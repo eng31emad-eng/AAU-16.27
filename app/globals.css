@@ -1,0 +1,308 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 0%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 0%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 45 82% 58%;
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 45 82% 58%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 45 82% 58%;
+
+    --radius: 0.5rem;
+
+    /* Gold colors */
+    --gold: 45 82% 58%;
+    --gold-dark: 45 70% 45%;
+    --gold-light: 45 90% 70%;
+
+    /* Gradients */
+    --gradient-gold: linear-gradient(135deg, hsl(45 82% 58%), hsl(45 90% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0% / 0.9), hsl(0 0% 0% / 0.7));
+    --gradient-overlay: linear-gradient(180deg, hsl(0 0% 0% / 0.6), hsl(0 0% 0% / 0.3));
+
+    /* Shadows */
+    --shadow-gold: 0 10px 40px -10px hsl(45 82% 58% / 0.3);
+    --shadow-elegant: 0 20px 60px -15px hsl(0 0% 0% / 0.2);
+    --shadow-glow: 0 0 40px hsl(45 82% 58% / 0.4);
+
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-elegant: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 47% 4%;
+    /* Very deep blue-black */
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 6%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 4%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 4%;
+
+    --secondary: 45 82% 58%;
+    /* Keep the gold */
+    --secondary-foreground: 222 47% 4%;
+
+    --muted: 217 32% 12%;
+    --muted-foreground: 215 20% 70%;
+
+    --accent: 45 82% 58%;
+    --accent-foreground: 222 47% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 32% 16%;
+    --input: 217 32% 16%;
+    --ring: 45 82% 58%;
+
+    --sidebar-background: 222 47% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 45 82% 58%;
+    --sidebar-primary-foreground: 222 47% 4%;
+    --sidebar-accent: 217 32% 12%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 32% 16%;
+    --sidebar-ring: 45 82% 58%;
+
+    /* Refined Shadows for Dark Mode */
+    --shadow-gold: 0 10px 40px -10px hsl(45 82% 58% / 0.15);
+    --shadow-elegant: 0 20px 60px -15px hsl(0 0% 0% / 0.8);
+    --shadow-glow: 0 0 40px hsl(45 82% 58% / 0.2);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: direction 0.3s ease;
+  }
+
+  [dir="rtl"] body {
+    font-family: 'Tajawal', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  [dir="rtl"] h1,
+  [dir="rtl"] h2,
+  [dir="rtl"] h3,
+  [dir="rtl"] h4,
+  [dir="rtl"] h5,
+  [dir="rtl"] h6,
+  [dir="ltr"] h1,
+  [dir="ltr"] h2,
+  [dir="ltr"] h3,
+  [dir="ltr"] h4,
+  [dir="ltr"] h5,
+  [dir="ltr"] h6 {
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
+@layer utilities {
+
+  /* Smooth scroll behavior */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+
+  /* Gold text */
+  .text-gold {
+    @apply text-[hsl(var(--gold))];
+  }
+
+  /* Hero section with gradient overlay */
+  .hero-overlay {
+    background: var(--gradient-hero);
+  }
+
+  /* Parallax effect */
+  .parallax {
+    will-change: transform;
+  }
+
+  /* Animation delays */
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+
+  /* Text shadow utilities for better readability */
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Glow effect */
+  .glow-gold {
+    box-shadow: 0 0 20px hsl(var(--gold) / 0.3);
+  }
+
+  .glow-gold-strong {
+    box-shadow: 0 0 30px hsl(var(--gold) / 0.5);
+  }
+
+  .mobile-menu-scroll {
+    background: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--background) / 0.96) 100%);
+    border: 1px solid hsl(var(--border) / 0.6);
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    box-shadow: 0 10px 24px -18px hsl(0 0% 0% / 0.35);
+  }
+
+  .mobile-menu-scroll::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .mobile-menu-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .mobile-menu-scroll::-webkit-scrollbar-thumb {
+    background: hsl(var(--secondary) / 0.35);
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+
+  .mobile-menu-scroll::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--secondary) / 0.5);
+    background-clip: padding-box;
+  }
+
+  .college-stat-card {
+    background: linear-gradient(135deg, #fef7e6 0%, #fdf3d7 100%);
+    border: 1px solid rgba(245, 200, 60, 0.3);
+    box-shadow: 0 4px 12px rgba(245, 200, 60, 0.15);
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  }
+
+  .dark .college-stat-card {
+    background: linear-gradient(135deg, hsl(222 47% 6%) 0%, hsl(222 47% 10%) 100%);
+    border: 1px solid rgba(245, 200, 60, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .dark .college-stat-value {
+    color: hsl(var(--foreground));
+  }
+
+  .dark .college-stat-label {
+    color: hsl(var(--muted-foreground));
+  }
+
+  .college-stat-value {
+    color: #1a1a1a;
+    font-weight: 700;
+  }
+
+  .college-stat-label {
+    color: rgba(0, 0, 0, 0.65);
+  }
+
+  .college-stat-icon {
+    color: rgba(245, 200, 60, 1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .college-stat-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(245, 200, 60, 0.25);
+      border-color: rgba(245, 200, 60, 0.5);
+    }
+  }
+
+  @media (hover: none) and (pointer: coarse) {
+    .college-stat-card:active {
+      transform: translateY(-1px);
+      border-color: rgba(245, 200, 60, 0.5);
+    }
+
+    .mobile-nav-item:hover:not(.is-active) {
+      background-color: transparent;
+      color: inherit;
+    }
+
+    .mobile-nav-item:active:not(.is-active),
+    .mobile-nav-item:focus-visible:not(.is-active) {
+      background-color: rgba(245, 200, 60, 0.22);
+    }
+  }
+
+  @media (max-width: 420px) {
+    .college-stat-value {
+      font-size: 1.5rem;
+    }
+  }
+}

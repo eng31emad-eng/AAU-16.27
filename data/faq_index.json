@@ -1,0 +1,4986 @@
+{
+  "createdAt": "2026-03-31T21:11:39.768Z",
+  "count": 383,
+  "model": "keyword-only",
+  "items": [
+    {
+      "id": 1,
+      "question": "ما اسم الجامعة؟",
+      "answer": "اسم الجامعة هو جامعة الجيل الجديد 🎓\nإذا حاب تعرف عن التخصصات أو نظام الدراسة أقدر أساعدك.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما اسم الجامعة؟\nج: اسم الجامعة هو جامعة الجيل الجديد 🎓\nإذا حاب تعرف عن التخصصات أو نظام الدراسة أقدر أساعدك.",
+        "importedAt": "2026-03-31T21:11:39.764Z"
+      }
+    },
+    {
+      "id": 2,
+      "question": "متى تأسست الجامعة؟",
+      "answer": "تأسست جامعة الجيل الجديد عام 2022م.\nوهي من الجامعات الحديثة التي تسعى لتقديم تعليم أكاديمي متطور.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: متى تأسست الجامعة؟\nج: تأسست جامعة الجيل الجديد عام 2022م.\nوهي من الجامعات الحديثة التي تسعى لتقديم تعليم أكاديمي متطور.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 3,
+      "question": "أين تقع الجامعة؟",
+      "answer": "تقع جامعة الجيل الجديد في صنعاء:\nبداية شارع الرقاص خلف محطة العبور.\nومبنى الطالبات في شارع المقالح أمام الهدف للألعاب.\nإذا حاب أرسل لك الموقع على الخريطة أخبرني.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: أين تقع الجامعة؟\nج: تقع جامعة الجيل الجديد في صنعاء:\nبداية شارع الرقاص خلف محطة العبور.\nومبنى الطالبات في شارع المقالح أمام الهدف للألعاب.\nإذا حاب أرسل لك الموقع على الخريطة أخبرني.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 4,
+      "question": "ما رؤية الجامعة؟",
+      "answer": "رؤية جامعة الجيل الجديد هي أن تكون مؤسسة تعليمية رائدة وطنياً ومتميزة إقليمياً، وفعالة في بناء مجتمع المعرفة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما رؤية الجامعة؟\nج: رؤية جامعة الجيل الجديد هي أن تكون مؤسسة تعليمية رائدة وطنياً ومتميزة إقليمياً، وفعالة في بناء مجتمع المعرفة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 5,
+      "question": "ما رسالة الجامعة؟",
+      "answer": "تتمثل رسالة جامعة الجيل الجديد في إعداد خريجين يتمتعون بالكفاءة العلمية والمهنية وروح التعلم مدى الحياة، من خلال تقديم خبرة تعليمية رائدة ترتكز على بيئة علمية وتعليمية داعمة، وبرامج أكاديمية نوعية مبتكرة تواكب المتغيرات الراهنة والاحتياجات التنموية، وتلبي متطلبات سوق العمل، وتسهم في خدمة المجتمع وتعزيز التنمية المستدامة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما رسالة الجامعة؟\nج: تتمثل رسالة جامعة الجيل الجديد في إعداد خريجين يتمتعون بالكفاءة العلمية والمهنية وروح التعلم مدى الحياة، من خلال تقديم خبرة تعليمية رائدة ترتكز على بيئة علمية وتعليمية داعمة، وبرامج أكاديمية نوعية مبتكرة تواكب المتغيرات الراهنة والاحتياجات التنموية، وتلبي متطلبات سوق العمل، وتسهم في خدمة المجتمع وتعزيز التنمية المستدامة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 6,
+      "question": "ما أهداف الجامعة؟",
+      "answer": "تتسعى جامعة الجيل الجديد إلى تحقيق الأهداف التالية:\n\n-تحقيق التميز الأكاديمي والبحثي.\n\n-تعزيز الشراكة المجتمعية.\n\n-توفير بيئة تعليمية محفزة.\n\n-تنمية الموارد البشرية والمادية للجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما أهداف الجامعة؟\nج: تتسعى جامعة الجيل الجديد إلى تحقيق الأهداف التالية:\n\n-تحقيق التميز الأكاديمي والبحثي.\n\n-تعزيز الشراكة المجتمعية.\n\n-توفير بيئة تعليمية محفزة.\n\n-تنمية الموارد البشرية والمادية للجامعة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 7,
+      "question": "هل الجامعة حكومية أم خاصة؟",
+      "answer": "جامعة الجيل الجديد جامعة خاصة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل الجامعة حكومية أم خاصة؟\nج: جامعة الجيل الجديد جامعة خاصة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 8,
+      "question": "من هو رئيس الجامعة؟",
+      "answer": "رئيس جامعة الجيل الجديد هو الدكتور همدان الشامي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: من هو رئيس الجامعة؟\nج: رئيس جامعة الجيل الجديد هو الدكتور همدان الشامي.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 9,
+      "question": "كم عدد الكليات؟",
+      "answer": "تضم جامعة الجيل الجديد أربع كليات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كم عدد الكليات؟\nج: تضم جامعة الجيل الجديد أربع كليات.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 10,
+      "question": "هل الجامعة معترف بها رسميًا؟",
+      "answer": "نعم، جامعة الجيل الجديد معترف بها رسميًا على المستوى المحلي، وتسعى إلى تعزيز حضورها الأكاديمي على المستوى الدولي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل الجامعة معترف بها رسميًا؟\nج: نعم، جامعة الجيل الجديد معترف بها رسميًا على المستوى المحلي، وتسعى إلى تعزيز حضورها الأكاديمي على المستوى الدولي.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 11,
+      "question": "ما هي الاعتمادات الأكاديمية التي حصلت عليها الجامعة؟",
+      "answer": "الجامعة حاليًا في طور العمل واستكمال متطلبات الحصول على الاعتمادات الأكاديمية اللازمة وفق المعايير المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما هي الاعتمادات الأكاديمية التي حصلت عليها الجامعة؟\nج: الجامعة حاليًا في طور العمل واستكمال متطلبات الحصول على الاعتمادات الأكاديمية اللازمة وفق المعايير المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 12,
+      "question": "هل يوجد فروع أخرى للجامعة؟",
+      "answer": "عم، يوجد للجامعة فرعان:\n\n-المركز الرئيسي في شارع الرقاص.\n\n-فرع الطالبات في شارع المقالح",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد فروع أخرى للجامعة؟\nج: عم، يوجد للجامعة فرعان:\n\n-المركز الرئيسي في شارع الرقاص.\n\n-فرع الطالبات في شارع المقالح",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 13,
+      "question": "ما هو الشعار الرسمي للجامعة؟",
+      "answer": "الشعار الرسمي لجامعة الجيل الجديد هو:\nجامعة الجيل الجديد لأجيال واعدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما هو الشعار الرسمي للجامعة؟\nج: الشعار الرسمي لجامعة الجيل الجديد هو:\nجامعة الجيل الجديد لأجيال واعدة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 14,
+      "question": "كيف يمكن التواصل مع إدارة الجامعة؟",
+      "answer": "يمكن التواصل مع إدارة الجامعة عبر عدة وسائل، منها:\n\nالبريد الإلكتروني.\n\nالبوابة الإلكترونية الرسمية.\n\nالاتصال على أرقام التواصل المعتمدة لدى الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف يمكن التواصل مع إدارة الجامعة؟\nج: يمكن التواصل مع إدارة الجامعة عبر عدة وسائل، منها:\n\nالبريد الإلكتروني.\n\nالبوابة الإلكترونية الرسمية.\n\nالاتصال على أرقام التواصل المعتمدة لدى الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 15,
+      "question": "هل يوجد حسابات رسمية على مواقع التواصل؟",
+      "answer": "نعم، لدى جامعة الجيل الجديد حسابات رسمية على مواقع التواصل الاجتماعي، وتشمل:\n\nفيسبوك\n\nيوتيوب\n\nإنستغرام",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد حسابات رسمية على مواقع التواصل؟\nج: نعم، لدى جامعة الجيل الجديد حسابات رسمية على مواقع التواصل الاجتماعي، وتشمل:\n\nفيسبوك\n\nيوتيوب\n\nإنستغرام",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 16,
+      "question": "ما أوقات الدوام الرسمية؟",
+      "answer": "يبدأ الدوام الرسمي في الجامعة من الساعة 8:00 صباحًا وينتهي الساعة 4:00 مساءً.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما أوقات الدوام الرسمية؟\nج: يبدأ الدوام الرسمي في الجامعة من الساعة 8:00 صباحًا وينتهي الساعة 4:00 مساءً.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 17,
+      "question": "هل الجامعة مختلطة أم منفصلة؟",
+      "answer": "المبنى الرئيسي مختلط، بينما فرع شارع المقالح مخصص للطالبات فقط.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل الجامعة مختلطة أم منفصلة؟\nج: المبنى الرئيسي مختلط، بينما فرع شارع المقالح مخصص للطالبات فقط.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 18,
+      "question": "هل يوجد سكن جامعي؟",
+      "answer": "حاليًا لا يتوفر سكن جامعي، إلا أن الجامعة لديها توجهات استراتيجية لإضافة هذه الخدمة مستقبلًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد سكن جامعي؟\nج: حاليًا لا يتوفر سكن جامعي، إلا أن الجامعة لديها توجهات استراتيجية لإضافة هذه الخدمة مستقبلًا.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 19,
+      "question": "ما مساحة الحرم الجامعي؟",
+      "answer": "تبلغ مساحة الحرم الجامعي تقريبًا 3 كيلومترات مربعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما مساحة الحرم الجامعي؟\nج: تبلغ مساحة الحرم الجامعي تقريبًا 3 كيلومترات مربعة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 20,
+      "question": "هل توفر الجامعة برامج دراسات عليا؟",
+      "answer": "برامج الدراسات العليا ضمن الخطة الاستراتيجية المستقبلية للجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توفر الجامعة برامج دراسات عليا؟\nج: برامج الدراسات العليا ضمن الخطة الاستراتيجية المستقبلية للجامعة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 21,
+      "question": "ما نظام الدراسة المعتمد؟",
+      "answer": "تعتمد الجامعة النظام الفصلي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما نظام الدراسة المعتمد؟\nج: تعتمد الجامعة النظام الفصلي.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 22,
+      "question": "كم عدد الفصول الدراسية في السنة؟",
+      "answer": "يتكون العام الدراسي من فصلين دراسيين.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كم عدد الفصول الدراسية في السنة؟\nج: يتكون العام الدراسي من فصلين دراسيين.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 23,
+      "question": "هل يوجد فصل صيفي؟",
+      "answer": "حاليًا لا يوجد فصل صيفي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد فصل صيفي؟\nج: حاليًا لا يوجد فصل صيفي.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 24,
+      "question": "ما لغة التدريس؟",
+      "answer": "تعتمد الجامعة اللغتين العربية والإنجليزية في التدريس، حسب طبيعة البرنامج الأكاديمي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما لغة التدريس؟\nج: تعتمد الجامعة اللغتين العربية والإنجليزية في التدريس، حسب طبيعة البرنامج الأكاديمي.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 25,
+      "question": "هل توجد برامج تعليم عن بعد؟",
+      "answer": "حاليًا لا تتوفر برامج تعليم عن بعد.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توجد برامج تعليم عن بعد؟\nج: حاليًا لا تتوفر برامج تعليم عن بعد.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 26,
+      "question": "هل يوجد نظام إلكتروني للطلاب؟",
+      "answer": "نعم، توفر الجامعة نظامًا إلكترونيًا خاصًا بالطلاب لإدارة شؤونهم الأكاديمية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نظام إلكتروني للطلاب؟\nج: نعم، توفر الجامعة نظامًا إلكترونيًا خاصًا بالطلاب لإدارة شؤونهم الأكاديمية.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 27,
+      "question": "هل توفر الجامعة تدريبًا عمليًا؟",
+      "answer": "نعم، توفر الجامعة تدريبًا عمليًا ضمن برامجها الأكاديمية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توفر الجامعة تدريبًا عمليًا؟\nج: نعم، توفر الجامعة تدريبًا عمليًا ضمن برامجها الأكاديمية.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 28,
+      "question": "هل توفر الجامعة أنشطة طلابية؟",
+      "answer": "نعم، توفر الجامعة أنشطة طلابية متنوعة تشمل أنشطة رياضية وثقافية وعملية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توفر الجامعة أنشطة طلابية؟\nج: نعم، توفر الجامعة أنشطة طلابية متنوعة تشمل أنشطة رياضية وثقافية وعملية.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 29,
+      "question": "هل يوجد نادي طلابي؟",
+      "answer": "نعم، يوجد نادي طلابي في الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نادي طلابي؟\nج: نعم، يوجد نادي طلابي في الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 30,
+      "question": "هل يوجد اتحاد طلاب؟",
+      "answer": "نعم، يوجد اتحاد طلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد اتحاد طلاب؟\nج: نعم، يوجد اتحاد طلاب.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 31,
+      "question": "ما سياسة الحضور والغياب؟",
+      "answer": "وفقًا للوائح الجامعة، يُشترط ألا تتجاوز نسبة غياب الطالب 30% من إجمالي المحاضرات دون عذر مقبول.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما سياسة الحضور والغياب؟\nج: وفقًا للوائح الجامعة، يُشترط ألا تتجاوز نسبة غياب الطالب 30% من إجمالي المحاضرات دون عذر مقبول.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 32,
+      "question": "هل توفر الجامعة منح دراسية؟",
+      "answer": "نعم، توفر الجامعة منحًا دراسية وفقًا للبروتوكولات والأنظمة المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توفر الجامعة منح دراسية؟\nج: نعم، توفر الجامعة منحًا دراسية وفقًا للبروتوكولات والأنظمة المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 33,
+      "question": "هل يوجد خصومات؟",
+      "answer": "نعم، توفر الجامعة خصومات تمثل دعمًا للطلاب وفق السياسات المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد خصومات؟\nج: نعم، توفر الجامعة خصومات تمثل دعمًا للطلاب وفق السياسات المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 34,
+      "question": "هل الجامعة معترف بها دوليًا؟",
+      "answer": "نعم، الجامعة معترف بها، وتسعى لتعزيز حضورها الأكاديمي دوليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل الجامعة معترف بها دوليًا؟\nج: نعم، الجامعة معترف بها، وتسعى لتعزيز حضورها الأكاديمي دوليًا.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 35,
+      "question": "هل تقبل طلابًا من خارج الدولة؟",
+      "answer": "حاليًا لا يتم قبول طلاب من خارج الدولة، إلا أن ذلك ضمن التوجهات المستقبلية للجامعة وفق البروتوكولات المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل تقبل طلابًا من خارج الدولة؟\nج: حاليًا لا يتم قبول طلاب من خارج الدولة، إلا أن ذلك ضمن التوجهات المستقبلية للجامعة وفق البروتوكولات المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 36,
+      "question": "هل يوجد مكتب شؤون طلاب؟",
+      "answer": "نعم، يوجد مكتب لشؤون الطلاب في الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مكتب شؤون طلاب؟\nج: نعم، يوجد مكتب لشؤون الطلاب في الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 37,
+      "question": "كيف أقدم شكوى؟",
+      "answer": "يمكن تقديم الشكاوى من خلال صندوق الشكاوى المخصص داخل كل كلية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف أقدم شكوى؟\nج: يمكن تقديم الشكاوى من خلال صندوق الشكاوى المخصص داخل كل كلية.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 38,
+      "question": "هل يوجد دليل طالب؟",
+      "answer": "نعم، يتوفر دليل طالب بنسخة ورقية وأخرى إلكترونية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دليل طالب؟\nج: نعم، يتوفر دليل طالب بنسخة ورقية وأخرى إلكترونية.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 39,
+      "question": "هل يوجد تقييم لأداء الأساتذة؟",
+      "answer": "نعم، يوجد نظام لتقييم أداء أعضاء هيئة التدريس.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تقييم لأداء الأساتذة؟\nج: نعم، يوجد نظام لتقييم أداء أعضاء هيئة التدريس.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 40,
+      "question": "هل توفر الجامعة خدمات لذوي الاحتياجات الخاصة؟",
+      "answer": "نعم، توفر الجامعة خدمات لذوي الاحتياجات الخاصة ضمن توجهاتها الرئيسية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توفر الجامعة خدمات لذوي الاحتياجات الخاصة؟\nج: نعم، توفر الجامعة خدمات لذوي الاحتياجات الخاصة ضمن توجهاتها الرئيسية.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 41,
+      "question": "هل يوجد مركز إرشاد أكاديمي؟",
+      "answer": "نعم، توجد وحدات إرشاد أكاديمي ومرشدون أكاديميون لمتابعة الطلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مركز إرشاد أكاديمي؟\nج: نعم، توجد وحدات إرشاد أكاديمي ومرشدون أكاديميون لمتابعة الطلاب.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 42,
+      "question": "هل توفر الجامعة خدمات صحية؟",
+      "answer": "نعم، توجد عيادة صحية داخل الحرم الجامعي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توفر الجامعة خدمات صحية؟\nج: نعم، توجد عيادة صحية داخل الحرم الجامعي.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 43,
+      "question": "هل يوجد تأمين للطلاب؟",
+      "answer": "حاليًا لا يوجد نظام تأمين للطلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تأمين للطلاب؟\nج: حاليًا لا يوجد نظام تأمين للطلاب.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 44,
+      "question": "ما الكليات الموجودة في الجامعة؟",
+      "answer": "تضم جامعة الجيل الجديد الكليات التالية:\n\nكلية الطب والجراحة\n\nكلية العلوم الطبية التطبيقية والصحية\n\nكلية الهندسة وتكنولوجيا المعلومات\n\nكلية العلوم الإدارية",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما الكليات الموجودة في الجامعة؟\nج: تضم جامعة الجيل الجديد الكليات التالية:\n\nكلية الطب والجراحة\n\nكلية العلوم الطبية التطبيقية والصحية\n\nكلية الهندسة وتكنولوجيا المعلومات\n\nكلية العلوم الإدارية",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 45,
+      "question": "هل توجد كلية طب؟",
+      "answer": "نعم، توجد كلية للطب والجراحة في جامعة الجيل الجديد.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توجد كلية طب؟\nج: نعم، توجد كلية للطب والجراحة في جامعة الجيل الجديد.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 46,
+      "question": "هل توجد كلية هندسة؟",
+      "answer": "نعم، توجد كلية للهندسة وتكنولوجيا المعلومات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توجد كلية هندسة؟\nج: نعم، توجد كلية للهندسة وتكنولوجيا المعلومات.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 47,
+      "question": "هل توجد كلية إدارة أعمال وعلوم إنسانية؟",
+      "answer": "نعم، توجد كلية العلوم الإدارية، وتشمل تخصصات مرتبطة بإدارة الأعمال والعلوم الإنسانية وفق البرامج المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توجد كلية إدارة أعمال وعلوم إنسانية؟\nج: نعم، توجد كلية العلوم الإدارية، وتشمل تخصصات مرتبطة بإدارة الأعمال والعلوم الإنسانية وفق البرامج المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 48,
+      "question": "هل توجد كلية إعلام؟",
+      "answer": "لا، لا يوجد قسم أو كلية للإعلام حاليًا ضمن كليات الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توجد كلية إعلام؟\nج: لا، لا يوجد قسم أو كلية للإعلام حاليًا ضمن كليات الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 49,
+      "question": "هل توجد كلية حقوق؟",
+      "answer": "لا، لا يوجد قسم أو كلية للحقوق حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توجد كلية حقوق؟\nج: لا، لا يوجد قسم أو كلية للحقوق حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 50,
+      "question": "هل توجد كلية صيدلة؟",
+      "answer": "يوجد قسم للصيدلة ضمن كلية العلوم الطبية التطبيقية والصحية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توجد كلية صيدلة؟\nج: يوجد قسم للصيدلة ضمن كلية العلوم الطبية التطبيقية والصحية.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 51,
+      "question": "أين تقع كلية الهندسة؟",
+      "answer": "تقع كلية الهندسة وتكنولوجيا المعلومات ضمن المبنى الرئيسي لجامعة الجيل الجديد.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: أين تقع كلية الهندسة؟\nج: تقع كلية الهندسة وتكنولوجيا المعلومات ضمن المبنى الرئيسي لجامعة الجيل الجديد.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 52,
+      "question": "أين تقع كلية الطب؟",
+      "answer": "تقع كلية الطب والجراحة ضمن المبنى الرئيسي للجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: أين تقع كلية الطب؟\nج: تقع كلية الطب والجراحة ضمن المبنى الرئيسي للجامعة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 53,
+      "question": "هل لكل كلية مبنى مستقل؟",
+      "answer": "تضم الجامعة كليات لها مبانٍ مستقلة، في حين أن بعض الكليات أو الأقسام ترتبط ضمن مبانٍ مشتركة، وذلك وفق التنظيم الإداري والأكاديمي المعتمد.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل لكل كلية مبنى مستقل؟\nج: تضم الجامعة كليات لها مبانٍ مستقلة، في حين أن بعض الكليات أو الأقسام ترتبط ضمن مبانٍ مشتركة، وذلك وفق التنظيم الإداري والأكاديمي المعتمد.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 54,
+      "question": "هل لكل كلية موقع إلكتروني؟",
+      "answer": "لا يوجد موقع مستقل لكل كلية، وإنما يوجد موقع إلكتروني رسمي للجامعة يمكن من خلاله الوصول إلى معلومات كل كلية وأقسامها.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل لكل كلية موقع إلكتروني؟\nج: لا يوجد موقع مستقل لكل كلية، وإنما يوجد موقع إلكتروني رسمي للجامعة يمكن من خلاله الوصول إلى معلومات كل كلية وأقسامها.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 55,
+      "question": "هل توجد برامج مشتركة بين الكليات؟",
+      "answer": "نعم، توجد بعض المقررات الدراسية المشتركة التي يدرسها طلاب أكثر من برنامج أو كلية، بحسب طبيعة الخطة الدراسية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توجد برامج مشتركة بين الكليات؟\nج: نعم، توجد بعض المقررات الدراسية المشتركة التي يدرسها طلاب أكثر من برنامج أو كلية، بحسب طبيعة الخطة الدراسية.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 56,
+      "question": "هل يمكن دراسة تخصص مزدوج؟",
+      "answer": "لا، لا تتيح الجامعة حاليًا نظام التخصص المزدوج.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن دراسة تخصص مزدوج؟\nج: لا، لا تتيح الجامعة حاليًا نظام التخصص المزدوج.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 57,
+      "question": "هل يمكن تغيير الكلية بعد القبول؟",
+      "answer": "نعم، يمكن تغيير الكلية بعد القبول وفقًا للوائح والأنظمة المعتمدة في الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن تغيير الكلية بعد القبول؟\nج: نعم، يمكن تغيير الكلية بعد القبول وفقًا للوائح والأنظمة المعتمدة في الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 58,
+      "question": "هل توجد مقابلة شخصية لبعض الكليات؟",
+      "answer": "حاليًا لا توجد مقابلات شخصية للقبول في الكليات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توجد مقابلة شخصية لبعض الكليات؟\nج: حاليًا لا توجد مقابلات شخصية للقبول في الكليات.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 59,
+      "question": "هل توجد مقابلة شخصية لبعض الكليات؟",
+      "answer": "حاليًا لا توجد مقابلات شخصية للقبول في الكليات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توجد مقابلة شخصية لبعض الكليات؟\nج: حاليًا لا توجد مقابلات شخصية للقبول في الكليات.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 60,
+      "question": "هل يوجد اختبار قبول؟",
+      "answer": "لا يوجد اختبار قبول حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد اختبار قبول؟\nج: لا يوجد اختبار قبول حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 61,
+      "question": "هل توجد سنة تحضيرية؟",
+      "answer": "لا، لا توجد سنة تحضيرية في الوقت الحالي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توجد سنة تحضيرية؟\nج: لا، لا توجد سنة تحضيرية في الوقت الحالي.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 62,
+      "question": "هل توجد برامج ماجستير في الكليات؟",
+      "answer": "حاليًا لا توجد برامج ماجستير، وهي ضمن التوجهات المستقبلية للجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توجد برامج ماجستير في الكليات؟\nج: حاليًا لا توجد برامج ماجستير، وهي ضمن التوجهات المستقبلية للجامعة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 63,
+      "question": "هل توجد برامج دكتوراه؟",
+      "answer": "برامج الدكتوراه ضمن التوجه الاستراتيجي المستقبلي للجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توجد برامج دكتوراه؟\nج: برامج الدكتوراه ضمن التوجه الاستراتيجي المستقبلي للجامعة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 64,
+      "question": "هل توفر الكليات تدريبًا ميدانيًا؟",
+      "answer": "نعم، توفر الكليات تدريبًا ميدانيًا ضمن الخطط الدراسية المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توفر الكليات تدريبًا ميدانيًا؟\nج: نعم، توفر الكليات تدريبًا ميدانيًا ضمن الخطط الدراسية المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 65,
+      "question": "هل يوجد مختبرات متخصصة؟",
+      "answer": "نعم، تتوفر مختبرات متخصصة بحسب طبيعة كل كلية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مختبرات متخصصة؟\nج: نعم، تتوفر مختبرات متخصصة بحسب طبيعة كل كلية.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 66,
+      "question": "هل يوجد معامل حاسوب؟",
+      "answer": "نعم، توجد معامل حاسوب مجهزة لخدمة العملية التعليمية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد معامل حاسوب؟\nج: نعم، توجد معامل حاسوب مجهزة لخدمة العملية التعليمية.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 67,
+      "question": "هل يوجد مستشفى جامعي؟",
+      "answer": "حاليًا توجد بروتوكولات تعاون بين الجامعة وعدد من المستشفيات لأغراض التدريب، كما أن لدى الجامعة توجهًا استراتيجيًا لإنشاء مستشفى جامعي بالشراكة مع جهة مختصة مستقبلًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مستشفى جامعي؟\nج: حاليًا توجد بروتوكولات تعاون بين الجامعة وعدد من المستشفيات لأغراض التدريب، كما أن لدى الجامعة توجهًا استراتيجيًا لإنشاء مستشفى جامعي بالشراكة مع جهة مختصة مستقبلًا.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 68,
+      "question": "هل يوجد مركز أبحاث؟",
+      "answer": "حاليًا لا يوجد مركز أبحاث مستقل، وهو ضمن الخطة الاستراتيجية المستقبلية للجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مركز أبحاث؟\nج: حاليًا لا يوجد مركز أبحاث مستقل، وهو ضمن الخطة الاستراتيجية المستقبلية للجامعة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 69,
+      "question": "هل يوجد مشاريع تخرج؟",
+      "answer": "نعم، يوجد نظام لمشاريع التخرج في البرامج التي تتطلب ذلك.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مشاريع تخرج؟\nج: نعم، يوجد نظام لمشاريع التخرج في البرامج التي تتطلب ذلك.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 70,
+      "question": "كم عدد سنوات الدراسة في كلية الهندسة؟",
+      "answer": "مدة الدراسة في كلية الهندسة أربع سنوات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كم عدد سنوات الدراسة في كلية الهندسة؟\nج: مدة الدراسة في كلية الهندسة أربع سنوات.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 71,
+      "question": "كم عدد سنوات دراسة الطب؟",
+      "answer": "مدة دراسة الطب ست سنوات، بالإضافة إلى سنة امتياز.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كم عدد سنوات دراسة الطب؟\nج: مدة دراسة الطب ست سنوات، بالإضافة إلى سنة امتياز.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 72,
+      "question": "كم عدد سنوات دراسة إدارة الأعمال؟",
+      "answer": "مدة الدراسة في تخصص إدارة الأعمال أربع سنوات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كم عدد سنوات دراسة إدارة الأعمال؟\nج: مدة الدراسة في تخصص إدارة الأعمال أربع سنوات.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 73,
+      "question": "هل يوجد نظام انتساب؟",
+      "answer": "لا، لا يوجد نظام انتساب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نظام انتساب؟\nج: لا، لا يوجد نظام انتساب.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 74,
+      "question": "هل يوجد تعليم مسائي؟",
+      "answer": "لا، لا يتوفر تعليم مسائي حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تعليم مسائي؟\nج: لا، لا يتوفر تعليم مسائي حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 75,
+      "question": "هل يمكن الدراسة بنظام جزئي؟",
+      "answer": "لا، لا يتوفر نظام دراسة جزئي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن الدراسة بنظام جزئي؟\nج: لا، لا يتوفر نظام دراسة جزئي.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 76,
+      "question": "هل يوجد اعتماد دولي لبعض الكليات؟",
+      "answer": "نعم، يوجد اعتماد دولي لبعض الكليات وفق الأطر المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد اعتماد دولي لبعض الكليات؟\nج: نعم، يوجد اعتماد دولي لبعض الكليات وفق الأطر المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 77,
+      "question": "هل توفر الكليات فرص تبادل طلابي؟",
+      "answer": "فرص التبادل الطلابي ضمن التوجهات الاستراتيجية المستقبلية للجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توفر الكليات فرص تبادل طلابي؟\nج: فرص التبادل الطلابي ضمن التوجهات الاستراتيجية المستقبلية للجامعة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 78,
+      "question": "هل يوجد إشراف أكاديمي؟",
+      "answer": "نعم، يوجد إشراف أكاديمي لمتابعة الطلاب خلال مسيرتهم الدراسية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد إشراف أكاديمي؟\nج: نعم، يوجد إشراف أكاديمي لمتابعة الطلاب خلال مسيرتهم الدراسية.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 79,
+      "question": "هل يوجد برنامج إرشاد مهني؟",
+      "answer": "يتوفر برنامج إرشاد أكاديمي وطلابي ومهني لدعم الطلبة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد برنامج إرشاد مهني؟\nج: يتوفر برنامج إرشاد أكاديمي وطلابي ومهني لدعم الطلبة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 80,
+      "question": "هل يوجد مسابقات علمية؟",
+      "answer": "نعم، تُنظم مسابقات علمية لدعم التميز والإبداع الطلابي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مسابقات علمية؟\nج: نعم، تُنظم مسابقات علمية لدعم التميز والإبداع الطلابي.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 81,
+      "question": "هل توجد شراكات بين الجامعة ومؤسسات المجتمع؟",
+      "answer": "نعم، توجد شراكات علمية وتدريبية مع عدد من مؤسسات المجتمع.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل توجد شراكات بين الجامعة ومؤسسات المجتمع؟\nج: نعم، توجد شراكات علمية وتدريبية مع عدد من مؤسسات المجتمع.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 82,
+      "question": "هل يوجد دعم للبحث العلمي؟",
+      "answer": "نعم، دعم البحث العلمي ضمن الخطة الاستراتيجية للجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دعم للبحث العلمي؟\nج: نعم، دعم البحث العلمي ضمن الخطة الاستراتيجية للجامعة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 83,
+      "question": "هل يوجد منح للمتفوقين؟",
+      "answer": "نعم، توجد منح مخصصة للطلاب المتفوقين وفق المعايير المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد منح للمتفوقين؟\nج: نعم، توجد منح مخصصة للطلاب المتفوقين وفق المعايير المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 84,
+      "question": "هل يوجد تكريم للطلاب الأوائل؟",
+      "answer": "نعم، يتم تكريم الطلاب الأوائل تقديرًا لتفوقهم الأكاديمي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تكريم للطلاب الأوائل؟\nج: نعم، يتم تكريم الطلاب الأوائل تقديرًا لتفوقهم الأكاديمي.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 85,
+      "question": "متى يبدأ التسجيل؟",
+      "answer": "يبدأ التسجيل وفقًا للتقويم المعتمد من الوزارة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: متى يبدأ التسجيل؟\nج: يبدأ التسجيل وفقًا للتقويم المعتمد من الوزارة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 86,
+      "question": "متى ينتهي التسجيل؟",
+      "answer": "ينتهي التسجيل وفقًا للتقويم المعتمد من الوزارة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: متى ينتهي التسجيل؟\nج: ينتهي التسجيل وفقًا للتقويم المعتمد من الوزارة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 87,
+      "question": "كيف أقدم طلب التحاق؟",
+      "answer": "يتم تقديم طلب الالتحاق عبر البوابة الإلكترونية الرسمية للجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف أقدم طلب التحاق؟\nج: يتم تقديم طلب الالتحاق عبر البوابة الإلكترونية الرسمية للجامعة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 88,
+      "question": "ما الوثائق المطلوبة للتسجيل؟",
+      "answer": "يشترط للتسجيل تقديم شهادة الثانوية العامة أو ما يعادلها وفق الأنظمة المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما الوثائق المطلوبة للتسجيل؟\nج: يشترط للتسجيل تقديم شهادة الثانوية العامة أو ما يعادلها وفق الأنظمة المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 89,
+      "question": "هل يوجد تقديم إلكتروني؟",
+      "answer": "نعم، يتوفر نظام تقديم إلكتروني عبر البوابة الرسمية للجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تقديم إلكتروني؟\nج: نعم، يتوفر نظام تقديم إلكتروني عبر البوابة الرسمية للجامعة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 90,
+      "question": "هل يمكن التقديم حضوريًا؟",
+      "answer": "نعم، يمكن التقديم حضوريًا من خلال مقر الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن التقديم حضوريًا؟\nج: نعم، يمكن التقديم حضوريًا من خلال مقر الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 91,
+      "question": "كيف أعرف نتيجة القبول؟",
+      "answer": "يتم إشعار المتقدم بالقبول بعد استيفاء شروط القبول المعتمدة، ويُعتبر القبول مباشرًا عند اكتمال المتطلبات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف أعرف نتيجة القبول؟\nج: يتم إشعار المتقدم بالقبول بعد استيفاء شروط القبول المعتمدة، ويُعتبر القبول مباشرًا عند اكتمال المتطلبات.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 92,
+      "question": "كم مدة معالجة الطلب؟",
+      "answer": "تتم معالجة الطلبات خلال فترة زمنية تعتمد على استكمال المتطلبات واستيفاء شروط القبول وفق الإجراءات المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كم مدة معالجة الطلب؟\nج: تتم معالجة الطلبات خلال فترة زمنية تعتمد على استكمال المتطلبات واستيفاء شروط القبول وفق الإجراءات المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 93,
+      "question": "هل يمكن تعديل الطلب بعد التقديم؟",
+      "answer": "نعم، يمكن تعديل الطلب وفق الإجراءات المعتمدة قبل اعتماده النهائي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن تعديل الطلب بعد التقديم؟\nج: نعم، يمكن تعديل الطلب وفق الإجراءات المعتمدة قبل اعتماده النهائي.",
+        "importedAt": "2026-03-31T21:11:39.766Z"
+      }
+    },
+    {
+      "id": 94,
+      "question": "هل يمكن إلغاء الطلب؟",
+      "answer": "نعم، يمكن إلغاء الطلب وفق السياسات المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن إلغاء الطلب؟\nج: نعم، يمكن إلغاء الطلب وفق السياسات المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 95,
+      "question": "ما شروط القبول العامة؟",
+      "answer": "تُحدد شروط القبول وفق دليل القبول المعتمد في الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما شروط القبول العامة؟\nج: تُحدد شروط القبول وفق دليل القبول المعتمد في الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 96,
+      "question": "هل يوجد حد أدنى للمعدل؟",
+      "answer": "نعم، يوجد حد أدنى للمعدل وفق معايير القبول المعتمدة لكل برنامج.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد حد أدنى للمعدل؟\nج: نعم، يوجد حد أدنى للمعدل وفق معايير القبول المعتمدة لكل برنامج.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 97,
+      "question": "هل يوجد اختبار تحديد مستوى؟",
+      "answer": "لا، لا يوجد اختبار تحديد مستوى حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد اختبار تحديد مستوى؟\nج: لا، لا يوجد اختبار تحديد مستوى حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 98,
+      "question": "هل يوجد اختبار لغة إنجليزية؟",
+      "answer": "لا، لا يوجد اختبار لغة إنجليزية ضمن إجراءات القبول الحالية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد اختبار لغة إنجليزية؟\nج: لا، لا يوجد اختبار لغة إنجليزية ضمن إجراءات القبول الحالية.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 99,
+      "question": "هل يمكن التحويل من جامعة أخرى؟",
+      "answer": "نعم، يمكن التحويل من جامعة أخرى وفق اللوائح المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن التحويل من جامعة أخرى؟\nج: نعم، يمكن التحويل من جامعة أخرى وفق اللوائح المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 100,
+      "question": "هل يمكن تأجيل القبول؟",
+      "answer": "نعم، يمكن تأجيل القبول وفق الأنظمة المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن تأجيل القبول؟\nج: نعم، يمكن تأجيل القبول وفق الأنظمة المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 101,
+      "question": "هل يمكن تجميد الدراسة؟",
+      "answer": "يمكن إيقاف القيد وفق لوائح الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن تجميد الدراسة؟\nج: يمكن إيقاف القيد وفق لوائح الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 102,
+      "question": "هل يمكن إعادة القيد؟",
+      "answer": "نعم، يمكن إعادة القيد وفق الإجراءات المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن إعادة القيد؟\nج: نعم، يمكن إعادة القيد وفق الإجراءات المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 103,
+      "question": "ما آلية تسجيل المواد؟",
+      "answer": "تتم آلية تسجيل المواد وفق الخطة الدراسية المعتمدة لكل فصل دراسي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما آلية تسجيل المواد؟\nج: تتم آلية تسجيل المواد وفق الخطة الدراسية المعتمدة لكل فصل دراسي.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 104,
+      "question": "كيف أحذف مادة؟",
+      "answer": "لا ينطبق نظام الحذف على آلية الدراسة المعتمدة في الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف أحذف مادة؟\nج: لا ينطبق نظام الحذف على آلية الدراسة المعتمدة في الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 105,
+      "question": "كيف أضيف مادة؟",
+      "answer": "لا ينطبق نظام الإضافة على آلية الدراسة المعتمدة في الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف أضيف مادة؟\nج: لا ينطبق نظام الإضافة على آلية الدراسة المعتمدة في الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 106,
+      "question": "ما الحد الأقصى للساعات؟",
+      "answer": "يُحدد الحد الأقصى للساعات وفق الخطة الدراسية المعتمدة لكل برنامج.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما الحد الأقصى للساعات؟\nج: يُحدد الحد الأقصى للساعات وفق الخطة الدراسية المعتمدة لكل برنامج.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 107,
+      "question": "ما الحد الأدنى للساعات؟",
+      "answer": "يُحدد الحد الأدنى للساعات وفق الخطة الدراسية المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما الحد الأدنى للساعات؟\nج: يُحدد الحد الأدنى للساعات وفق الخطة الدراسية المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 108,
+      "question": "هل يوجد غرامة تأخير؟",
+      "answer": "نعم، توجد غرامات تأخير وفق اللوائح المالية المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد غرامة تأخير؟\nج: نعم، توجد غرامات تأخير وفق اللوائح المالية المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 109,
+      "question": "كيف أدفع الرسوم؟",
+      "answer": "يتم سداد الرسوم عبر النظام المالي الإلكتروني المعتمد في الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف أدفع الرسوم؟\nج: يتم سداد الرسوم عبر النظام المالي الإلكتروني المعتمد في الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 110,
+      "question": "هل يمكن التقسيط؟",
+      "answer": "نعم، تتوفر إمكانية تقسيط الرسوم وفق السياسات المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن التقسيط؟\nج: نعم، تتوفر إمكانية تقسيط الرسوم وفق السياسات المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 111,
+      "question": "هل يوجد خصم للأشقاء؟",
+      "answer": "نعم، يوجد خصم مخصص للأشقاء وفق اللوائح المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد خصم للأشقاء؟\nج: نعم، يوجد خصم مخصص للأشقاء وفق اللوائح المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 112,
+      "question": "هل يوجد خصم للمتفوقين؟",
+      "answer": "نعم، يوجد خصم للطلاب المتفوقين وفق المعايير المحددة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد خصم للمتفوقين؟\nج: نعم، يوجد خصم للطلاب المتفوقين وفق المعايير المحددة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 113,
+      "question": "ما هي آلية الانسحاب؟",
+      "answer": "تتم إجراءات الانسحاب وفق لائحة الجامعة المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما هي آلية الانسحاب؟\nج: تتم إجراءات الانسحاب وفق لائحة الجامعة المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 114,
+      "question": "كيف أستخرج بطاقة طالب؟",
+      "answer": "يتم إصدار البطاقة الجامعية للطالب في بداية الدراسة بعد استكمال إجراءات التسجيل.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف أستخرج بطاقة طالب؟\nج: يتم إصدار البطاقة الجامعية للطالب في بداية الدراسة بعد استكمال إجراءات التسجيل.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 115,
+      "question": "هل يوجد رقم جامعي؟",
+      "answer": "نعم، يُمنح كل طالب رقمًا جامعيًا خاصًا به عند تسجيله في الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد رقم جامعي؟\nج: نعم، يُمنح كل طالب رقمًا جامعيًا خاصًا به عند تسجيله في الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 116,
+      "question": "كيف أستعيد كلمة المرور للنظام؟",
+      "answer": "يمكن استعادة كلمة المرور من خلال التواصل مع مسؤول تقنية المعلومات في الجامعة لإعادة تعيينها.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف أستعيد كلمة المرور للنظام؟\nج: يمكن استعادة كلمة المرور من خلال التواصل مع مسؤول تقنية المعلومات في الجامعة لإعادة تعيينها.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 117,
+      "question": "هل يوجد تسجيل صيفي؟",
+      "answer": "لا، لا يوجد تسجيل صيفي حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تسجيل صيفي؟\nج: لا، لا يوجد تسجيل صيفي حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 118,
+      "question": "متى تبدأ الاختبارات؟",
+      "answer": "تبدأ الاختبارات وفق التقويم الجامعي المعتمد لكل فصل دراسي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: متى تبدأ الاختبارات؟\nج: تبدأ الاختبارات وفق التقويم الجامعي المعتمد لكل فصل دراسي.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 119,
+      "question": "متى تظهر النتائج؟",
+      "answer": "تُعلن النتائج بعد الانتهاء من الاختبارات واعتمادها رسميًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: متى تظهر النتائج؟\nج: تُعلن النتائج بعد الانتهاء من الاختبارات واعتمادها رسميًا.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 120,
+      "question": "هل يمكن استخراج شهادة تخرج؟",
+      "answer": "نعم، يمكن استخراج شهادة التخرج بعد اجتياز جميع المقررات بنجاح واستكمال متطلبات التخرج.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن استخراج شهادة تخرج؟\nج: نعم، يمكن استخراج شهادة التخرج بعد اجتياز جميع المقررات بنجاح واستكمال متطلبات التخرج.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 121,
+      "question": "ما شروط التخرج؟",
+      "answer": "للتخرج يجب على الطالب استكمال جميع المقررات والمتطلبات الأكاديمية، بالإضافة إلى استيفاء أي وثائق ناقصة إن وجدت.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما شروط التخرج؟\nج: للتخرج يجب على الطالب استكمال جميع المقررات والمتطلبات الأكاديمية، بالإضافة إلى استيفاء أي وثائق ناقصة إن وجدت.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 122,
+      "question": "هل يوجد مرتبة شرف؟",
+      "answer": "نعم، يتم منح مرتبة الشرف وفقًا لسياسة الجامعة ومعاييرها الأكاديمية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مرتبة شرف؟\nج: نعم، يتم منح مرتبة الشرف وفقًا لسياسة الجامعة ومعاييرها الأكاديمية.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 123,
+      "question": "ما نظام المعدل التراكمي؟",
+      "answer": "يبدأ احتساب المعدل التراكمي اعتبارًا من السنة الثانية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما نظام المعدل التراكمي؟\nج: يبدأ احتساب المعدل التراكمي اعتبارًا من السنة الثانية.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 124,
+      "question": "كيف أحسب معدلي؟",
+      "answer": "يتم احتساب المعدل بناءً على مجموع الدرجات التي حصلت عليها مقسومًا على عدد المقررات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف أحسب معدلي؟\nج: يتم احتساب المعدل بناءً على مجموع الدرجات التي حصلت عليها مقسومًا على عدد المقررات.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 125,
+      "question": "هل يوجد إنذار أكاديمي؟",
+      "answer": "نعم، يوجد نظام للإنذارات الأكاديمية، ويتم توجيه عدة إنذارات قبل الوصول إلى مرحلة التوقيف أو الفصل.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد إنذار أكاديمي؟\nج: نعم، يوجد نظام للإنذارات الأكاديمية، ويتم توجيه عدة إنذارات قبل الوصول إلى مرحلة التوقيف أو الفصل.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 126,
+      "question": "متى يستلزم فصل الطالب؟",
+      "answer": "يتم فصل الطالب في حال مخالفة قوانين وأنظمة الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: متى يستلزم فصل الطالب؟\nج: يتم فصل الطالب في حال مخالفة قوانين وأنظمة الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 127,
+      "question": "هل يوجد لجنة تظلمات؟",
+      "answer": "نعم، توجد لجنة مختصة بالنظر في تظلمات الطلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد لجنة تظلمات؟\nج: نعم، توجد لجنة مختصة بالنظر في تظلمات الطلاب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 128,
+      "question": "كيف أقدم تظلم؟",
+      "answer": "يمكن تقديم التظلم عبر تعبئة استمارة مخصصة وتقديمها إلى شؤون الطلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف أقدم تظلم؟\nج: يمكن تقديم التظلم عبر تعبئة استمارة مخصصة وتقديمها إلى شؤون الطلاب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 129,
+      "question": "هل يمكن إعادة مقرر؟",
+      "answer": "إعادة المقرر تعتمد على قرار اللجنة المختصة، وذلك وفقًا لحالة الطالب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن إعادة مقرر؟\nج: إعادة المقرر تعتمد على قرار اللجنة المختصة، وذلك وفقًا لحالة الطالب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 130,
+      "question": "ما سياسة الغياب؟",
+      "answer": "إذا تجاوز غياب الطالب 4 محاضرات في مقرر واحد، يُحرم من المادة. وفي حال وجود عذر طبي، يتم تحويل الحالة إلى مجلس القسم للنظر فيها واتخاذ القرار المناسب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما سياسة الغياب؟\nج: إذا تجاوز غياب الطالب 4 محاضرات في مقرر واحد، يُحرم من المادة. وفي حال وجود عذر طبي، يتم تحويل الحالة إلى مجلس القسم للنظر فيها واتخاذ القرار المناسب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 131,
+      "question": "كم نسبة الحضور المطلوبة؟",
+      "answer": "نسبة الحضور المطلوبة هي 75% كحد أدنى.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كم نسبة الحضور المطلوبة؟\nج: نسبة الحضور المطلوبة هي 75% كحد أدنى.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 132,
+      "question": "هل يوجد تسجيل مبكر؟",
+      "answer": "نعم، يتوفر نظام التسجيل المبكر للطلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تسجيل مبكر؟\nج: نعم، يتوفر نظام التسجيل المبكر للطلاب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 133,
+      "question": "هل يوجد نظام إلكتروني للدرجات؟",
+      "answer": "نعم، تتوفر منصة إلكترونية تتيح للطلاب متابعة درجاتهم.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نظام إلكتروني للدرجات؟\nج: نعم، تتوفر منصة إلكترونية تتيح للطلاب متابعة درجاتهم.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 134,
+      "question": "هل يوجد تطبيق للجامعة؟",
+      "answer": "حاليًا التطبيق قيد الإنشاء وسيتم إطلاقه لاحقًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تطبيق للجامعة؟\nج: حاليًا التطبيق قيد الإنشاء وسيتم إطلاقه لاحقًا.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 135,
+      "question": "هل يوجد دعم فني للطلاب؟",
+      "answer": "نعم، يتوفر دعم فني لمساعدة الطلاب في حل المشكلات التقنية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دعم فني للطلاب؟\nج: نعم، يتوفر دعم فني لمساعدة الطلاب في حل المشكلات التقنية.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 136,
+      "question": "كيف أتواصل مع شؤون الطلاب؟",
+      "answer": "يمكن التواصل مع شؤون الطلاب عبر الحضور المباشر، أو البريد الإلكتروني، أو من خلال تطبيق واتساب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف أتواصل مع شؤون الطلاب؟\nج: يمكن التواصل مع شؤون الطلاب عبر الحضور المباشر، أو البريد الإلكتروني، أو من خلال تطبيق واتساب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 137,
+      "question": "هل يوجد مرشد أكاديمي؟",
+      "answer": "نعم، يتم توفير مرشد أكاديمي لمساعدة الطلاب في مسيرتهم الدراسية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مرشد أكاديمي؟\nج: نعم، يتم توفير مرشد أكاديمي لمساعدة الطلاب في مسيرتهم الدراسية.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 138,
+      "question": "كيف أغير تخصصي؟",
+      "answer": "يتم تغيير التخصص عبر المقاصة الداخلية، وذلك بالتنسيق مع شؤون الطلاب والقسم المعني.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف أغير تخصصي؟\nج: يتم تغيير التخصص عبر المقاصة الداخلية، وذلك بالتنسيق مع شؤون الطلاب والقسم المعني.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 139,
+      "question": "هل يوجد مقابلة أكاديمية؟",
+      "answer": "لا، لا توجد مقابلة أكاديمية حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مقابلة أكاديمية؟\nج: لا، لا توجد مقابلة أكاديمية حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 140,
+      "question": "هل يوجد اختبار قدرات؟",
+      "answer": "لا، لا يُشترط اختبار قدرات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد اختبار قدرات؟\nج: لا، لا يُشترط اختبار قدرات.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 141,
+      "question": "هل يوجد اختبار تحصيلي؟",
+      "answer": "لا يوجد اختبار تحصيلي في الوقت الحالي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد اختبار تحصيلي؟\nج: لا يوجد اختبار تحصيلي في الوقت الحالي.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 142,
+      "question": "هل يقبل شهادة خارجية؟",
+      "answer": "لا يتم قبول الشهادات الخارجية للدراسة، ويُشترط الحصول على شهادة الثانوية العامة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يقبل شهادة خارجية؟\nج: لا يتم قبول الشهادات الخارجية للدراسة، ويُشترط الحصول على شهادة الثانوية العامة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 143,
+      "question": "هل يلزم توثيق الشهادة؟",
+      "answer": "نعم، يجب توثيق شهادة الثانوية العامة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يلزم توثيق الشهادة؟\nج: نعم، يجب توثيق شهادة الثانوية العامة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 144,
+      "question": "هل يقبل خريجي المعاهد؟",
+      "answer": "لا، لا يتم قبول خريجي المعاهد.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يقبل خريجي المعاهد؟\nج: لا، لا يتم قبول خريجي المعاهد.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 145,
+      "question": "هل يوجد قبول فوري؟",
+      "answer": "نعم، يتوفر القبول الفوري في حال استيفاء جميع الشروط المطلوبة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد قبول فوري؟\nج: نعم، يتوفر القبول الفوري في حال استيفاء جميع الشروط المطلوبة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 146,
+      "question": "هل يوجد قائمة انتظار؟",
+      "answer": "نعم، يتم إدراج المتقدمين في قائمة انتظار عند اكتمال الطاقة الاستيعابية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد قائمة انتظار؟\nج: نعم، يتم إدراج المتقدمين في قائمة انتظار عند اكتمال الطاقة الاستيعابية.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 147,
+      "question": "هل يمكن الدفع أونلاين؟",
+      "answer": "نعم، يمكن سداد الرسوم إلكترونيًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن الدفع أونلاين؟\nج: نعم، يمكن سداد الرسوم إلكترونيًا.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 148,
+      "question": "هل يوجد بوابة دفع إلكتروني؟",
+      "answer": "نعم، تتوفر بوابة دفع إلكتروني عبر المحافظ الإلكترونية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد بوابة دفع إلكتروني؟\nج: نعم، تتوفر بوابة دفع إلكتروني عبر المحافظ الإلكترونية.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 149,
+      "question": "هل يوجد إشعار بالقبول عبر الرسائل؟",
+      "answer": "نعم، يتم إرسال إشعارات القبول عبر الرسائل.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد إشعار بالقبول عبر الرسائل؟\nج: نعم، يتم إرسال إشعارات القبول عبر الرسائل.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 150,
+      "question": "هل يوجد بريد جامعي؟",
+      "answer": "عم، يتم توفير بريد جامعي رسمي لكل طالب، ويُستخدم للتواصل الأكاديمي واستلام الإشعارات والرسائل المهمة من إدارة الجامعة وأعضاء هيئة التدريس.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد بريد جامعي؟\nج: عم، يتم توفير بريد جامعي رسمي لكل طالب، ويُستخدم للتواصل الأكاديمي واستلام الإشعارات والرسائل المهمة من إدارة الجامعة وأعضاء هيئة التدريس.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 151,
+      "question": "هل يوجد نظام LMS؟",
+      "answer": "النظام قيد الإنشاء حاليًا، وسيتم إطلاقه قريبًا لتمكين الطلاب من متابعة المحاضرات والواجبات والمواد الدراسية بشكل إلكتروني.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نظام LMS؟\nج: النظام قيد الإنشاء حاليًا، وسيتم إطلاقه قريبًا لتمكين الطلاب من متابعة المحاضرات والواجبات والمواد الدراسية بشكل إلكتروني.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 152,
+      "question": "هل يوجد دليل تسجيل؟",
+      "answer": "نعم، يتوفر دليل تسجيل يوضح خطوات تسجيل المقررات والإجراءات الأكاديمية بشكل مفصل لمساعدة الطلاب في إتمام العملية بسهولة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دليل تسجيل؟\nج: نعم، يتوفر دليل تسجيل يوضح خطوات تسجيل المقررات والإجراءات الأكاديمية بشكل مفصل لمساعدة الطلاب في إتمام العملية بسهولة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 153,
+      "question": "هل يوجد أنشطة طلابية؟",
+      "answer": "نعم، توفر الجامعة مجموعة متنوعة من الأنشطة الطلابية التي تهدف إلى تنمية مهارات الطلاب وتعزيز مشاركتهم في الحياة الجامعية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد أنشطة طلابية؟\nج: نعم، توفر الجامعة مجموعة متنوعة من الأنشطة الطلابية التي تهدف إلى تنمية مهارات الطلاب وتعزيز مشاركتهم في الحياة الجامعية.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 154,
+      "question": "ما هي الأنشطة المتاحة للطلاب؟",
+      "answer": "تتنوع الأنشطة بين أنشطة أكاديمية مثل الندوات وورش العمل، وأنشطة ترفيهية وثقافية ورياضية، بما يساهم في تطوير شخصية الطالب بشكل متكامل.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما هي الأنشطة المتاحة للطلاب؟\nج: تتنوع الأنشطة بين أنشطة أكاديمية مثل الندوات وورش العمل، وأنشطة ترفيهية وثقافية ورياضية، بما يساهم في تطوير شخصية الطالب بشكل متكامل.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 155,
+      "question": "هل يوجد أندية طلابية؟",
+      "answer": "نعم، توجد أندية طلابية في مجالات متعددة تتيح للطلاب فرصة المشاركة والتفاعل حسب اهتماماتهم.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد أندية طلابية؟\nج: نعم، توجد أندية طلابية في مجالات متعددة تتيح للطلاب فرصة المشاركة والتفاعل حسب اهتماماتهم.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 156,
+      "question": "كيف أنضم إلى نادي طلابي؟",
+      "answer": "يمكنك الانضمام إلى الأندية الطلابية من خلال إدارة الأنشطة، حيث يتم التسجيل وفق الإجراءات المعتمدة لديهم.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف أنضم إلى نادي طلابي؟\nج: يمكنك الانضمام إلى الأندية الطلابية من خلال إدارة الأنشطة، حيث يتم التسجيل وفق الإجراءات المعتمدة لديهم.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 157,
+      "question": "هل يوجد نادي برمجة؟",
+      "answer": "نادي البرمجة قيد الإنشاء حاليًا، ومن المتوقع إطلاقه قريبًا لدعم المهتمين بالمجال التقني.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نادي برمجة؟\nج: نادي البرمجة قيد الإنشاء حاليًا، ومن المتوقع إطلاقه قريبًا لدعم المهتمين بالمجال التقني.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 158,
+      "question": "هل يوجد نادي إعلام؟",
+      "answer": "لا، لا يوجد نادي إعلام في الوقت الحالي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نادي إعلام؟\nج: لا، لا يوجد نادي إعلام في الوقت الحالي.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 159,
+      "question": "هل يوجد نادي رياضي؟",
+      "answer": "نعم، يوجد نادي رياضي يتيح للطلاب ممارسة مختلف الأنشطة الرياضية والمشاركة في الفعاليات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نادي رياضي؟\nج: نعم، يوجد نادي رياضي يتيح للطلاب ممارسة مختلف الأنشطة الرياضية والمشاركة في الفعاليات.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 160,
+      "question": "هل يوجد نادي ثقافي؟",
+      "answer": "نعم، يوجد نادي ثقافي يهتم بتنظيم الفعاليات الثقافية والأنشطة الفكرية للطلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نادي ثقافي؟\nج: نعم، يوجد نادي ثقافي يهتم بتنظيم الفعاليات الثقافية والأنشطة الفكرية للطلاب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 161,
+      "question": "هل يوجد نادي تطوعي؟",
+      "answer": "نعم، يوجد نادي تطوعي يتيح للطلاب المشاركة في الأعمال التطوعية وخدمة المجتمع.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نادي تطوعي؟\nج: نعم، يوجد نادي تطوعي يتيح للطلاب المشاركة في الأعمال التطوعية وخدمة المجتمع.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 162,
+      "question": "هل يوجد مسابقات طلابية؟",
+      "answer": "نعم، تُنظم الجامعة مسابقات طلابية في مجالات مختلفة لتحفيز الإبداع والمنافسة بين الطلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مسابقات طلابية؟\nج: نعم، تُنظم الجامعة مسابقات طلابية في مجالات مختلفة لتحفيز الإبداع والمنافسة بين الطلاب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 163,
+      "question": "هل يوجد فعاليات سنوية؟",
+      "answer": "نعم، تُقام فعاليات سنوية متنوعة تشمل أنشطة أكاديمية وثقافية وترفيهية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد فعاليات سنوية؟\nج: نعم، تُقام فعاليات سنوية متنوعة تشمل أنشطة أكاديمية وثقافية وترفيهية.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 164,
+      "question": "هل يوجد يوم مفتوح؟",
+      "answer": "لا، لا يتم تنظيم يوم مفتوح حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد يوم مفتوح؟\nج: لا، لا يتم تنظيم يوم مفتوح حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 165,
+      "question": "هل يوجد أسبوع ثقافي؟",
+      "answer": "لا يوجد أسبوع ثقافي بشكل رسمي، ولكن يتم تنظيم دورات وندوات ثقافية بشكل متفرق خلال العام.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد أسبوع ثقافي؟\nج: لا يوجد أسبوع ثقافي بشكل رسمي، ولكن يتم تنظيم دورات وندوات ثقافية بشكل متفرق خلال العام.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 166,
+      "question": "هل يوجد مؤتمر علمي؟",
+      "answer": "نعم، تنظم الجامعة مؤتمرات علمية تهدف إلى تعزيز البحث العلمي وتبادل المعرفة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مؤتمر علمي؟\nج: نعم، تنظم الجامعة مؤتمرات علمية تهدف إلى تعزيز البحث العلمي وتبادل المعرفة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 167,
+      "question": "هل يمكنني المشاركة في مؤتمر؟",
+      "answer": "نعم، يمكن للطلاب المشاركة في المؤتمرات سواء بالحضور أو بتقديم أبحاث، وفق الشروط المحددة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكنني المشاركة في مؤتمر؟\nج: نعم، يمكن للطلاب المشاركة في المؤتمرات سواء بالحضور أو بتقديم أبحاث، وفق الشروط المحددة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 168,
+      "question": "هل يوجد رحلات علمية؟",
+      "answer": "نعم، يتم تنظيم رحلات علمية لربط الجانب النظري بالتطبيق العملي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد رحلات علمية؟\nج: نعم، يتم تنظيم رحلات علمية لربط الجانب النظري بالتطبيق العملي.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 169,
+      "question": "هل يوجد مسابقات برمجة؟",
+      "answer": "نعم، توجد مسابقات برمجة، لكنها غالبًا تكون خارجية بالتعاون مع جهات أخرى.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مسابقات برمجة؟\nج: نعم، توجد مسابقات برمجة، لكنها غالبًا تكون خارجية بالتعاون مع جهات أخرى.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 170,
+      "question": "هل يوجد مسابقات رياضية؟",
+      "answer": "نعم، يتم تنظيم مسابقات رياضية داخل الجامعة وخارجها.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مسابقات رياضية؟\nج: نعم، يتم تنظيم مسابقات رياضية داخل الجامعة وخارجها.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 171,
+      "question": "هل يوجد دوري كرة قدم؟",
+      "answer": "نعم، يوجد دوري كرة قدم داخلي بين الطلاب، بالإضافة إلى مشاركات خارجية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دوري كرة قدم؟\nج: نعم، يوجد دوري كرة قدم داخلي بين الطلاب، بالإضافة إلى مشاركات خارجية.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 172,
+      "question": "هل يوجد صالة رياضية؟",
+      "answer": "نعم، تتوفر صالة رياضية مجهزة لممارسة الأنشطة البدنية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد صالة رياضية؟\nج: نعم، تتوفر صالة رياضية مجهزة لممارسة الأنشطة البدنية.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 173,
+      "question": "هل يوجد مسبح؟",
+      "answer": "لا، لا يتوفر مسبح في الوقت الحالي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مسبح؟\nج: لا، لا يتوفر مسبح في الوقت الحالي.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 174,
+      "question": "هل يوجد مكتبة جامعية؟",
+      "answer": "نعم، توجد مكتبة جامعية توفر مصادر علمية متنوعة لدعم العملية التعليمية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مكتبة جامعية؟\nج: نعم، توجد مكتبة جامعية توفر مصادر علمية متنوعة لدعم العملية التعليمية.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 175,
+      "question": "ما أوقات عمل المكتبة؟",
+      "answer": "تعمل المكتبة يوميًا من الساعة 8 صباحًا حتى 2 ظهرًا، ويوم الخميس من الساعة 8 صباحًا حتى 12 ظهرًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما أوقات عمل المكتبة؟\nج: تعمل المكتبة يوميًا من الساعة 8 صباحًا حتى 2 ظهرًا، ويوم الخميس من الساعة 8 صباحًا حتى 12 ظهرًا.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 176,
+      "question": "هل يوجد استعارة كتب؟",
+      "answer": "نعم، يمكن للطلاب استعارة الكتب وفق النظام المعتمد في المكتبة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد استعارة كتب؟\nج: نعم، يمكن للطلاب استعارة الكتب وفق النظام المعتمد في المكتبة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 177,
+      "question": "هل يوجد مكتبة إلكترونية؟",
+      "answer": "نعم، تتوفر مكتبة إلكترونية تتيح الوصول إلى مصادر رقمية متنوعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مكتبة إلكترونية؟\nج: نعم، تتوفر مكتبة إلكترونية تتيح الوصول إلى مصادر رقمية متنوعة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 178,
+      "question": "هل يوجد قاعات مذاكرة؟",
+      "answer": "نعم، توجد قاعات مخصصة للمذاكرة توفر بيئة مناسبة للدراسة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد قاعات مذاكرة؟\nج: نعم، توجد قاعات مخصصة للمذاكرة توفر بيئة مناسبة للدراسة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 179,
+      "question": "هل يوجد إنترنت مجاني؟",
+      "answer": "نعم، توفر الجامعة خدمة الإنترنت للطلاب داخل الحرم الجامعي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد إنترنت مجاني؟\nج: نعم، توفر الجامعة خدمة الإنترنت للطلاب داخل الحرم الجامعي.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 180,
+      "question": "هل يوجد واي فاي في الحرم؟",
+      "answer": "نعم، يتوفر اتصال واي فاي في مرافق الحرم الجامعي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد واي فاي في الحرم؟\nج: نعم، يتوفر اتصال واي فاي في مرافق الحرم الجامعي.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 181,
+      "question": "هل يوجد كافتيريا؟",
+      "answer": "نعم، توجد كافتيريا تقدم وجبات ومشروبات متنوعة للطلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد كافتيريا؟\nج: نعم، توجد كافتيريا تقدم وجبات ومشروبات متنوعة للطلاب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 182,
+      "question": "هل يوجد مطعم جامعي؟",
+      "answer": "نعم، يتوفر مطعم جامعي لتقديم الوجبات داخل الحرم.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مطعم جامعي؟\nج: نعم، يتوفر مطعم جامعي لتقديم الوجبات داخل الحرم.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 183,
+      "question": "هل يوجد مصلى؟",
+      "answer": "نعم، يوجد مصلى مخصص لأداء الصلوات داخل الحرم الجامعي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مصلى؟\nج: نعم، يوجد مصلى مخصص لأداء الصلوات داخل الحرم الجامعي.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 184,
+      "question": "هل يوجد مواقف سيارات؟",
+      "answer": "نعم، تتوفر مواقف سيارات مخصصة للطلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مواقف سيارات؟\nج: نعم، تتوفر مواقف سيارات مخصصة للطلاب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 185,
+      "question": "هل يوجد مواصلات جامعية؟",
+      "answer": "نعم، توفر الجامعة وسائل نقل لتسهيل وصول الطلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مواصلات جامعية؟\nج: نعم، توفر الجامعة وسائل نقل لتسهيل وصول الطلاب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 186,
+      "question": "هل يوجد سكن للطلاب؟",
+      "answer": "لا، لا يتوفر سكن للطلاب حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد سكن للطلاب؟\nج: لا، لا يتوفر سكن للطلاب حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 187,
+      "question": "هل يوجد سكن للطالبات؟",
+      "answer": "لا، لا يتوفر سكن للطالبات .",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد سكن للطالبات؟\nج: لا، لا يتوفر سكن للطالبات .",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 188,
+      "question": "هل يوجد أمن داخل الحرم؟",
+      "answer": "نعم، يوجد نظام أمني داخل الحرم لضمان سلامة الجميع.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد أمن داخل الحرم؟\nج: نعم، يوجد نظام أمني داخل الحرم لضمان سلامة الجميع.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 189,
+      "question": "هل يوجد عيادة طبية؟",
+      "answer": "نعم، توجد عيادة طبية لتقديم الخدمات الصحية الأساسية للطلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد عيادة طبية؟\nج: نعم، توجد عيادة طبية لتقديم الخدمات الصحية الأساسية للطلاب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 190,
+      "question": "هل يوجد إرشاد مهني؟",
+      "answer": "نعم، توفر الجامعة خدمات الإرشاد المهني لمساعدة الطلاب في التخطيط لمستقبلهم الوظيفي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد إرشاد مهني؟\nج: نعم، توفر الجامعة خدمات الإرشاد المهني لمساعدة الطلاب في التخطيط لمستقبلهم الوظيفي.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 191,
+      "question": "هل يوجد تدريب صيفي؟",
+      "answer": "لا، لا يتوفر برنامج تدريب صيفي حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تدريب صيفي؟\nج: لا، لا يتوفر برنامج تدريب صيفي حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 192,
+      "question": "هل يوجد فرص تطوع؟",
+      "answer": "نعم، توجد فرص تطوعية تتيح للطلاب المشاركة في خدمة المجتمع واكتساب الخبرات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد فرص تطوع؟\nج: نعم، توجد فرص تطوعية تتيح للطلاب المشاركة في خدمة المجتمع واكتساب الخبرات.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 193,
+      "question": "هل يوجد برامج تبادل طلابي؟",
+      "answer": "حاليًا لا توجد برامج تبادل طلابي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد برامج تبادل طلابي؟\nج: حاليًا لا توجد برامج تبادل طلابي.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 194,
+      "question": "هل يمكن الدراسة في الخارج؟",
+      "answer": "لا، لا تتيح الجامعة حاليًا إمكانية الدراسة في الخارج ضمن برامجها.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن الدراسة في الخارج؟\nج: لا، لا تتيح الجامعة حاليًا إمكانية الدراسة في الخارج ضمن برامجها.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 195,
+      "question": "هل يوجد دعم للطلاب الجدد؟",
+      "answer": "نعم، يتم تقديم دعم وإرشاد خاص للطلاب الجدد لمساعدتهم على التكيف مع البيئة الجامعية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دعم للطلاب الجدد؟\nج: نعم، يتم تقديم دعم وإرشاد خاص للطلاب الجدد لمساعدتهم على التكيف مع البيئة الجامعية.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 196,
+      "question": "هل يوجد يوم تعريفي؟",
+      "answer": "لا، لا يتم تنظيم يوم تعريفي حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد يوم تعريفي؟\nج: لا، لا يتم تنظيم يوم تعريفي حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 197,
+      "question": "هل يوجد استقبال للطلاب المستجدين؟",
+      "answer": "نعم، يتم استقبال الطلاب المستجدين وتقديم التوجيهات الأساسية لهم عند بداية الدراسة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد استقبال للطلاب المستجدين؟\nج: نعم، يتم استقبال الطلاب المستجدين وتقديم التوجيهات الأساسية لهم عند بداية الدراسة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 198,
+      "question": "هل يوجد بطاقة طالب؟",
+      "answer": "نعم، يتم إصدار بطاقة جامعية لكل طالب لاستخدامها في الخدمات المختلفة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد بطاقة طالب؟\nج: نعم، يتم إصدار بطاقة جامعية لكل طالب لاستخدامها في الخدمات المختلفة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 199,
+      "question": "هل يوجد خصومات للطلاب؟",
+      "answer": "نعم، تقدم بعض الخصومات للطلاب على خدمات ومنتجات معينة وفق الشراكات المتاحة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد خصومات للطلاب؟\nج: نعم، تقدم بعض الخصومات للطلاب على خدمات ومنتجات معينة وفق الشراكات المتاحة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 200,
+      "question": "هل يوجد متجر جامعي؟",
+      "answer": "لا، لا يوجد متجر جامعي في الوقت الحالي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد متجر جامعي؟\nج: لا، لا يوجد متجر جامعي في الوقت الحالي.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 201,
+      "question": "هل يوجد دعم لذوي الاحتياجات الخاصة؟",
+      "answer": "نعم، توفر الجامعة دعمًا مخصصًا لذوي الاحتياجات الخاصة، بهدف تسهيل تجربتهم التعليمية وتوفير بيئة مناسبة لهم.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دعم لذوي الاحتياجات الخاصة؟\nج: نعم، توفر الجامعة دعمًا مخصصًا لذوي الاحتياجات الخاصة، بهدف تسهيل تجربتهم التعليمية وتوفير بيئة مناسبة لهم.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 202,
+      "question": "هل يوجد مصاعد؟",
+      "answer": "نعم، المباني مجهزة بمصاعد لتسهيل التنقل داخل الحرم الجامعي، خاصةً للطلاب الذين يحتاجون لذلك.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مصاعد؟\nج: نعم، المباني مجهزة بمصاعد لتسهيل التنقل داخل الحرم الجامعي، خاصةً للطلاب الذين يحتاجون لذلك.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 203,
+      "question": "هل يوجد مرافق مهيأة؟",
+      "answer": "بالتأكيد، تمتلك الجامعة بنية تحتية جيدة تشمل مرافق مهيأة لتناسب مختلف احتياجات الطلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مرافق مهيأة؟\nج: بالتأكيد، تمتلك الجامعة بنية تحتية جيدة تشمل مرافق مهيأة لتناسب مختلف احتياجات الطلاب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 204,
+      "question": "هل يوجد منصة تعليم إلكتروني؟",
+      "answer": "المنصة حاليًا قيد الإنشاء، وسيتم إطلاقها قريبًا لتوفير تجربة تعليمية رقمية متكاملة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد منصة تعليم إلكتروني؟\nج: المنصة حاليًا قيد الإنشاء، وسيتم إطلاقها قريبًا لتوفير تجربة تعليمية رقمية متكاملة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 205,
+      "question": "هل يوجد تسجيل محاضرات؟",
+      "answer": "ميزة تسجيل المحاضرات قيد التطوير، ومن المتوقع توفرها ضمن النظام الإلكتروني القادم.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تسجيل محاضرات؟\nج: ميزة تسجيل المحاضرات قيد التطوير، ومن المتوقع توفرها ضمن النظام الإلكتروني القادم.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 206,
+      "question": "هل يوجد بث مباشر للمحاضرات؟",
+      "answer": "هذا الخيار لا يزال قيد الدراسة، وقد يتم اعتماده مستقبلًا ضمن خطط التطوير.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد بث مباشر للمحاضرات؟\nج: هذا الخيار لا يزال قيد الدراسة، وقد يتم اعتماده مستقبلًا ضمن خطط التطوير.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 207,
+      "question": "هل يوجد نظام حضور إلكتروني؟",
+      "answer": "نعم، يوجد نظام حضور إلكتروني حاليًا، ويتم العمل على تطويره ليصبح أكثر دقة وكفاءة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نظام حضور إلكتروني؟\nج: نعم، يوجد نظام حضور إلكتروني حاليًا، ويتم العمل على تطويره ليصبح أكثر دقة وكفاءة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 208,
+      "question": "هل يوجد مجموعات دراسية؟",
+      "answer": "نعم، يمكنك الانضمام إلى مجموعات دراسية تساعدك على المذاكرة الجماعية وتبادل المعرفة مع زملائك.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مجموعات دراسية؟\nج: نعم، يمكنك الانضمام إلى مجموعات دراسية تساعدك على المذاكرة الجماعية وتبادل المعرفة مع زملائك.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 209,
+      "question": "هل يوجد جوائز للمتفوقين؟",
+      "answer": "نعم، يتم تكريم الطلاب المتفوقين من خلال جوائز تقديرية تشجيعًا لهم على الاستمرار في التميز.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد جوائز للمتفوقين؟\nج: نعم، يتم تكريم الطلاب المتفوقين من خلال جوائز تقديرية تشجيعًا لهم على الاستمرار في التميز.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 210,
+      "question": "هل يوجد حفل تخرج؟",
+      "answer": "نعم، يتم تنظيم حفل تخرج للاحتفال بإنجازات الطلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد حفل تخرج؟\nج: نعم، يتم تنظيم حفل تخرج للاحتفال بإنجازات الطلاب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 211,
+      "question": "متى يقام حفل التخرج؟",
+      "answer": "عادةً يُقام حفل التخرج بعد إعلان النتائج النهائية واعتمادها.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: متى يقام حفل التخرج؟\nج: عادةً يُقام حفل التخرج بعد إعلان النتائج النهائية واعتمادها.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 212,
+      "question": "هل يوجد زي موحد؟",
+      "answer": "لا، لا يُشترط وجود زي موحد للطلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد زي موحد؟\nج: لا، لا يُشترط وجود زي موحد للطلاب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 213,
+      "question": "هل يوجد تأمين صحي للطلاب؟",
+      "answer": "حاليًا لا يتوفر تأمين صحي للطلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تأمين صحي للطلاب؟\nج: حاليًا لا يتوفر تأمين صحي للطلاب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 214,
+      "question": "كم رسوم الدراسة؟",
+      "answer": "تختلف الرسوم حسب التخصص، حيث لكل برنامج دراسي رسومه الخاصة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كم رسوم الدراسة؟\nج: تختلف الرسوم حسب التخصص، حيث لكل برنامج دراسي رسومه الخاصة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 215,
+      "question": "هل تختلف الرسوم حسب الكلية؟",
+      "answer": "نعم، تختلف الرسوم من كلية إلى أخرى وفقًا لطبيعة التخصص.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل تختلف الرسوم حسب الكلية؟\nج: نعم، تختلف الرسوم من كلية إلى أخرى وفقًا لطبيعة التخصص.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 216,
+      "question": "هل الرسوم سنوية أم فصلية؟",
+      "answer": "الرسوم مرنة، حيث يمكن دفعها سنويًا أو فصليًا، كما تتوفر خيارات للدفع الشهري.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل الرسوم سنوية أم فصلية؟\nج: الرسوم مرنة، حيث يمكن دفعها سنويًا أو فصليًا، كما تتوفر خيارات للدفع الشهري.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 217,
+      "question": "هل يوجد رسوم تسجيل؟",
+      "answer": "نعم، توجد رسوم خاصة بعملية التسجيل.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد رسوم تسجيل؟\nج: نعم، توجد رسوم خاصة بعملية التسجيل.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 218,
+      "question": "هل يوجد غرامات غياب؟",
+      "answer": "لا، لا توجد غرامات مالية على الغياب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد غرامات غياب؟\nج: لا، لا توجد غرامات مالية على الغياب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 219,
+      "question": "هل يمكن تقسيط الرسوم؟",
+      "answer": "نعم، يمكن تقسيط الرسوم لتسهيل الدفع على الطلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن تقسيط الرسوم؟\nج: نعم، يمكن تقسيط الرسوم لتسهيل الدفع على الطلاب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 220,
+      "question": "كم دفعات التقسيط؟",
+      "answer": "عادةً يتم تقسيم الرسوم إلى ثماني دفعات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كم دفعات التقسيط؟\nج: عادةً يتم تقسيم الرسوم إلى ثماني دفعات.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 221,
+      "question": "هل يوجد خصم للدفع المبكر؟",
+      "answer": "نعم، يتوفر خصم للطلاب الذين يقومون بالدفع المبكر.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد خصم للدفع المبكر؟\nج: نعم، يتوفر خصم للطلاب الذين يقومون بالدفع المبكر.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 222,
+      "question": "هل يوجد خصم للأشقاء؟",
+      "answer": "نعم، يوجد خصم مخصص للأشقاء المسجلين في الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد خصم للأشقاء؟\nج: نعم، يوجد خصم مخصص للأشقاء المسجلين في الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 223,
+      "question": "هل يوجد خصم للمتفوقين؟",
+      "answer": "نعم، يُمنح خصم للطلاب المتفوقين، خاصةً إذا كانوا من أوائل الجمهورية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد خصم للمتفوقين؟\nج: نعم، يُمنح خصم للطلاب المتفوقين، خاصةً إذا كانوا من أوائل الجمهورية.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 224,
+      "question": "هل يوجد منح دراسية؟",
+      "answer": "نعم، تتوفر منح دراسية وفق شروط ومعايير محددة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد منح دراسية؟\nج: نعم، تتوفر منح دراسية وفق شروط ومعايير محددة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 225,
+      "question": "هل يوجد قروض طلابية؟",
+      "answer": "لا، لا تتوفر قروض طلابية حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد قروض طلابية؟\nج: لا، لا تتوفر قروض طلابية حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 226,
+      "question": "هل يوجد إعفاء من الرسوم؟",
+      "answer": "يمكن النظر في الإعفاء من الرسوم حسب الحالة، ويتم ذلك بالتنسيق مع رئاسة الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد إعفاء من الرسوم؟\nج: يمكن النظر في الإعفاء من الرسوم حسب الحالة، ويتم ذلك بالتنسيق مع رئاسة الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 227,
+      "question": "هل يوجد دعم للحالات الخاصة؟",
+      "answer": "نعم، يتم تقديم دعم للحالات الخاصة وفقًا للظروف والمعايير المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دعم للحالات الخاصة؟\nج: نعم، يتم تقديم دعم للحالات الخاصة وفقًا للظروف والمعايير المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 228,
+      "question": "هل يوجد دعم لأبناء الشهداء؟",
+      "answer": "نعم، توفر الجامعة دعمًا خاصًا لأبناء الشهداء.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دعم لأبناء الشهداء؟\nج: نعم، توفر الجامعة دعمًا خاصًا لأبناء الشهداء.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 229,
+      "question": "هل يوجد دعم للمتفوقين؟",
+      "answer": "نعم، يحصل الطلاب المتفوقون على إعفاءات أو تسهيلات في الرسوم.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دعم للمتفوقين؟\nج: نعم، يحصل الطلاب المتفوقون على إعفاءات أو تسهيلات في الرسوم.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 230,
+      "question": "هل يمكن استرداد الرسوم؟",
+      "answer": "عادةً لا يمكن استرداد الرسوم، إلا في حالات خاصة مثل الانسحاب خلال فترة التسجيل.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن استرداد الرسوم؟\nج: عادةً لا يمكن استرداد الرسوم، إلا في حالات خاصة مثل الانسحاب خلال فترة التسجيل.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 231,
+      "question": "هل يوجد رسوم مشاريع تخرج؟",
+      "answer": "نعم، قد تُفرض رسوم على مشاريع التخرج حسب التخصص.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد رسوم مشاريع تخرج؟\nج: نعم، قد تُفرض رسوم على مشاريع التخرج حسب التخصص.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 232,
+      "question": "هل يوجد رسوم تدريب؟",
+      "answer": "لا، لا توجد رسوم مخصصة للتدريب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد رسوم تدريب؟\nج: لا، لا توجد رسوم مخصصة للتدريب.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 233,
+      "question": "هل يوجد رسوم تخرج؟",
+      "answer": "لا، لا توجد رسوم للتخرج.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد رسوم تخرج؟\nج: لا، لا توجد رسوم للتخرج.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 234,
+      "question": "هل يوجد رسوم شهادة؟",
+      "answer": "نعم، توجد رسوم لإصدار الشهادة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد رسوم شهادة؟\nج: نعم، توجد رسوم لإصدار الشهادة.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 235,
+      "question": "هل يوجد رسوم إعادة اختبار؟",
+      "answer": "نعم، توجد رسوم في حال إعادة الاختبار.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد رسوم إعادة اختبار؟\nج: نعم، توجد رسوم في حال إعادة الاختبار.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 236,
+      "question": "هل يوجد رسوم إعادة مقرر؟",
+      "answer": "نعم، يتم فرض رسوم عند إعادة المقرر.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد رسوم إعادة مقرر؟\nج: نعم، يتم فرض رسوم عند إعادة المقرر.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 237,
+      "question": "هل يوجد رسوم كشف درجات؟",
+      "answer": "لا، لا توجد رسوم لاستخراج كشف الدرجات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد رسوم كشف درجات؟\nج: لا، لا توجد رسوم لاستخراج كشف الدرجات.",
+        "importedAt": "2026-03-31T21:11:39.767Z"
+      }
+    },
+    {
+      "id": 238,
+      "question": "هل يوجد رسوم إفادة قيد؟",
+      "answer": "نعم، توجد رسوم لإصدار إفادة قيد.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد رسوم إفادة قيد؟\nج: نعم، توجد رسوم لإصدار إفادة قيد.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 239,
+      "question": "هل يوجد رسوم بطاقة بدل فاقد؟",
+      "answer": "نعم، يتم دفع رسوم لاستخراج بطاقة بدل فاقد.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد رسوم بطاقة بدل فاقد؟\nج: نعم، يتم دفع رسوم لاستخراج بطاقة بدل فاقد.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 240,
+      "question": "هل يوجد رسوم مواصلات؟",
+      "answer": "نعم، توجد رسوم خاصة بخدمة المواصلات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد رسوم مواصلات؟\nج: نعم، توجد رسوم خاصة بخدمة المواصلات.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 241,
+      "question": "هل يوجد رسوم أنشطة؟",
+      "answer": "نعم، قد تُفرض رسوم على بعض الأنشطة الطلابية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد رسوم أنشطة؟\nج: نعم، قد تُفرض رسوم على بعض الأنشطة الطلابية.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 242,
+      "question": "هل يوجد رسوم تأمين؟",
+      "answer": "لا، لا توجد رسوم تأمين.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد رسوم تأمين؟\nج: لا، لا توجد رسوم تأمين.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 243,
+      "question": "هل يمكن الدفع عبر البنك؟",
+      "answer": "نعم، يمكنك الدفع من خلال التحويل البنكي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن الدفع عبر البنك؟\nج: نعم، يمكنك الدفع من خلال التحويل البنكي.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 244,
+      "question": "هل يمكن الدفع عبر تحويل؟",
+      "answer": "نعم، الدفع عبر التحويل متاح.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن الدفع عبر تحويل؟\nج: نعم، الدفع عبر التحويل متاح.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 245,
+      "question": "هل يوجد دفع إلكتروني؟",
+      "answer": "نعم، يتوفر نظام للدفع الإلكتروني لتسهيل عملية السداد.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دفع إلكتروني؟\nج: نعم، يتوفر نظام للدفع الإلكتروني لتسهيل عملية السداد.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 246,
+      "question": "هل يمكن الدفع عبر بطاقة؟",
+      "answer": "نعم، يمكن الدفع باستخدام البطاقات البنكية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن الدفع عبر بطاقة؟\nج: نعم، يمكن الدفع باستخدام البطاقات البنكية.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 247,
+      "question": "هل يوجد إيصال إلكتروني؟",
+      "answer": "حاليًا لا يتم إصدار إيصال إلكتروني، ويتم الاعتماد على الإيصالات التقليدية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد إيصال إلكتروني؟\nج: حاليًا لا يتم إصدار إيصال إلكتروني، ويتم الاعتماد على الإيصالات التقليدية.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 248,
+      "question": "هل يمكن جدولة الدفع؟",
+      "answer": "نعم، يمكنك جدولة الدفع بكل سهولة، حيث توفر الجامعة خيارات مرنة تساعدك على توزيع الرسوم بما يناسبك.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن جدولة الدفع؟\nج: نعم، يمكنك جدولة الدفع بكل سهولة، حيث توفر الجامعة خيارات مرنة تساعدك على توزيع الرسوم بما يناسبك.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 249,
+      "question": "هل يوجد غرامة تأخير سداد؟",
+      "answer": "لا يتم فرض غرامة مالية، لكن في حال التأخر عن السداد قد يتم إيقافك من دخول الاختبارات حتى يتم السداد.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد غرامة تأخير سداد؟\nج: لا يتم فرض غرامة مالية، لكن في حال التأخر عن السداد قد يتم إيقافك من دخول الاختبارات حتى يتم السداد.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 250,
+      "question": "هل يوجد دعم مالي طارئ؟",
+      "answer": "حاليًا لا يتوفر دعم مالي طارئ، لكن يمكنك التواصل مع الإدارة لبحث أي حالة خاصة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دعم مالي طارئ؟\nج: حاليًا لا يتوفر دعم مالي طارئ، لكن يمكنك التواصل مع الإدارة لبحث أي حالة خاصة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 251,
+      "question": "هل يوجد مكافآت شهرية؟",
+      "answer": "لا، لا توجد مكافآت شهرية في الوقت الحالي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مكافآت شهرية؟\nج: لا، لا توجد مكافآت شهرية في الوقت الحالي.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 252,
+      "question": "كيف أستعيد كلمة المرور؟",
+      "answer": "يمكنك استعادة كلمة المرور من خلال مراجعة شؤون الطلاب، وسيتم مساعدتك في استرجاعها بسرعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف أستعيد كلمة المرور؟\nج: يمكنك استعادة كلمة المرور من خلال مراجعة شؤون الطلاب، وسيتم مساعدتك في استرجاعها بسرعة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 253,
+      "question": "هل يوجد تطبيق للجامعة؟",
+      "answer": "التطبيق قيد الإنشاء حاليًا، وسيتم توفيره قريبًا بإذن الله.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تطبيق للجامعة؟\nج: التطبيق قيد الإنشاء حاليًا، وسيتم توفيره قريبًا بإذن الله.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 254,
+      "question": "كيف أحمل التطبيق؟",
+      "answer": "بمجرد إطلاق التطبيق، سيكون متاحًا عبر متجر Google Play لتتمكن من تحميله بسهولة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف أحمل التطبيق؟\nج: بمجرد إطلاق التطبيق، سيكون متاحًا عبر متجر Google Play لتتمكن من تحميله بسهولة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 255,
+      "question": "هل يوجد دعم فني؟",
+      "answer": "نعم، يتوفر دعم فني لمساعدتك في حل أي مشكلة تقنية تواجهك.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دعم فني؟\nج: نعم، يتوفر دعم فني لمساعدتك في حل أي مشكلة تقنية تواجهك.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 256,
+      "question": "كيف أرى درجاتي؟",
+      "answer": "يمكنك الاطلاع على درجاتك من خلال الموقع الإلكتروني الخاص بالجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف أرى درجاتي؟\nج: يمكنك الاطلاع على درجاتك من خلال الموقع الإلكتروني الخاص بالجامعة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 257,
+      "question": "ماذا أفعل إذا نسيت الرقم الجامعي؟",
+      "answer": "لا تقلق، يمكنك التوجه إلى شؤون الطلاب وسيتم تزويدك به بعد التحقق من بياناتك.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ماذا أفعل إذا نسيت الرقم الجامعي؟\nج: لا تقلق، يمكنك التوجه إلى شؤون الطلاب وسيتم تزويدك به بعد التحقق من بياناتك.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 258,
+      "question": "كيف أغير كلمة المرور؟",
+      "answer": "لتغيير كلمة المرور، يرجى مراجعة شؤون الطلاب وسيتم تنفيذ الطلب لك.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف أغير كلمة المرور؟\nج: لتغيير كلمة المرور، يرجى مراجعة شؤون الطلاب وسيتم تنفيذ الطلب لك.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 259,
+      "question": "هل يوجد محاضرات مسجلة؟",
+      "answer": "الميزة قيد الإنشاء حاليًا، ومن المتوقع توفرها قريبًا ضمن الخدمات الإلكترونية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد محاضرات مسجلة؟\nج: الميزة قيد الإنشاء حاليًا، ومن المتوقع توفرها قريبًا ضمن الخدمات الإلكترونية.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 260,
+      "question": "هل يوجد بث مباشر؟",
+      "answer": "لا، لا يتوفر بث مباشر للمحاضرات حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد بث مباشر؟\nج: لا، لا يتوفر بث مباشر للمحاضرات حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 261,
+      "question": "هل يوجد تسجيل حضور إلكتروني؟",
+      "answer": "لا، لا يوجد نظام حضور إلكتروني في الوقت الحالي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تسجيل حضور إلكتروني؟\nج: لا، لا يوجد نظام حضور إلكتروني في الوقت الحالي.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 262,
+      "question": "هل يوجد اشعار بالنتائج ؟",
+      "answer": "نعم، يتم إرسال إشعارات عند صدور النتائج.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد اشعار بالنتائج ؟\nج: نعم، يتم إرسال إشعارات عند صدور النتائج.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 263,
+      "question": "هل يوجد إشعار بالرسوم؟",
+      "answer": "بالتأكيد، يتم إشعارك بمواعيد الرسوم وأي مستحقات مالية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد إشعار بالرسوم؟\nج: بالتأكيد، يتم إشعارك بمواعيد الرسوم وأي مستحقات مالية.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 264,
+      "question": "هل يوجد تنبيه غياب؟",
+      "answer": "نعم، يتم تنبيه الطلاب في حال وجود غياب لمتابعة وضعهم الأكاديمي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تنبيه غياب؟\nج: نعم، يتم تنبيه الطلاب في حال وجود غياب لمتابعة وضعهم الأكاديمي.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 265,
+      "question": "هل يوجد دردشة مع الدكتور؟",
+      "answer": "نعم، يمكنك التواصل مع الدكتور إما عبر أرقام واتساب أو من خلال الموقع الإلكتروني إن توفر.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دردشة مع الدكتور؟\nج: نعم، يمكنك التواصل مع الدكتور إما عبر أرقام واتساب أو من خلال الموقع الإلكتروني إن توفر.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 266,
+      "question": "هل يوجد نظام شكاوى إلكتروني؟",
+      "answer": "نعم، يوجد نظام مخصص لتقديم الشكاوى ومتابعتها إلكترونيًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نظام شكاوى إلكتروني؟\nج: نعم، يوجد نظام مخصص لتقديم الشكاوى ومتابعتها إلكترونيًا.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 267,
+      "question": "هل يوجد بوابة أولياء الأمور؟",
+      "answer": "لا توجد بوابة مستقلة، لكن يتم التواصل مع أولياء الأمور عند الحاجة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد بوابة أولياء الأمور؟\nج: لا توجد بوابة مستقلة، لكن يتم التواصل مع أولياء الأمور عند الحاجة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 268,
+      "question": "هل يوجد تقارير حضور؟",
+      "answer": "نعم، يمكنك الحصول على تقارير توضح نسبة حضورك.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تقارير حضور؟\nج: نعم، يمكنك الحصول على تقارير توضح نسبة حضورك.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 269,
+      "question": "هل يوجد تقارير درجات؟",
+      "answer": "نعم، تتوفر تقارير تفصيلية لدرجاتك الأكاديمية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تقارير درجات؟\nج: نعم، تتوفر تقارير تفصيلية لدرجاتك الأكاديمية.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 270,
+      "question": "هل يوجد إشعارات فورية؟",
+      "answer": "نعم، يتم إرسال إشعارات فورية لمتابعة أهم التحديثات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد إشعارات فورية؟\nج: نعم، يتم إرسال إشعارات فورية لمتابعة أهم التحديثات.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 271,
+      "question": "هل يوجد تسجيل دخول ببصمة؟",
+      "answer": "نعم، يتوفر تسجيل دخول باستخدام البصمة لتسهيل الوصول.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تسجيل دخول ببصمة؟\nج: نعم، يتوفر تسجيل دخول باستخدام البصمة لتسهيل الوصول.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 272,
+      "question": "هل يوجد تسجيل دخول برقم الهوية؟",
+      "answer": "نعم، يمكن تسجيل الدخول باستخدام البطاقة الجامعية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تسجيل دخول برقم الهوية؟\nج: نعم، يمكن تسجيل الدخول باستخدام البطاقة الجامعية.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 273,
+      "question": "هل يوجد حماية بيانات؟",
+      "answer": "نعم، يتم تطبيق إجراءات لحماية بيانات الطلاب وضمان سريتها.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد حماية بيانات؟\nج: نعم، يتم تطبيق إجراءات لحماية بيانات الطلاب وضمان سريتها.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 274,
+      "question": "هل يوجد نظام تقييم لأعضاء هيئة التدريس؟",
+      "answer": "نعم، يمكن للطلاب تقييم أعضاء هيئة التدريس لتحسين جودة التعليم.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نظام تقييم لأعضاء هيئة التدريس؟\nج: نعم، يمكن للطلاب تقييم أعضاء هيئة التدريس لتحسين جودة التعليم.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 275,
+      "question": "هل يوجد لوحة تحكم للطالب؟",
+      "answer": "نعم، لديك لوحة تحكم خاصة تتيح لك متابعة كل ما يتعلق بدراستك.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد لوحة تحكم للطالب؟\nج: نعم، لديك لوحة تحكم خاصة تتيح لك متابعة كل ما يتعلق بدراستك.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 276,
+      "question": "هل يوجد ذكاء اصطناعي للمساعدة؟",
+      "answer": "نعم، يتم توفير نظام ذكي لمساعدتك في الإجابة على استفساراتك.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد ذكاء اصطناعي للمساعدة؟\nج: نعم، يتم توفير نظام ذكي لمساعدتك في الإجابة على استفساراتك.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 277,
+      "question": "هل يمكنني التحدث مع موظف مباشر؟",
+      "answer": "نعم، يمكنك التواصل مع موظف بشكل مباشر عند الحاجة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكنني التحدث مع موظف مباشر؟\nج: نعم، يمكنك التواصل مع موظف بشكل مباشر عند الحاجة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 278,
+      "question": "ما أفضل تخصص في الجامعة؟",
+      "answer": "يعتمد ذلك على ميولك واهتماماتك الشخصية، لذلك يُفضل اختيار التخصص الذي يناسبك.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما أفضل تخصص في الجامعة؟\nج: يعتمد ذلك على ميولك واهتماماتك الشخصية، لذلك يُفضل اختيار التخصص الذي يناسبك.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 279,
+      "question": "ما أسهل تخصص؟",
+      "answer": "لا يوجد تخصص يمكن اعتباره الأسهل بشكل مطلق، فالأمر يعتمد على قدراتك واهتماماتك.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما أسهل تخصص؟\nج: لا يوجد تخصص يمكن اعتباره الأسهل بشكل مطلق، فالأمر يعتمد على قدراتك واهتماماتك.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 280,
+      "question": "ما أصعب تخصص؟",
+      "answer": "كل التخصصات تتطلب جهدًا، ولا يمكن تحديد تخصص معين على أنه الأصعب للجميع.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما أصعب تخصص؟\nج: كل التخصصات تتطلب جهدًا، ولا يمكن تحديد تخصص معين على أنه الأصعب للجميع.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 281,
+      "question": "ما أكثر تخصص مطلوب؟",
+      "answer": "جميع التخصصات لها فرص، لكن يعتمد الطلب على سوق العمل وتطوراته.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: ما أكثر تخصص مطلوب؟\nج: جميع التخصصات لها فرص، لكن يعتمد الطلب على سوق العمل وتطوراته.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 282,
+      "question": "هل تخصص IT مطلوب؟",
+      "answer": "نعم، تخصص تقنية المعلومات مطلوب بشكل كبير في سوق العمل حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل تخصص IT مطلوب؟\nج: نعم، تخصص تقنية المعلومات مطلوب بشكل كبير في سوق العمل حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 283,
+      "question": "هل تخصص الأمن السيبراني متوفر؟",
+      "answer": "نعم، التخصص متوفر.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل تخصص الأمن السيبراني متوفر؟\nج: نعم، التخصص متوفر.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 284,
+      "question": "هل تخصص الذكاء الاصطناعي متوفر؟",
+      "answer": "نعم، التخصص متوفر أيضًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل تخصص الذكاء الاصطناعي متوفر؟\nج: نعم، التخصص متوفر أيضًا.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 285,
+      "question": "هل تخصص الطب صعب؟",
+      "answer": "قد يكون تحديًا، لكن مع الاجتهاد والتنظيم يمكن النجاح فيه بإذن الله.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل تخصص الطب صعب؟\nج: قد يكون تحديًا، لكن مع الاجتهاد والتنظيم يمكن النجاح فيه بإذن الله.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 286,
+      "question": "هل يوجد تعليم عن بعد؟",
+      "answer": "لا، لا يتوفر تعليم عن بعد حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تعليم عن بعد؟\nج: لا، لا يتوفر تعليم عن بعد حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 287,
+      "question": "هل يوجد دراسة أونلاين؟",
+      "answer": "لا، الدراسة تتم حضوريًا فقط في الوقت الحالي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دراسة أونلاين؟\nج: لا، الدراسة تتم حضوريًا فقط في الوقت الحالي.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 288,
+      "question": "هل الشهادة معترف بها؟",
+      "answer": "نعم، الشهادة معترف بها.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل الشهادة معترف بها؟\nج: نعم، الشهادة معترف بها.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 289,
+      "question": "هل الجامعة قوية؟",
+      "answer": "تُعد الجامعة من الجامعات المتميزة بفضل بنيتها التحتية وكادرها الأكاديمي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل الجامعة قوية؟\nج: تُعد الجامعة من الجامعات المتميزة بفضل بنيتها التحتية وكادرها الأكاديمي.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 290,
+      "question": "هل الجامعة معترف بها في السعودية؟",
+      "answer": "نعم، الشهادة معترف بها في مختلف الدول.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل الجامعة معترف بها في السعودية؟\nج: نعم، الشهادة معترف بها في مختلف الدول.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 291,
+      "question": "هل الجامعة معترف بها في اليمن؟",
+      "answer": "نعم، معترف بها داخل اليمن.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل الجامعة معترف بها في اليمن؟\nج: نعم، معترف بها داخل اليمن.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 292,
+      "question": "هل الجامعة معترف بها دوليًا؟",
+      "answer": "نعم، معترف بها دوليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل الجامعة معترف بها دوليًا؟\nج: نعم، معترف بها دوليًا.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 293,
+      "question": "هل يوجد وظائف بعد التخرج؟",
+      "answer": "قد تتوفر فرص للطلاب المتفوقين، خاصةً حسب أدائهم وتميزهم.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد وظائف بعد التخرج؟\nج: قد تتوفر فرص للطلاب المتفوقين، خاصةً حسب أدائهم وتميزهم.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 294,
+      "question": "هل يوجد معرض وظائف؟",
+      "answer": "لا، لا يوجد حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد معرض وظائف؟\nج: لا، لا يوجد حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 295,
+      "question": "هل يوجد تدريب إلزامي؟",
+      "answer": "لا، لا يوجد تدريب إلزامي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تدريب إلزامي؟\nج: لا، لا يوجد تدريب إلزامي.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 296,
+      "question": "هل يوجد مقابلات عمل داخل الجامعة؟",
+      "answer": "لا، لا يتم تنظيم مقابلات عمل داخل الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مقابلات عمل داخل الجامعة؟\nج: لا، لا يتم تنظيم مقابلات عمل داخل الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 297,
+      "question": "هل يوجد شركات شريكة؟",
+      "answer": "لا توجد شراكات حالية مع شركات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد شركات شريكة؟\nج: لا توجد شراكات حالية مع شركات.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 298,
+      "question": "هل يوجد مشاريع تخرج قوية؟",
+      "answer": "نعم، يتم تنفيذ مشاريع تخرج مميزة حسب التخصص.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مشاريع تخرج قوية؟\nج: نعم، يتم تنفيذ مشاريع تخرج مميزة حسب التخصص.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 299,
+      "question": "هل يوجد دعم للمشاريع؟",
+      "answer": "نعم، يتم تقديم دعم للمشاريع الطلابية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دعم للمشاريع؟\nج: نعم، يتم تقديم دعم للمشاريع الطلابية.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 300,
+      "question": "هل يوجد حاضنة أعمال؟",
+      "answer": "نعم، توجد حاضنة أعمال لدعم الأفكار الريادية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد حاضنة أعمال؟\nج: نعم، توجد حاضنة أعمال لدعم الأفكار الريادية.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 301,
+      "question": "هل يوجد دعم لرواد الأعمال؟",
+      "answer": "حاليًا لا يوجد دعم مباشر، لكن قد يتم تطوير ذلك مستقبلًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دعم لرواد الأعمال؟\nج: حاليًا لا يوجد دعم مباشر، لكن قد يتم تطوير ذلك مستقبلًا.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 302,
+      "question": "هل يوجد مسابقات ابتكار؟",
+      "answer": "نعم، يتم تنظيم مسابقات للابتكار.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مسابقات ابتكار؟\nج: نعم، يتم تنظيم مسابقات للابتكار.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 303,
+      "question": "هل يوجد تمويل مشاريع؟",
+      "answer": "نعم، يمكن تمويل المشاريع إذا كانت تخدم مصلحة الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تمويل مشاريع؟\nج: نعم، يمكن تمويل المشاريع إذا كانت تخدم مصلحة الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 304,
+      "question": "هل يمكن زيارة الجامعة؟",
+      "answer": "نعم، يمكنك زيارة الجامعة في أي وقت مناسب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن زيارة الجامعة؟\nج: نعم، يمكنك زيارة الجامعة في أي وقت مناسب.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 305,
+      "question": "هل يوجد جولة تعريفية؟",
+      "answer": "نعم، تتوفر جولات تعريفية للتعرف على مرافق الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد جولة تعريفية؟\nج: نعم، تتوفر جولات تعريفية للتعرف على مرافق الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 306,
+      "question": "هل يوجد تصوير داخل الجامعة؟",
+      "answer": "نعم، يُسمح بالتصوير داخل الحرم.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تصوير داخل الجامعة؟\nج: نعم، يُسمح بالتصوير داخل الحرم.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 307,
+      "question": "هل يوجد شروط لباس؟",
+      "answer": "لا، لا توجد شروط لباس محددة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد شروط لباس؟\nج: لا، لا توجد شروط لباس محددة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 308,
+      "question": "هل يوجد نظام انضباط؟",
+      "answer": "نعم، يوجد نظام يضمن الالتزام بالقوانين داخل الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نظام انضباط؟\nج: نعم، يوجد نظام يضمن الالتزام بالقوانين داخل الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 309,
+      "question": "هل يوجد فصل بسبب الغياب؟",
+      "answer": "لا، لا يتم الفصل بسبب الغياب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد فصل بسبب الغياب؟\nج: لا، لا يتم الفصل بسبب الغياب.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 310,
+      "question": "هل يوجد فصل بسبب الرسوم؟",
+      "answer": "لا يتم الفصل، لكن قد يتم إيقاف الطالب مؤقتًا حتى السداد.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد فصل بسبب الرسوم؟\nج: لا يتم الفصل، لكن قد يتم إيقاف الطالب مؤقتًا حتى السداد.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 311,
+      "question": "هل يوجد إنذار أكاديمي؟",
+      "answer": "نعم، يتم توجيه إنذارات أكاديمية عند الحاجة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد إنذار أكاديمي؟\nج: نعم، يتم توجيه إنذارات أكاديمية عند الحاجة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 312,
+      "question": "هل يمكن إعادة السنة؟",
+      "answer": "نعم، يمكن ذلك وفق النظام الأكاديمي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن إعادة السنة؟\nج: نعم، يمكن ذلك وفق النظام الأكاديمي.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 313,
+      "question": "هل يمكن إعادة مقرر؟",
+      "answer": "نعم، يمكنك إعادة المقرر عند الحاجة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكن إعادة مقرر؟\nج: نعم، يمكنك إعادة المقرر عند الحاجة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 314,
+      "question": "هل يوجد اختبار شامل؟",
+      "answer": "لا، لا يوجد اختبار شامل.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد اختبار شامل؟\nج: لا، لا يوجد اختبار شامل.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 315,
+      "question": "هل يوجد مشروع تخرج؟",
+      "answer": "نعم، مشروع التخرج جزء أساسي من البرنامج.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مشروع تخرج؟\nج: نعم، مشروع التخرج جزء أساسي من البرنامج.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 316,
+      "question": "هل يوجد مناقشة؟",
+      "answer": "نعم، يتم مناقشة مشروع التخرج.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مناقشة؟\nج: نعم، يتم مناقشة مشروع التخرج.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 317,
+      "question": "هل يوجد لجنة تحكيم؟",
+      "answer": "نعم، توجد لجنة لتقييم المشاريع.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد لجنة تحكيم؟\nج: نعم، توجد لجنة لتقييم المشاريع.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 318,
+      "question": "هل يوجد إشراف أكاديمي؟",
+      "answer": "نعم، يتم توفير مشرف أكاديمي لكل طالب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد إشراف أكاديمي؟\nج: نعم، يتم توفير مشرف أكاديمي لكل طالب.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 319,
+      "question": "هل يوجد تغيير تخصص؟",
+      "answer": "نعم، يمكنك تغيير تخصصك وفق الشروط.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تغيير تخصص؟\nج: نعم، يمكنك تغيير تخصصك وفق الشروط.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 320,
+      "question": "هل يوجد تحويل داخلي؟",
+      "answer": "نعم، التحويل الداخلي متاح.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تحويل داخلي؟\nج: نعم، التحويل الداخلي متاح.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 321,
+      "question": "هل يوجد تحويل خارجي؟",
+      "answer": "نعم، يمكن التحويل من أو إلى جامعات أخرى.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تحويل خارجي؟\nج: نعم، يمكن التحويل من أو إلى جامعات أخرى.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 322,
+      "question": "هل يوجد تسجيل مبكر؟",
+      "answer": "نعم، التسجيل المبكر متاح.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تسجيل مبكر؟\nج: نعم، التسجيل المبكر متاح.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 323,
+      "question": "هل يوجد خصم خاص؟",
+      "answer": "نعم، تتوفر خصومات خاصة في بعض الحالات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد خصم خاص؟\nج: نعم، تتوفر خصومات خاصة في بعض الحالات.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 324,
+      "question": "هل يوجد تكريم؟",
+      "answer": "نعم، يتم تكريم الطلاب المتميزين.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تكريم؟\nج: نعم، يتم تكريم الطلاب المتميزين.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 325,
+      "question": "هل يوجد صور التخرج؟",
+      "answer": "نعم، يتم توفير صور التخرج.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد صور التخرج؟\nج: نعم، يتم توفير صور التخرج.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 326,
+      "question": "هل يوجد فيديو تخرج؟",
+      "answer": "نعم، يتم توثيق التخرج بالفيديو.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد فيديو تخرج؟\nج: نعم، يتم توثيق التخرج بالفيديو.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 327,
+      "question": "هل يوجد شهادة إلكترونية؟",
+      "answer": "لا، لا تتوفر شهادة إلكترونية حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد شهادة إلكترونية؟\nج: لا، لا تتوفر شهادة إلكترونية حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 328,
+      "question": "هل يوجد نسخة مترجمة للشهادة؟",
+      "answer": "نعم، يمكن الحصول على نسخة مترجمة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نسخة مترجمة للشهادة؟\nج: نعم، يمكن الحصول على نسخة مترجمة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 329,
+      "question": "هل يوجد توثيق إلكتروني؟",
+      "answer": "لا، لا يوجد توثيق إلكتروني حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد توثيق إلكتروني؟\nج: لا، لا يوجد توثيق إلكتروني حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 330,
+      "question": "هل يوجد قبول لغير المواطنين؟",
+      "answer": "نعم، يتم قبول الطلاب غير المواطنين.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد قبول لغير المواطنين؟\nج: نعم، يتم قبول الطلاب غير المواطنين.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 331,
+      "question": "هل يوجد شروط خاصة للأجانب؟",
+      "answer": "نعم، توجد شروط خاصة يتم توضيحها أثناء التقديم.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد شروط خاصة للأجانب؟\nج: نعم، توجد شروط خاصة يتم توضيحها أثناء التقديم.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 332,
+      "question": "هل يوجد سكن للأجانب؟",
+      "answer": "حاليًا لا يتوفر سكن مخصص للطلاب الأجانب، ويمكنك ترتيب السكن بشكل مستقل خارج الجامعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد سكن للأجانب؟\nج: حاليًا لا يتوفر سكن مخصص للطلاب الأجانب، ويمكنك ترتيب السكن بشكل مستقل خارج الجامعة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 333,
+      "question": "هل يوجد خدمات استقبال؟",
+      "answer": "لا توجدخدمات استقبال رسمية في الوقت الحالي، لكن يمكنك التوجه مباشرة إلى الجهات المعنية داخل الجامعة وسيتم إرشادك.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد خدمات استقبال؟\nج: لا توجدخدمات استقبال رسمية في الوقت الحالي، لكن يمكنك التوجه مباشرة إلى الجهات المعنية داخل الجامعة وسيتم إرشادك.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 334,
+      "question": "هل يوجد مؤتمر دولي؟",
+      "answer": "نعم، يتم تنظيم مؤتمرات دولية تهدف إلى تبادل الخبرات وتعزيز التعاون الأكاديمي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مؤتمر دولي؟\nج: نعم، يتم تنظيم مؤتمرات دولية تهدف إلى تبادل الخبرات وتعزيز التعاون الأكاديمي.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 335,
+      "question": "هل يوجد بحث علمي؟",
+      "answer": "نعم، تولي الجامعة اهتمامًا كبيرًا بالبحث العلمي وتشجع الطلاب على المشاركة فيه.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد بحث علمي؟\nج: نعم، تولي الجامعة اهتمامًا كبيرًا بالبحث العلمي وتشجع الطلاب على المشاركة فيه.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 336,
+      "question": "هل يوجد نشر علمي؟",
+      "answer": "نعم، يمكن للطلاب وأعضاء هيئة التدريس نشر أبحاثهم وفق المعايير الأكاديمية المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نشر علمي؟\nج: نعم، يمكن للطلاب وأعضاء هيئة التدريس نشر أبحاثهم وفق المعايير الأكاديمية المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 337,
+      "question": "هل يوجد مجلة علمية؟",
+      "answer": "نعم، توجد مجلة علمية لنشر الأبحاث والدراسات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مجلة علمية؟\nج: نعم، توجد مجلة علمية لنشر الأبحاث والدراسات.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 338,
+      "question": "هل يوجد براءات اختراع؟",
+      "answer": "نعم، يتم دعم وتسجيل براءات الاختراع للمشاريع المبتكرة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد براءات اختراع؟\nج: نعم، يتم دعم وتسجيل براءات الاختراع للمشاريع المبتكرة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 339,
+      "question": "هل يوجد مختبرات حديثة؟",
+      "answer": "نعم، تحتوي الجامعة على مختبرات مجهزة بأحدث التقنيات لدعم الجانب العملي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مختبرات حديثة؟\nج: نعم، تحتوي الجامعة على مختبرات مجهزة بأحدث التقنيات لدعم الجانب العملي.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 340,
+      "question": "هل يوجد أجهزة حديثة؟",
+      "answer": "بالتأكيد، يتم توفير أجهزة حديثة تواكب متطلبات الدراسة والتطبيق العملي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد أجهزة حديثة؟\nج: بالتأكيد، يتم توفير أجهزة حديثة تواكب متطلبات الدراسة والتطبيق العملي.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 341,
+      "question": "هل يوجد تقنية حديثة؟",
+      "answer": "نعم، تعتمد الجامعة على تقنيات حديثة في العملية التعليمية والإدارية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تقنية حديثة؟\nج: نعم، تعتمد الجامعة على تقنيات حديثة في العملية التعليمية والإدارية.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 342,
+      "question": "هل يوجد ذكاء اصطناعي؟",
+      "answer": "نعم، يتم استخدام تقنيات الذكاء الاصطناعي في بعض الخدمات التعليمية والمساندة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد ذكاء اصطناعي؟\nج: نعم، يتم استخدام تقنيات الذكاء الاصطناعي في بعض الخدمات التعليمية والمساندة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 343,
+      "question": "هل يوجد تخصصات جديدة؟",
+      "answer": "نعم، يتم طرح تخصصات جديدة بشكل مستمر لمواكبة سوق العمل.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تخصصات جديدة؟\nج: نعم، يتم طرح تخصصات جديدة بشكل مستمر لمواكبة سوق العمل.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 344,
+      "question": "هل يوجد خطة تطوير؟",
+      "answer": "نعم، لدى الجامعة خطة تطوير مستمرة لتحسين جودة التعليم والخدمات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد خطة تطوير؟\nج: نعم، لدى الجامعة خطة تطوير مستمرة لتحسين جودة التعليم والخدمات.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 345,
+      "question": "هل يوجد رؤية مستقبلية؟",
+      "answer": "نعم، تمتلك الجامعة رؤية مستقبلية تهدف إلى التميز الأكاديمي والتوسع.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد رؤية مستقبلية؟\nج: نعم، تمتلك الجامعة رؤية مستقبلية تهدف إلى التميز الأكاديمي والتوسع.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 346,
+      "question": "هل يوجد تقييم جودة؟",
+      "answer": "نعم، يتم تطبيق أنظمة تقييم جودة لضمان مستوى تعليمي عالي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تقييم جودة؟\nج: نعم، يتم تطبيق أنظمة تقييم جودة لضمان مستوى تعليمي عالي.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 347,
+      "question": "هل يوجد اعتماد أكاديمي؟",
+      "answer": "نعم، الجامعة حاصلة على اعتماد أكاديمي وفق المعايير المعتمدة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد اعتماد أكاديمي؟\nج: نعم، الجامعة حاصلة على اعتماد أكاديمي وفق المعايير المعتمدة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 348,
+      "question": "هل يوجد تصنيف عالمي؟",
+      "answer": "نعم، تسعى الجامعة للحصول على تصنيفات عالمية وتعزيز مكانتها.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تصنيف عالمي؟\nج: نعم، تسعى الجامعة للحصول على تصنيفات عالمية وتعزيز مكانتها.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 349,
+      "question": "هل يوجد تقييم طلاب؟",
+      "answer": "يتم تقييم الطلاب بناءً على أدائهم الأكاديمي ودرجاتهم في المقررات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تقييم طلاب؟\nج: يتم تقييم الطلاب بناءً على أدائهم الأكاديمي ودرجاتهم في المقررات.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 350,
+      "question": "هل يوجد استبيانات؟",
+      "answer": "نعم، يتم إجراء استبيانات دورية لقياس رضا الطلاب وتحسين الخدمات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد استبيانات؟\nج: نعم، يتم إجراء استبيانات دورية لقياس رضا الطلاب وتحسين الخدمات.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 351,
+      "question": "هل يوجد خدمة مجتمع؟",
+      "answer": "نعم، تشارك الجامعة في خدمة المجتمع من خلال برامج ومبادرات مختلفة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد خدمة مجتمع؟\nج: نعم، تشارك الجامعة في خدمة المجتمع من خلال برامج ومبادرات مختلفة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 352,
+      "question": "هل يوجد مبادرات تطوعية؟",
+      "answer": "نعم، يمكنك الانضمام إلى مبادرات تطوعية متنوعة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مبادرات تطوعية؟\nج: نعم، يمكنك الانضمام إلى مبادرات تطوعية متنوعة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 353,
+      "question": "هل يوجد أنشطة دينية؟",
+      "answer": "نعم، يتم تنظيم أنشطة دينية داخل الحرم الجامعي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد أنشطة دينية؟\nج: نعم، يتم تنظيم أنشطة دينية داخل الحرم الجامعي.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 354,
+      "question": "هل يوجد مسابقات قرآنية؟",
+      "answer": "نعم، تُقام مسابقات قرآنية بشكل دوري.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مسابقات قرآنية؟\nج: نعم، تُقام مسابقات قرآنية بشكل دوري.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 355,
+      "question": "هل يوجد استشارات قانونية؟",
+      "answer": "نعم، تتوفر استشارات قانونية عند الحاجة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد استشارات قانونية؟\nج: نعم، تتوفر استشارات قانونية عند الحاجة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 356,
+      "question": "هل يوجد استشارات أكاديمية؟",
+      "answer": "نعم، يمكنك الحصول على استشارات أكاديمية لمساعدتك في مسيرتك الدراسية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد استشارات أكاديمية؟\nج: نعم، يمكنك الحصول على استشارات أكاديمية لمساعدتك في مسيرتك الدراسية.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 357,
+      "question": "هل يوجد استشارات نفسية؟",
+      "answer": "حاليًا لا تتوفر استشارات نفسية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد استشارات نفسية؟\nج: حاليًا لا تتوفر استشارات نفسية.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 358,
+      "question": "هل يوجد مركز لغات؟",
+      "answer": "لا يوجد مركز لغات في الوقت الحالي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مركز لغات؟\nج: لا يوجد مركز لغات في الوقت الحالي.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 359,
+      "question": "هل يوجد دورات تدريبية؟",
+      "answer": "حاليًا لا تتوفر دورات تدريبية منتظمة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دورات تدريبية؟\nج: حاليًا لا تتوفر دورات تدريبية منتظمة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 360,
+      "question": "هل يوجد شهادات مهنية؟",
+      "answer": "لا، لا يتم تقديم شهادات مهنية حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد شهادات مهنية؟\nج: لا، لا يتم تقديم شهادات مهنية حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 361,
+      "question": "هل يوجد كورسات قصيرة؟",
+      "answer": "لا، لا تتوفر كورسات قصيرة في الوقت الحالي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد كورسات قصيرة؟\nج: لا، لا تتوفر كورسات قصيرة في الوقت الحالي.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 362,
+      "question": "هل يوجد ورش عمل؟",
+      "answer": "نعم، يتم تنظيم ورش عمل في مجالات مختلفة بشكل متقطع.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد ورش عمل؟\nج: نعم، يتم تنظيم ورش عمل في مجالات مختلفة بشكل متقطع.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 363,
+      "question": "هل يوجد دورات أونلاين؟",
+      "answer": "نعم، تتوفر بعض الدورات الأونلاين.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دورات أونلاين؟\nج: نعم، تتوفر بعض الدورات الأونلاين.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 364,
+      "question": "هل يوجد تسجيل فوري؟",
+      "answer": "نعم، يمكنك التسجيل مباشرة في حال استيفاء الشروط.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد تسجيل فوري؟\nج: نعم، يمكنك التسجيل مباشرة في حال استيفاء الشروط.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 365,
+      "question": "هل يوجد إعلان نتائج؟",
+      "answer": "نعم، يتم إعلان النتائج بشكل رسمي وإشعار الطلاب بها.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد إعلان نتائج؟\nج: نعم، يتم إعلان النتائج بشكل رسمي وإشعار الطلاب بها.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 366,
+      "question": "هل يوجد نظام حضور؟",
+      "answer": "نعم، يوجد نظام لمتابعة حضور الطلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نظام حضور؟\nج: نعم، يوجد نظام لمتابعة حضور الطلاب.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 367,
+      "question": "هل يوجد نظام غياب؟",
+      "answer": "نعم، يتم تسجيل الغياب ومتابعته بشكل مستمر.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نظام غياب؟\nج: نعم، يتم تسجيل الغياب ومتابعته بشكل مستمر.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 368,
+      "question": "هل يوجد اعتراض درجات؟",
+      "answer": "نعم، يمكنك تقديم اعتراض على الدرجات وفق الإجراءات المحددة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد اعتراض درجات؟\nج: نعم، يمكنك تقديم اعتراض على الدرجات وفق الإجراءات المحددة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 369,
+      "question": "هل يوجد كشف حساب؟",
+      "answer": "نعم، يمكنك الحصول على كشف حساب يوضح وضعك المالي.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد كشف حساب؟\nج: نعم، يمكنك الحصول على كشف حساب يوضح وضعك المالي.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 370,
+      "question": "هل يوجد رقم جامعي؟",
+      "answer": "نعم، يتم إصدار رقم جامعي خاص بكل طالب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد رقم جامعي؟\nج: نعم، يتم إصدار رقم جامعي خاص بكل طالب.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 371,
+      "question": "هل يوجد نظام إشعارات؟",
+      "answer": "نعم، يتم إرسال إشعارات لمتابعة أهم التحديثات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نظام إشعارات؟\nج: نعم، يتم إرسال إشعارات لمتابعة أهم التحديثات.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 372,
+      "question": "هل يوجد دعم عبر الشات؟",
+      "answer": "لا، لا يتوفر دعم مباشر عبر الشات حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد دعم عبر الشات؟\nج: لا، لا يتوفر دعم مباشر عبر الشات حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 373,
+      "question": "هل يوجد رد فوري؟",
+      "answer": "نعم، يتم الرد على الاستفسارات في أسرع وقت ممكن.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد رد فوري؟\nج: نعم، يتم الرد على الاستفسارات في أسرع وقت ممكن.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 374,
+      "question": "هل يوجد ذكاء اصطناعي؟",
+      "answer": "نعم، يتم استخدام تقنيات الذكاء الاصطناعي لتحسين تجربة المستخدم.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد ذكاء اصطناعي؟\nج: نعم، يتم استخدام تقنيات الذكاء الاصطناعي لتحسين تجربة المستخدم.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 375,
+      "question": "هل يمكنني التحدث مع موظف؟",
+      "answer": "نعم، يمكنك التواصل مباشرة مع أحد الموظفين.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يمكنني التحدث مع موظف؟\nج: نعم، يمكنك التواصل مباشرة مع أحد الموظفين.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 376,
+      "question": "هل يوجد حجز موعد؟",
+      "answer": "لا، لا يتوفر نظام حجز مواعيد حاليًا.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد حجز موعد؟\nج: لا، لا يتوفر نظام حجز مواعيد حاليًا.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 377,
+      "question": "هل يوجد نموذج تواصل؟",
+      "answer": "نعم، يمكنك استخدام نموذج التواصل لإرسال استفساراتك.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد نموذج تواصل؟\nج: نعم، يمكنك استخدام نموذج التواصل لإرسال استفساراتك.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 378,
+      "question": "هل يوجد مركز اتصال؟",
+      "answer": "نعم، يتوفر مركز اتصال لخدمة الطلاب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد مركز اتصال؟\nج: نعم، يتوفر مركز اتصال لخدمة الطلاب.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 379,
+      "question": "هل يوجد خدمة طوارئ؟",
+      "answer": "لا، لا توجد خدمة طوارئ مخصصة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد خدمة طوارئ؟\nج: لا، لا توجد خدمة طوارئ مخصصة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 380,
+      "question": "هل يوجد سياسة جامعية؟",
+      "answer": "نعم، توجد سياسات جامعية تنظم العملية التعليمية والإدارية.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد سياسة جامعية؟\nج: نعم، توجد سياسات جامعية تنظم العملية التعليمية والإدارية.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 381,
+      "question": "هل يوجد لائحة طلابية؟",
+      "answer": "نعم، توجد لائحة طلابية توضح حقوق وواجبات الطالب.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد لائحة طلابية؟\nج: نعم، توجد لائحة طلابية توضح حقوق وواجبات الطالب.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 382,
+      "question": "هل يوجد أسئلة شائعة؟",
+      "answer": "نعم، تتوفر صفحة للأسئلة الشائعة لتسهيل الوصول إلى المعلومات.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: هل يوجد أسئلة شائعة؟\nج: نعم، تتوفر صفحة للأسئلة الشائعة لتسهيل الوصول إلى المعلومات.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    },
+    {
+      "id": 383,
+      "question": "كيف أتواصل مع الجامعة الآن؟",
+      "answer": "يمكنك التواصل مع الجامعة بعدة طرق، مثل: الحضور المباشر، أو الاتصال الهاتفي، أو عبر البريد الإلكتروني، أو من خلال نماذج التواصل المتاحة.",
+      "embedding": [],
+      "metadata": {
+        "sourceType": "faq",
+        "sourceName": "FAQ CSV",
+        "sourceUrl": "https://auusite.yemenfrappe.com/faq",
+        "excerpt": "س: كيف أتواصل مع الجامعة الآن؟\nج: يمكنك التواصل مع الجامعة بعدة طرق، مثل: الحضور المباشر، أو الاتصال الهاتفي، أو عبر البريد الإلكتروني، أو من خلال نماذج التواصل المتاحة.",
+        "importedAt": "2026-03-31T21:11:39.768Z"
+      }
+    }
+  ]
+}

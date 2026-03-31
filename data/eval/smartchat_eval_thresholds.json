@@ -1,0 +1,28 @@
+{
+  "version": "1.0.0",
+  "minCases": 10,
+  "maxErrorCount": 0,
+  "minMetrics": {
+    "successRate": 0.95,
+    "intentAccuracy": 0.7,
+    "keywordMatchRate": 0.6,
+    "sourceCoverageRate": 0.6,
+    "noAnswerPrecision": 0.5
+  },
+  "maxMetrics": {
+    "hallucinationRiskRate": 0.2,
+    "latencyP95Ms": 4500
+  },
+  "regression": {
+    "enabled": true,
+    "maxDrop": {
+      "intentAccuracy": 0.08,
+      "sourceCoverageRate": 0.08,
+      "keywordMatchRate": 0.1
+    },
+    "maxIncrease": {
+      "hallucinationRiskRate": 0.06,
+      "latencyP95Ms": 900
+    }
+  }
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ngu.edu.iq/sitemap.xml

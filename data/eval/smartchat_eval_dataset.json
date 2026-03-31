@@ -1,0 +1,141 @@
+{
+  "name": "smartchat_baseline_eval",
+  "version": "1.0.0",
+  "language": "ar",
+  "cases": [
+    {
+      "id": "c1",
+      "question": "ما اسم الجامعة؟",
+      "expectedIntent": "general_university",
+      "expectedAnswerKeywords": ["جامعة", "الجيل"],
+      "requireSources": true
+    },
+    {
+      "id": "c2",
+      "question": "وين موقع الجامعة؟",
+      "expectedIntent": "contact_location",
+      "expectedAnswerKeywords": ["صنعاء", "شارع", "موقع"],
+      "requireSources": true
+    },
+    {
+      "id": "c3",
+      "question": "كم رسوم الدراسة؟",
+      "expectedIntent": "tuition_fees",
+      "expectedAnswerKeywords": ["رسوم", "قسط", "تكلفة"],
+      "requireSources": true
+    },
+    {
+      "id": "c4",
+      "question": "ما هي شروط القبول؟",
+      "expectedIntent": "admission_requirements",
+      "expectedAnswerKeywords": ["قبول", "شروط", "تسجيل"],
+      "requireSources": true
+    },
+    {
+      "id": "c5",
+      "question": "هل في منح أو خصومات؟",
+      "expectedIntent": "scholarships",
+      "expectedAnswerKeywords": ["منح", "خصم", "إعفاء"],
+      "requireSources": true
+    },
+    {
+      "id": "c6",
+      "question": "ايش التخصصات المتاحة؟",
+      "expectedIntent": "program_info",
+      "expectedAnswerKeywords": ["تخصص", "برنامج", "كلية"],
+      "requireSources": true
+    },
+    {
+      "id": "c7",
+      "question": "متى يبدأ الدوام؟",
+      "expectedIntent": "schedule_calendar",
+      "expectedAnswerKeywords": ["دوام", "بداية", "تقويم"],
+      "requireSources": true
+    },
+    {
+      "id": "c8",
+      "question": "مرحبا",
+      "expectedIntent": "small_talk",
+      "expectedAnswerKeywords": ["مرحب", "مساعد"],
+      "requireSources": false
+    },
+    {
+      "id": "c9",
+      "question": "من أنت؟",
+      "expectedIntent": "small_talk",
+      "expectedAnswerKeywords": ["مساعد", "جامعة"],
+      "requireSources": false
+    },
+    {
+      "id": "c10",
+      "question": "من هو رئيس فرنسا؟",
+      "expectedIntent": "outside_scope",
+      "expectedAnswerKeywords": ["مخصص", "جامعة"],
+      "requireSources": false
+    },
+    {
+      "id": "c11",
+      "question": "عطني وصفة بيتزا",
+      "expectedIntent": "outside_scope",
+      "expectedAnswerKeywords": ["مخصص", "جامعة"],
+      "requireSources": false
+    },
+    {
+      "id": "c12",
+      "question": "هل الجامعة توفر سكن طلابي؟",
+      "expectedIntent": "campus_services",
+      "expectedAnswerKeywords": ["سكن", "خدمات", "طلاب"],
+      "requireSources": true
+    },
+    {
+      "id": "c13",
+      "question": "ما هي لائحة الغياب؟",
+      "expectedIntent": "policies_regulations",
+      "expectedAnswerKeywords": ["لائحة", "غياب", "حضور"],
+      "requireSources": true
+    },
+    {
+      "id": "c14",
+      "question": "كيف أتواصل مع الجامعة الآن؟",
+      "expectedIntent": "contact_location",
+      "expectedAnswerKeywords": ["هاتف", "بريد", "تواصل", "عنوان"],
+      "requireSources": true
+    },
+    {
+      "id": "c15",
+      "question": "ما لون شعار الجامعة بالتفصيل الدقيق؟",
+      "expectedIntent": "general_university",
+      "expectNoAnswer": true,
+      "requireSources": false
+    },
+    {
+      "id": "c16",
+      "question": "اين تقع الجامعة؟",
+      "history": [
+        { "role": "user", "text": "اريد معلومات عن الجامعة" },
+        { "role": "assistant", "text": "أكيد، ماذا تريد تحديدًا؟" }
+      ],
+      "expectedIntent": "contact_location",
+      "expectedAnswerKeywords": ["صنعاء", "شارع", "موقع"],
+      "requireSources": true
+    },
+    {
+      "id": "c17",
+      "question": "وكم الرسوم بعد هذا؟",
+      "history": [
+        { "role": "user", "text": "اريد التسجيل في الجامعة" },
+        { "role": "assistant", "text": "يمكنني مساعدتك بمعلومات القبول." }
+      ],
+      "expectedIntent": "tuition_fees",
+      "expectedAnswerKeywords": ["رسوم", "قسط", "تكلفة"],
+      "requireSources": true
+    },
+    {
+      "id": "c18",
+      "question": "هل يوجد معامل هندسية؟",
+      "expectedIntent": "campus_services",
+      "expectedAnswerKeywords": ["مختبر", "معمل", "هندس"],
+      "requireSources": true
+    }
+  ]
+}
