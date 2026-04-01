@@ -39,7 +39,7 @@ const CONTACT_LOCATION_MIN_SEMANTIC_SCORE = Number(process.env.SMARTCHAT_CONTACT
 const CONTACT_LOCATION_MIN_KEYWORD_SCORE = Number(process.env.SMARTCHAT_CONTACT_LOCATION_MIN_KEYWORD_SCORE || 0.20);
 
 const EMPTY_QUESTION_MESSAGE = 'اكتب سؤالك من فضلك.';
-const NO_INFO_MESSAGE = 'حاليًا لا أجد إجابة مباشرة لهذا السؤال ضمن بيانات الجامعة المتاحة لدي.';
+const NO_INFO_MESSAGE = 'لا أجد إجابة مباشرة لهذا السؤال في بيانات الجامعة.';
 const OUTSIDE_MESSAGE = 'أعتذر، أنا مساعد مخصص لأسئلة جامعة الجيل الجديد فقط.';
 const GENERIC_ERROR_MESSAGE = 'حدث خلل مؤقت. حاول مرة أخرى بعد قليل.';
 const RATE_LIMIT_MESSAGE = 'الرجاء الانتظار قليلًا قبل إرسال سؤال جديد.';
@@ -203,12 +203,55 @@ function cosineSimilarity(a: number[], b: number[]) {
 function getKeywordScore(normalizedQuery: string, normalizedText: string) {
   const qWords = normalizedQuery.split(' ').filter(Boolean);
   if (qWords.length === 0) return 0;
-  const textWords = new Set(normalizedText.split(' ').filter(Boolean));
+  const textWords = Array.from(new Set(normalizedText.split(' ').filter(Boolean)));
   let overlap = 0;
   for (const word of qWords) {
-    if (textWords.has(word)) overlap += 1;
+    if (textWords.some((candidate) => isApproxWordMatch(word, candidate))) overlap += 1;
   }
   return overlap / qWords.length;
+}
+
+function boundedLevenshtein(a: string, b: string, maxDist: number) {
+  if (a === b) return 0;
+  const la = a.length;
+  const lb = b.length;
+  if (Math.abs(la - lb) > maxDist) return maxDist + 1;
+  if (la === 0) return lb;
+  if (lb === 0) return la;
+
+  let prev = new Array(lb + 1);
+  let curr = new Array(lb + 1);
+  for (let j = 0; j <= lb; j += 1) prev[j] = j;
+
+  for (let i = 1; i <= la; i += 1) {
+    curr[0] = i;
+    let rowMin = curr[0];
+    for (let j = 1; j <= lb; j += 1) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      curr[j] = Math.min(
+        prev[j] + 1,
+        curr[j - 1] + 1,
+        prev[j - 1] + cost,
+      );
+      if (curr[j] < rowMin) rowMin = curr[j];
+    }
+    if (rowMin > maxDist) return maxDist + 1;
+    [prev, curr] = [curr, prev];
+  }
+  return prev[lb];
+}
+
+function isApproxWordMatch(queryWord: string, candidateWord: string) {
+  if (!queryWord || !candidateWord) return false;
+  if (queryWord === candidateWord) return true;
+
+  // Keep short tokens strict to avoid noisy matches.
+  if (queryWord.length <= 3 || candidateWord.length <= 3) return false;
+
+  if (queryWord.startsWith(candidateWord) || candidateWord.startsWith(queryWord)) return true;
+
+  const maxDist = Math.max(queryWord.length, candidateWord.length) >= 7 ? 2 : 1;
+  return boundedLevenshtein(queryWord, candidateWord, maxDist) <= maxDist;
 }
 
 function getPhraseScore(normalizedQuery: string, normalizedQuestionText: string, normalizedAnswerText: string) {
@@ -646,7 +689,7 @@ function getSmallTalkReply(question: string) {
 function getLowSimilarityReply(suggestions: string[]) {
   const top2 = suggestions.filter(Boolean).slice(0, 2);
   if (top2.length === 0) return NO_INFO_MESSAGE;
-  return `${NO_INFO_MESSAGE} ربما تقصد: ${top2.join('، ')}`;
+  return `${NO_INFO_MESSAGE} ${top2.join('، ')}`;
 }
 
 async function postJsonWithRetry(url: string, body: unknown, retries = MAX_RETRIES): Promise<UpstreamResult> {
@@ -799,6 +842,7 @@ async function generateAnswerGemini(apiKey: string, question: string, topMatches
     'أنت مساعد رسمي لجامعة الجيل الجديد.',
     'التعليمات:',
     '- أجب باللغة العربية.',
+    '- اجعل الإجابة قصيرة جدًا (سطر إلى سطرين فقط).',
     '- استخدم فقط المعلومات الموجودة في "المصدر".',
     '- ممنوع اختراع معلومات غير موجودة.',
     '- إذا كانت النتائج غير كافية أو متضاربة، أعد جملة عدم توفر المعلومات فقط.',
@@ -1051,6 +1095,11 @@ export async function POST(req: Request) {
         topGap < (isEarlyTurn ? EARLY_TURN_MIN_GAP : MIN_TOP_GAP) &&
         topScore < threshold + 0.06 &&
         topQuestionMatchScore < 0.55;
+      const weakOverallSignal =
+        topQuestionMatchScore < 0.35 &&
+        topKeywordScore < 0.18 &&
+        topSemanticScore < 0.22 &&
+        topScore < 0.26;
 
       const isContactLocationIntent = intentProfile.intent === 'contact_location';
       const hasReasonableContactSignal =
@@ -1059,7 +1108,7 @@ export async function POST(req: Request) {
         topScore >= CONTACT_LOCATION_MIN_TOP_SCORE;
       const bypassEarlyGuardForContact = isContactLocationIntent && hasReasonableContactSignal;
 
-      if (!bypassEarlyGuardForContact && (weakByTopScore || weakBySemantic || weakByKeyword || ambiguousTop)) {
+      if (!bypassEarlyGuardForContact && (weakByTopScore || weakBySemantic || weakByKeyword || ambiguousTop || weakOverallSignal)) {
         return {
           answer: getLowSimilarityReply(fallbackSuggestions),
           confidence,
