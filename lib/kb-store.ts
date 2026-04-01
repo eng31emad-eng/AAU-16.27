@@ -1,4 +1,4 @@
-import fs from 'fs'
+﻿import fs from 'fs'
 import path from 'path'
 import type { KbIndex } from '@/types/kb'
 
@@ -14,6 +14,26 @@ function hasSupabaseConfig() {
 
 function isValidKbIndex(parsed: any): parsed is KbIndex {
   return Boolean(parsed && Array.isArray(parsed.items) && parsed.items.length > 0)
+}
+
+function looksMojibake(text: string) {
+  const value = String(text || '')
+  if (!value) return false
+  // Common corrupted Arabic tokens seen when UTF-8/Windows-1256 decoding gets mixed.
+  return /ط§ظ|ظ„ط|ط¹ط|ظ…ط|طھظ|ظˆط|ط±ط|ط³ط|ط¬ط|ظٹط|ط¯ط/.test(value)
+}
+
+function hasIndexMojibake(index: KbIndex) {
+  const sample = index.items.slice(0, 20)
+  let hits = 0
+  for (const item of sample) {
+    const q = String((item as any)?.question || '')
+    const a = String((item as any)?.answer || '')
+    if (looksMojibake(q) || looksMojibake(a)) {
+      hits += 1
+    }
+  }
+  return hits >= 2
 }
 
 function readKbIndexFromFile(): KbIndex {
@@ -52,6 +72,12 @@ async function readKbIndexFromSupabase(): Promise<KbIndex | null> {
   const rows = (await response.json().catch(() => [])) as Array<{ index_payload?: KbIndex }>
   const payload = rows?.[0]?.index_payload
   if (!payload || !isValidKbIndex(payload)) return null
+
+  if (hasIndexMojibake(payload)) {
+    console.error('[kb-store] Supabase KB appears corrupted (mojibake). Ignoring Supabase payload.')
+    return null
+  }
+
   return payload
 }
 
@@ -65,7 +91,12 @@ export async function loadKbIndex(): Promise<KbIndex> {
       console.error('[kb-store] Supabase read failed, fallback to file:', message)
     }
   }
-  return readKbIndexFromFile()
+
+  const fileIndex = readKbIndexFromFile()
+  if (hasIndexMojibake(fileIndex)) {
+    console.error('[kb-store] Local KB file appears corrupted (mojibake).')
+  }
+  return fileIndex
 }
 
 export async function saveKbIndex(
@@ -113,4 +144,3 @@ export async function saveKbIndex(
   fs.writeFileSync(FILE_INDEX_PATH, `${JSON.stringify(index, null, 2)}\n`, 'utf8')
   return { storage: 'file' }
 }
-
