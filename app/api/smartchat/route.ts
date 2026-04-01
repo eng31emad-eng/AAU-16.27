@@ -40,7 +40,7 @@ const CONTACT_LOCATION_MIN_KEYWORD_SCORE = Number(process.env.SMARTCHAT_CONTACT_
 
 const EMPTY_QUESTION_MESSAGE = 'اكتب سؤالك من فضلك.';
 const NO_INFO_MESSAGE = 'لا أجد إجابة مباشرة لهذا السؤال في بيانات الجامعة.';
-const OUTSIDE_MESSAGE = 'أعتذر، أنا مساعد مخصص لأسئلة جامعة الجيل الجديد فقط.';
+const OUTSIDE_MESSAGE = 'أنا مساعد جامعة الجيل الجديد. اسألني عن التخصصات، الكليات، الرسوم، القبول، العنوان، والتواصل.';
 const GENERIC_ERROR_MESSAGE = 'حدث خلل مؤقت. حاول مرة أخرى بعد قليل.';
 const RATE_LIMIT_MESSAGE = 'الرجاء الانتظار قليلًا قبل إرسال سؤال جديد.';
 const UNIVERSITY_NAME = 'جامعة الجيل الجديد';
@@ -303,6 +303,27 @@ const SMALL_TALK_TERMS = [
   'help',
 ].map((term) => normalizeQuestion(term));
 
+const PRAISE_TERMS = [
+  'ممتاز',
+  'رائع',
+  'جميل',
+  'ابدعت',
+  'احسنت',
+  'شكرا',
+  'شكراً',
+  'تسلم',
+  'يعطيك العافيه',
+  'يعطيك العافية',
+  'كفو',
+  'مشكور',
+  'مبدع',
+  'افضل شات',
+  'best chatbot',
+  'great',
+  'awesome',
+  'thank you',
+].map((term) => normalizeQuestion(term));
+
 const OUTSIDE_STRONG_TERMS = [
   'الطقس',
   'درجه الحراره',
@@ -488,7 +509,7 @@ function classifyIntent(question: string): IntentProfile {
   const q = normalizeQuestion(question);
   const words = q.split(' ').filter(Boolean);
 
-  if (includesAny(q, SMALL_TALK_TERMS) || /(hi|hello|who are you|help)/i.test(question)) {
+  if (includesAny(q, SMALL_TALK_TERMS) || includesAny(q, PRAISE_TERMS) || /(hi|hello|who are you|help|thanks?|great|awesome)/i.test(question)) {
     return { intent: 'small_talk', type: 'small_talk', intentTerms: [], outside: false, smallTalk: true };
   }
 
@@ -699,6 +720,9 @@ function buildSourceRef(match: SearchMatch, rank: number): KbSourceRef {
 
 function getSmallTalkReply(question: string) {
   const q = normalizeQuestion(question);
+  if (includesAny(q, PRAISE_TERMS) || /(thanks?|great|awesome|best chatbot)/i.test(q)) {
+    return 'شكرًا لك. سعيد أن الخدمة أعجبتك، وأنا جاهز لأي سؤال عن الجامعة.';
+  }
   if (includesAny(q, ['السلام عليكم', 'السلام', 'مرحبا', 'اهلا']) || /(hi|hello)/i.test(q)) {
     return 'وعليكم السلام، أهلًا بك. أنا مساعد الجامعة.';
   }
@@ -710,8 +734,8 @@ function getSmallTalkReply(question: string) {
 
 function getLowSimilarityReply(suggestions: string[]) {
   const top2 = suggestions.filter(Boolean).slice(0, 2);
-  if (top2.length === 0) return NO_INFO_MESSAGE;
-  return `${NO_INFO_MESSAGE} ${top2.join('، ')}`;
+  if (top2.length === 0) return `${NO_INFO_MESSAGE} يمكنك سؤالي عن التخصصات، الكليات، الرسوم، القبول، أو التواصل.`;
+  return `${NO_INFO_MESSAGE} يمكنك سؤالي مثل: ${top2.join('، ')}`;
 }
 
 async function postJsonWithRetry(url: string, body: unknown, retries = MAX_RETRIES): Promise<UpstreamResult> {
@@ -1047,11 +1071,11 @@ export async function POST(req: Request) {
     if (intentProfile.outside) {
       return respond({
         answer: OUTSIDE_MESSAGE,
-        confidence: 1,
+        confidence: 0.9,
         sources: [],
-        suggestions: [],
-        type: 'outside',
-        intent: 'outside_scope',
+        suggestions: ['ما هي تخصصات الجامعة؟', 'كم رسوم الجامعة؟'],
+        type: 'university',
+        intent: 'general_university',
       });
     }
 

@@ -1,7 +1,7 @@
 ﻿'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { Send, ThumbsDown, ThumbsUp, X } from 'lucide-react';
+import { Send, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -188,32 +188,6 @@ export const SmartChat = () => {
     }
   };
 
-  const submitFeedback = async (messageId: string, value: 'up' | 'down') => {
-    const target = messages.find((m) => m.id === messageId);
-    if (!target || target.role !== 'assistant') return;
-
-    setMessages((prev) =>
-      prev.map((m) => (m.id === messageId ? { ...m, feedback: value } : m))
-    );
-
-    try {
-      await fetch('/api/smartchat/feedback', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          type: 'answer_feedback',
-          value,
-          traceId: target.traceId,
-          intent: target.intent,
-          confidence: target.confidence,
-          answer: target.text,
-        }),
-      });
-    } catch {
-      // Ignore feedback transport errors in UI.
-    }
-  };
-
   const askSuggestion = async (suggestion: string) => {
     try {
       await fetch('/api/smartchat/feedback', {
@@ -358,29 +332,6 @@ export const SmartChat = () => {
                           {s}
                         </button>
                       ))}
-                    </div>
-                  )}
-                  {m.role === 'assistant' && typeof m.confidence === 'number' && (
-                    <div className="mt-2 text-[11px] text-muted-foreground">
-                      {language === 'ar' ? 'الثقة:' : 'Confidence:'} {(m.confidence * 100).toFixed(0)}%
-                    </div>
-                  )}
-                  {m.role === 'assistant' && (
-                    <div className={`mt-2.5 flex items-center gap-2 ${isRtl ? 'justify-end' : 'justify-start'}`}>
-                      <button
-                        onClick={() => submitFeedback(m.id, 'up')}
-                        className={`inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-[11px] transition-colors ${m.feedback === 'up' ? 'border-secondary/60 bg-secondary/15 text-foreground' : 'border-border/50 bg-background text-muted-foreground hover:text-foreground'}`}
-                      >
-                        <ThumbsUp className="h-3.5 w-3.5" />
-                        {language === 'ar' ? 'مفيد' : 'Helpful'}
-                      </button>
-                      <button
-                        onClick={() => submitFeedback(m.id, 'down')}
-                        className={`inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-[11px] transition-colors ${m.feedback === 'down' ? 'border-secondary/60 bg-secondary/15 text-foreground' : 'border-border/50 bg-background text-muted-foreground hover:text-foreground'}`}
-                      >
-                        <ThumbsDown className="h-3.5 w-3.5" />
-                        {language === 'ar' ? 'غير مفيد' : 'Not helpful'}
-                      </button>
                     </div>
                   )}
                   <div className={`mt-2 ${isRtl ? 'text-right' : 'text-left'}`}>
