@@ -295,6 +295,27 @@ function withOptionalEmoji(text: string, emoji: string) {
   return ENABLE_EMOJI_REPLIES ? `${text} ${emoji}` : text;
 }
 
+function pickByHash(input: string, size: number) {
+  const text = String(input || '');
+  let hash = 0;
+  for (let i = 0; i < text.length; i += 1) {
+    hash = (hash * 31 + text.charCodeAt(i)) >>> 0;
+  }
+  return size > 0 ? hash % size : 0;
+}
+
+function getOutsideReply(question: string) {
+  const variants = [
+    'أنا مساعد جامعة الجيل الجديد، وأقدر أساعدك بأسئلة الجامعة مثل التخصصات، الرسوم، القبول، والموقع.',
+    'هذا السؤال خارج نطاقي الحالي. أنا مخصص لمعلومات جامعة الجيل الجديد مثل الكليات، التخصصات، والتواصل.',
+    'يسعدني مساعدتك، لكن اختصاصي فقط أسئلة جامعة الجيل الجديد: الرسوم، القبول، البرامج، والعنوان.',
+    'أنا هنا لدعمك في كل ما يخص جامعة الجيل الجديد. اسألني عن التسجيل، التخصصات، أو طرق التواصل.',
+    'سؤالك جميل، لكنني مخصص لأسئلة جامعة الجيل الجديد فقط. جرّب سؤالًا عن الكليات أو الرسوم أو القبول.',
+  ];
+  const index = pickByHash(question, variants.length);
+  return withOptionalEmoji(variants[index] || OUTSIDE_MESSAGE, '🙂');
+}
+
 const SMALL_TALK_TERMS = [
   'السلام عليكم',
   'السلام',
@@ -303,11 +324,30 @@ const SMALL_TALK_TERMS = [
   'اهلين',
   'صباح الخير',
   'مساء الخير',
+  'كيف حالك',
+  'كيف الحال',
+  'كيفك',
+  'شلونك',
+  'اخبارك',
+  'كيف امورك',
+  'صباح النور',
+  'مساء النور',
+  'تصبح على خير',
+  'تصبحون على خير',
+  'ليله سعيده',
+  'ليلة سعيدة',
+  'جمعه مباركه',
+  'جمعة مباركة',
+  'يا هلا',
+  'هلا',
   'من انت',
   'ما اسمك',
   'ساعدني',
   'hello',
   'hi',
+  'good morning',
+  'good evening',
+  'how are you',
   'help',
 ].map((term) => normalizeQuestion(term));
 
@@ -772,6 +812,24 @@ function getSmallTalkReply(question: string) {
   if (includesAny(q, PRAISE_TERMS) || /(thanks?|great|awesome|best chatbot)/i.test(q)) {
     return withOptionalEmoji('شكرًا لك. سعيد أن الخدمة أعجبتك، وأنا جاهز لأي سؤال عن الجامعة.', '🙏');
   }
+  if (
+    includesAny(q, ['كيف حالك', 'كيف الحال', 'كيفك', 'شلونك', 'اخبارك', 'كيف امورك']) ||
+    /(how are you|how's it going)/i.test(q)
+  ) {
+    return withOptionalEmoji('بخير الحمد لله، شكرًا لسؤالك. كيف أقدر أساعدك بخصوص الجامعة؟', '😊');
+  }
+  if (includesAny(q, ['صباح الخير', 'صباح النور']) || /(good morning)/i.test(q)) {
+    return withOptionalEmoji('صباح النور، أهلًا بك. كيف أساعدك في شؤون الجامعة؟', '🌤️');
+  }
+  if (includesAny(q, ['مساء الخير', 'مساء النور']) || /(good evening)/i.test(q)) {
+    return withOptionalEmoji('مساء النور، أهلًا بك. كيف أساعدك في شؤون الجامعة؟', '🌙');
+  }
+  if (includesAny(q, ['تصبح على خير', 'تصبحون على خير', 'ليله سعيده', 'ليلة سعيدة'])) {
+    return withOptionalEmoji('وأنت من أهل الخير، ليلة سعيدة. إذا احتجت أي معلومة عن الجامعة أنا حاضر.', '🌙');
+  }
+  if (includesAny(q, ['جمعه مباركه', 'جمعة مباركة'])) {
+    return withOptionalEmoji('جمعة مباركة عليك، وبالتوفيق دائمًا. إذا رغبت، اسألني أي شيء عن الجامعة.', '🤍');
+  }
   if (includesAny(q, ['السلام عليكم', 'السلام', 'مرحبا', 'اهلا']) || /(hi|hello)/i.test(q)) {
     return withOptionalEmoji('وعليكم السلام، أهلًا بك. أنا مساعد الجامعة.', '😊');
   }
@@ -1122,7 +1180,7 @@ export async function POST(req: Request) {
 
     if (intentProfile.outside) {
       return respond({
-        answer: OUTSIDE_MESSAGE,
+        answer: getOutsideReply(question),
         confidence: 0.9,
         sources: [],
         suggestions: ['ما هي تخصصات الجامعة؟', 'كم رسوم الجامعة؟'],
