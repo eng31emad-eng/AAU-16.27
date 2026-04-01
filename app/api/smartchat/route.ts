@@ -28,6 +28,12 @@ const MAX_RETRIES = 2;
 const ENABLE_LLM_INTENT_REWRITE = (process.env.SMARTCHAT_ENABLE_LLM_INTENT_REWRITE || '1') !== '0';
 const STRICT_FAQ_MATCH_MODE = (process.env.SMARTCHAT_STRICT_FAQ_MATCH_MODE || '0') !== '0';
 const MIN_EXACT_QUESTION_SCORE = Number(process.env.SMARTCHAT_MIN_EXACT_QUESTION_SCORE || 0.65);
+const EARLY_TURN_MAX_USER_MESSAGES = Number(process.env.SMARTCHAT_EARLY_TURN_MAX_USER_MESSAGES || 1);
+const EARLY_TURN_MIN_TOP_SCORE = Number(process.env.SMARTCHAT_EARLY_TURN_MIN_TOP_SCORE || 0.36);
+const EARLY_TURN_MIN_SEMANTIC_SCORE = Number(process.env.SMARTCHAT_EARLY_TURN_MIN_SEMANTIC_SCORE || 0.42);
+const EARLY_TURN_MIN_KEYWORD_SCORE = Number(process.env.SMARTCHAT_EARLY_TURN_MIN_KEYWORD_SCORE || 0.34);
+const EARLY_TURN_MIN_GAP = Number(process.env.SMARTCHAT_EARLY_TURN_MIN_GAP || 0.03);
+const MIN_TOP_GAP = Number(process.env.SMARTCHAT_MIN_TOP_GAP || 0.015);
 
 const EMPTY_QUESTION_MESSAGE = 'اكتب سؤالك من فضلك.';
 const NO_INFO_MESSAGE = 'حاليًا لا أجد إجابة مباشرة لهذا السؤال ضمن بيانات الجامعة المتاحة لدي.';
@@ -462,9 +468,8 @@ function rewriteQuestionFromHistory(question: string, history: ChatHistoryItem[]
   const words = normalized.split(' ').filter(Boolean);
   const followUp = /^(و|طيب|طب|اذن|اذا|وماذا|وهل|وكيف|ومتى|كم|what about|and )/i.test(cleanedQuestion.trim());
   const pronounLike = includesAny(normalized, ['هذا', 'هذه', 'ذلك', 'الذي', 'التي', 'هذي', 'ذا']);
-  const tooShort = words.length <= 4;
 
-  if ((followUp || pronounLike || tooShort) && previousUser) {
+  if ((followUp || pronounLike) && previousUser) {
     const merged = `${previousUser} | ${cleanedQuestion}`;
     return { rewrittenQuestion: merged, rewritten: true };
   }
@@ -489,6 +494,13 @@ function applyIntentFilter(items: IndexItem[], intentProfile: IntentProfile) {
 
   if (filtered.length < 8) return items;
   return filtered;
+}
+
+function countUserTurns(history: ChatHistoryItem[]) {
+  if (!Array.isArray(history)) return 0;
+  return history
+    .filter((item) => item?.role === 'user' && String(item?.text || '').trim().length > 0)
+    .length;
 }
 
 function reciprocalRankFusion(index: number, k = 60) {
@@ -520,8 +532,8 @@ function hybridRetrieve(
       : 0;
 
     const finalScore = useSemanticSearch
-      ? semanticScore * 0.6 + keywordScore * 0.25 + phraseScore * 0.07 + questionMatchScore * 0.05 + intentScore * 0.03
-      : keywordScore * 0.7 + phraseScore * 0.15 + questionMatchScore * 0.1 + intentScore * 0.05;
+      ? semanticScore * 0.64 + keywordScore * 0.26 + phraseScore * 0.07 + questionMatchScore * 0.02 + intentScore * 0.01
+      : keywordScore * 0.77 + phraseScore * 0.17 + questionMatchScore * 0.03 + intentScore * 0.03;
 
     return {
       ...item,
@@ -560,7 +572,7 @@ function hybridRetrieve(
   const reranked = [...union.values()]
     .map((item) => ({
       ...item,
-      rerankScore: item.finalScore * 0.75 + item.rrfScore * 0.2 + item.questionMatchScore * 0.05,
+      rerankScore: item.finalScore * 0.8 + item.rrfScore * 0.18 + item.questionMatchScore * 0.02,
     }))
     .sort((a, b) => b.rerankScore - a.rerankScore)
     .slice(0, TOP_K);
@@ -597,14 +609,6 @@ function calibrateConfidence(
 }
 
 
-function applyQuestionMatchConfidenceAdjustment(confidence: number, questionMatchScore: number) {
-  if (!STRICT_FAQ_MATCH_MODE) return confidence;
-  if (questionMatchScore >= MIN_EXACT_QUESTION_SCORE) return confidence;
-
-  const gap = MIN_EXACT_QUESTION_SCORE - questionMatchScore;
-  const adjusted = confidence - gap * 0.2;
-  return Number(clampConfidence(adjusted).toFixed(2));
-}
 function buildSourceRef(match: SearchMatch, rank: number): KbSourceRef {
   const metadata = match.metadata || {};
   const sourceName = typeof metadata.sourceName === 'string' && metadata.sourceName.trim()
@@ -803,6 +807,7 @@ async function generateAnswerGemini(apiKey: string, question: string, topMatches
     '- أجب باللغة العربية.',
     '- استخدم فقط المعلومات الموجودة في "المصدر".',
     '- ممنوع اختراع معلومات غير موجودة.',
+    '- إذا كانت النتائج غير كافية أو متضاربة، أعد جملة عدم توفر المعلومات فقط.',
     `- إذا لم تتوفر إجابة واضحة، أعد هذه الجملة فقط: ${NO_INFO_MESSAGE}`,
     '',
     `السؤال:\n${question}`,
@@ -1033,12 +1038,23 @@ export async function POST(req: Request) {
       questionMatchScoreLog = topQuestionMatchScore;
       const rawConfidence = deriveConfidence(topScore, useSemanticSearch);
       let confidence = calibrateConfidence(rawConfidence, topMatches, intentProfile.intent);
-      confidence = applyQuestionMatchConfidenceAdjustment(confidence, topQuestionMatchScore);
       const suggestions = topMatches.slice(0, 3).map((m) => m.question);
       const sources = topMatches.slice(0, 3).map((m, i) => buildSourceRef(m, i));
 
       const threshold = useSemanticSearch ? MIN_SIMILARITY : KEYWORD_ONLY_MIN_SCORE;
-      if (topScore < threshold) {
+      const secondScore = topMatches[1]?.rerankScore ?? 0;
+      const topSemanticScore = topMatches[0]?.semanticScore ?? 0;
+      const topKeywordScore = topMatches[0]?.keywordScore ?? 0;
+      const topGap = Math.max(0, topScore - secondScore);
+      const userTurns = countUserTurns(history);
+      const isEarlyTurn = userTurns <= EARLY_TURN_MAX_USER_MESSAGES;
+
+      const weakByTopScore = topScore < (isEarlyTurn ? Math.max(threshold, EARLY_TURN_MIN_TOP_SCORE) : threshold);
+      const weakBySemantic = useSemanticSearch && topSemanticScore < (isEarlyTurn ? EARLY_TURN_MIN_SEMANTIC_SCORE : MIN_SIMILARITY);
+      const weakByKeyword = !useSemanticSearch && topKeywordScore < (isEarlyTurn ? EARLY_TURN_MIN_KEYWORD_SCORE : KEYWORD_ONLY_MIN_SCORE);
+      const ambiguousTop = topGap < (isEarlyTurn ? EARLY_TURN_MIN_GAP : MIN_TOP_GAP) && topScore < threshold + 0.08;
+
+      if (weakByTopScore || weakBySemantic || weakByKeyword || ambiguousTop) {
         return {
           answer: getLowSimilarityReply(suggestions),
           confidence,
@@ -1123,4 +1139,5 @@ export async function POST(req: Request) {
     console.log('[smartchat] responseTime:', `${Date.now() - startedAt}ms`);
   }
 }
+
 
