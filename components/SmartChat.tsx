@@ -12,7 +12,6 @@ type Message = {
   role: 'user' | 'assistant' | 'system';
   text: string;
   suggestions?: string[];
-  confidence?: number;
   sources?: Array<{
     sourceName: string;
     sourceUrl?: string;
@@ -22,7 +21,6 @@ type Message = {
   traceId?: string;
   intent?: string;
   rewrittenQuestion?: string;
-  feedback?: 'up' | 'down';
   errorCode?: string;
   retryAfterSeconds?: number;
 };
@@ -147,7 +145,6 @@ export const SmartChat = () => {
         suggestions: Array.isArray(data?.suggestions)
           ? data.suggestions.filter((s: unknown) => typeof s === 'string' && s.trim()).slice(0, 3)
           : [],
-        confidence: typeof data?.confidence === 'number' ? data.confidence : undefined,
         sources: Array.isArray(data?.sources)
           ? data.sources
             .filter((s: unknown) => typeof s === 'object' && s !== null)
