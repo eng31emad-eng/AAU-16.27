@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useRef, useState } from 'react';
 import { Send, ThumbsDown, ThumbsUp, X } from 'lucide-react';
@@ -82,7 +82,7 @@ export const SmartChat = () => {
       const sysMsg: Message = {
         id: String(Date.now() + 1),
         role: 'system',
-        text: language === 'ar' ? `تم التعرف عليك كـ ${roleLabel(inferred)}` : `Detected as ${roleLabel(inferred)}`
+        text: language === 'ar' ? `طھظ… ط§ظ„طھط¹ط±ظپ ط¹ظ„ظٹظƒ ظƒظ€ ${roleLabel(inferred)}` : `Detected as ${roleLabel(inferred)}`
       };
       setMessages((prev) => [...prev, sysMsg]);
     }
@@ -112,13 +112,13 @@ export const SmartChat = () => {
       if (data?.errorCode === 'RATE_LIMIT' && typeof data?.retryAfterSeconds === 'number') {
         setRequestNotice(
           language === 'ar'
-            ? `تم تجاوز الحد المسموح. حاول بعد ${data.retryAfterSeconds} ثانية.`
+            ? `طھظ… طھط¬ط§ظˆط² ط§ظ„ط­ط¯ ط§ظ„ظ…ط³ظ…ظˆط­. ط­ط§ظˆظ„ ط¨ط¹ط¯ ${data.retryAfterSeconds} ط«ط§ظ†ظٹط©.`
             : `Rate limit reached. Try again in ${data.retryAfterSeconds}s.`,
         );
       } else if (data?.errorCode === 'UPSTREAM_TIMEOUT') {
         setRequestNotice(
           language === 'ar'
-            ? 'الخدمة الخارجية بطيئة حالياً وتم استخدام رد احتياطي.'
+            ? 'ط§ظ„ط®ط¯ظ…ط© ط§ظ„ط®ط§ط±ط¬ظٹط© ط¨ط·ظٹط¦ط© ط­ط§ظ„ظٹط§ظ‹ ظˆطھظ… ط§ط³طھط®ط¯ط§ظ… ط±ط¯ ط§ط­طھظٹط§ط·ظٹ.'
             : 'The upstream model timed out and a fallback response was used.',
         );
       }
@@ -128,7 +128,7 @@ export const SmartChat = () => {
           role: 'assistant',
           text:
             language === 'ar'
-              ? 'عذرًا، حدثت مشكلة مؤقتة. حاول مرة أخرى بعد قليل.'
+              ? 'ط¹ط°ط±ظ‹ط§طŒ ط­ط¯ط«طھ ظ…ط´ظƒظ„ط© ظ…ط¤ظ‚طھط©. ط­ط§ظˆظ„ ظ…ط±ط© ط£ط®ط±ظ‰ ط¨ط¹ط¯ ظ‚ظ„ظٹظ„.'
               : 'A temporary issue occurred. Please try again shortly.'
         };
         setMessages((prev) => [...prev, reply]);
@@ -142,7 +142,7 @@ export const SmartChat = () => {
           typeof data?.answer === 'string' && data.answer.trim()
             ? data.answer.trim()
             : language === 'ar'
-              ? 'لا أملك معلومة كافية من المصدر.'
+              ? 'ظ„ط§ ط£ظ…ظ„ظƒ ظ…ط¹ظ„ظˆظ…ط© ظƒط§ظپظٹط© ظ…ظ† ط§ظ„ظ…طµط¯ط±.'
               : 'I do not have enough information from the source.',
         suggestions: Array.isArray(data?.suggestions)
           ? data.suggestions.filter((s: unknown) => typeof s === 'string' && s.trim()).slice(0, 3)
@@ -170,7 +170,7 @@ export const SmartChat = () => {
       if (error instanceof Error && error.name === 'AbortError') {
         setRequestNotice(
           language === 'ar'
-            ? 'انتهت مهلة الطلب. جرّب سؤالاً أقصر أو أعد المحاولة.'
+            ? 'ط§ظ†طھظ‡طھ ظ…ظ‡ظ„ط© ط§ظ„ط·ظ„ط¨. ط¬ط±ظ‘ط¨ ط³ط¤ط§ظ„ط§ظ‹ ط£ظ‚طµط± ط£ظˆ ط£ط¹ط¯ ط§ظ„ظ…ط­ط§ظˆظ„ط©.'
             : 'Request timed out. Try a shorter question or retry.',
         );
       }
@@ -179,7 +179,7 @@ export const SmartChat = () => {
         role: 'assistant',
         text:
           language === 'ar'
-            ? 'لا أستطيع الرد الآن. حاول مرة أخرى.'
+            ? 'ظ„ط§ ط£ط³طھط·ظٹط¹ ط§ظ„ط±ط¯ ط§ظ„ط¢ظ†. ط­ط§ظˆظ„ ظ…ط±ط© ط£ط®ط±ظ‰.'
             : 'An error occurred while fetching the answer. Please try again.'
       };
       setMessages((prev) => [...prev, reply]);
@@ -229,10 +229,10 @@ export const SmartChat = () => {
 
   const inferRoleFromText = (text: string): 'student' | 'doctor' | 'editor' | 'admin' | 'guest' => {
     const tLower = text.toLowerCase();
-    if (/\b(طالب|طالبة|الدراسة|مقرر|مشروع|تسجيل)\b/.test(tLower) || tLower.includes('طالب')) return 'student';
-    if (/\b(دكتور|دكتورة|أستاذ|أستاذة)\b/.test(tLower) || tLower.includes('دكتور') || tLower.includes('أستاذ')) return 'doctor';
-    if (/\b(محرر|تحرير|نشر|محتوى)\b/.test(tLower) || tLower.includes('محرر')) return 'editor';
-    if (/\b(ادمن|مسؤول|admin|administrator|مدير)\b/.test(tLower) || tLower.includes('ادمن') || tLower.includes('مسؤول')) return 'admin';
+    if (/\b(ط·ط§ظ„ط¨|ط·ط§ظ„ط¨ط©|ط§ظ„ط¯ط±ط§ط³ط©|ظ…ظ‚ط±ط±|ظ…ط´ط±ظˆط¹|طھط³ط¬ظٹظ„)\b/.test(tLower) || tLower.includes('ط·ط§ظ„ط¨')) return 'student';
+    if (/\b(ط¯ظƒطھظˆط±|ط¯ظƒطھظˆط±ط©|ط£ط³طھط§ط°|ط£ط³طھط§ط°ط©)\b/.test(tLower) || tLower.includes('ط¯ظƒطھظˆط±') || tLower.includes('ط£ط³طھط§ط°')) return 'doctor';
+    if (/\b(ظ…ط­ط±ط±|طھط­ط±ظٹط±|ظ†ط´ط±|ظ…ط­طھظˆظ‰)\b/.test(tLower) || tLower.includes('ظ…ط­ط±ط±')) return 'editor';
+    if (/\b(ط§ط¯ظ…ظ†|ظ…ط³ط¤ظˆظ„|admin|administrator|ظ…ط¯ظٹط±)\b/.test(tLower) || tLower.includes('ط§ط¯ظ…ظ†') || tLower.includes('ظ…ط³ط¤ظˆظ„')) return 'admin';
     if (tLower.match(/\b(student|homework|course|enroll|degree)\b/)) return 'student';
     if (tLower.match(/\b(professor|doctor|faculty|lecturer)\b/)) return 'doctor';
     if (tLower.match(/\b(editor|content|publish)\b/)) return 'editor';
@@ -241,17 +241,18 @@ export const SmartChat = () => {
   };
 
   const roleLabel = (r: string) => {
-    if (r === 'student') return language === 'ar' ? 'طالب' : 'Student';
-    if (r === 'doctor') return language === 'ar' ? 'دكتور' : 'Doctor';
-    if (r === 'editor') return language === 'ar' ? 'محرر محتوى' : 'Editor';
-    if (r === 'admin') return language === 'ar' ? 'ادمن' : 'Admin';
-    return language === 'ar' ? 'زائر' : 'Guest';
+    if (r === 'student') return language === 'ar' ? 'ط·ط§ظ„ط¨' : 'Student';
+    if (r === 'doctor') return language === 'ar' ? 'ط¯ظƒطھظˆط±' : 'Doctor';
+    if (r === 'editor') return language === 'ar' ? 'ظ…ط­ط±ط± ظ…ط­طھظˆظ‰' : 'Editor';
+    if (r === 'admin') return language === 'ar' ? 'ط§ط¯ظ…ظ†' : 'Admin';
+    return language === 'ar' ? 'ط²ط§ط¦ط±' : 'Guest';
   };
 
   const clearChat = () => {
     setMessages([]);
     setRequestNotice(null);
   };
+
 
   return (
     <>
@@ -263,8 +264,8 @@ export const SmartChat = () => {
           transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
           className="group relative h-16 w-16 rounded-[1.35rem] border border-white/40 bg-gradient-to-br from-secondary/95 via-gold-light to-secondary/90 text-primary shadow-[0_18px_42px_-20px_hsl(var(--secondary)/0.75)] hover:shadow-[0_24px_52px_-22px_hsl(var(--secondary)/0.82)] ring-1 ring-black/10 flex items-center justify-center transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           onClick={() => setOpen((o) => !o)}
-          aria-label={t('الدردشة الذكية', 'Smart Chat')}
-          title={t('المساعد الذكي', 'Smart Assistant')}
+          aria-label={t('ط§ظ„ط¯ط±ط¯ط´ط© ط§ظ„ط°ظƒظٹط©', 'Smart Chat')}
+          title={t('ط§ظ„ظ…ط³ط§ط¹ط¯ ط§ظ„ط°ظƒظٹ', 'Smart Assistant')}
         >
           <span className="pointer-events-none absolute inset-0 rounded-[1.35rem] border border-white/30" />
           <span className="pointer-events-none absolute inset-1 rounded-[1.1rem] bg-gradient-to-br from-white/45 via-white/10 to-transparent" />
@@ -295,25 +296,25 @@ export const SmartChat = () => {
               </div>
               <div>
                 <div className="inline-flex items-center rounded-full border border-secondary/35 bg-primary px-2.5 py-0.5 text-xs font-bold tracking-wide text-secondary shadow-sm">
-                  {t('المساعد الذكي', 'Smart Assistant')}
+                  {t('ط§ظ„ظ…ط³ط§ط¹ط¯ ط§ظ„ط°ظƒظٹ', 'Smart Assistant')}
                 </div>
-                <div className="text-[13px] text-muted-foreground/90">{t('نسعد بمساعدتك', 'Happy to help')}</div>
+                <div className="text-[13px] text-muted-foreground/90">{t('ظ†ط³ط¹ط¯ ط¨ظ…ط³ط§ط¹ط¯طھظƒ', 'Happy to help')}</div>
                 {role !== 'guest' && (
                   <div className="text-[11px] text-muted-foreground mt-0.5">
                     {role === 'student'
-                      ? t('طالب', 'Student')
+                      ? t('ط·ط§ظ„ط¨', 'Student')
                       : role === 'doctor'
-                        ? t('دكتور', 'Doctor')
+                        ? t('ط¯ظƒطھظˆط±', 'Doctor')
                         : role === 'editor'
-                          ? t('محرر محتوى', 'Editor')
-                          : t('ادمن', 'Admin')}
+                          ? t('ظ…ط­ط±ط± ظ…ط­طھظˆظ‰', 'Editor')
+                          : t('ط§ط¯ظ…ظ†', 'Admin')}
                   </div>
                 )}
               </div>
             </div>
             <div className="flex items-center gap-2">
               <button onClick={clearChat} className="rounded-md px-2.5 py-1 text-xs font-medium text-muted-foreground hover:bg-secondary/10 hover:text-secondary transition-colors">
-                {t('مسح', 'Clear')}
+                {t('ظ…ط³ط­', 'Clear')}
               </button>
               <button onClick={() => setOpen(false)} className="rounded-lg p-2 hover:bg-muted/70 transition-colors duration-150">
                 <X className="w-4 h-4" />
@@ -329,7 +330,7 @@ export const SmartChat = () => {
             )}
             {messages.length === 0 && (
               <div className="mt-12 text-center text-[15px] leading-7 text-muted-foreground">
-                {t('ابدأ المحادثة بطرح سؤال...', 'Start the conversation by asking a question...')}
+                {t('ط§ط¨ط¯ط£ ط§ظ„ظ…ط­ط§ط¯ط«ط© ط¨ط·ط±ط­ ط³ط¤ط§ظ„...', 'Start the conversation by asking a question...')}
               </div>
             )}
 
@@ -361,7 +362,7 @@ export const SmartChat = () => {
                   )}
                   {m.role === 'assistant' && typeof m.confidence === 'number' && (
                     <div className="mt-2 text-[11px] text-muted-foreground">
-                      {language === 'ar' ? 'الثقة:' : 'Confidence:'} {(m.confidence * 100).toFixed(0)}%
+                      {language === 'ar' ? 'ط§ظ„ط«ظ‚ط©:' : 'Confidence:'} {(m.confidence * 100).toFixed(0)}%
                     </div>
                   )}
                   {m.role === 'assistant' && Array.isArray(m.sources) && m.sources.length > 0 && (
@@ -369,7 +370,6 @@ export const SmartChat = () => {
                       {m.sources.map((src, idx) => (
                         <div key={`${m.id}-src-${src.chunkId}-${idx}`} className="rounded-lg border border-border/40 bg-background/80 p-2 text-xs leading-5">
                           <div className="font-semibold text-foreground">{src.sourceName}</div>
-                          {src.excerpt && <div className="text-muted-foreground mt-1 whitespace-pre-wrap">{src.excerpt}</div>}
                           {src.sourceUrl && (
                             <a
                               href={src.sourceUrl}
@@ -377,7 +377,7 @@ export const SmartChat = () => {
                               rel="noreferrer"
                               className="mt-1 inline-block text-secondary hover:underline"
                             >
-                              {language === 'ar' ? 'فتح المصدر' : 'Open source'}
+                              {language === 'ar' ? 'ظپطھط­ ط§ظ„ظ…طµط¯ط±' : 'Open source'}
                             </a>
                           )}
                         </div>
@@ -391,14 +391,14 @@ export const SmartChat = () => {
                         className={`inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-[11px] transition-colors ${m.feedback === 'up' ? 'border-secondary/60 bg-secondary/15 text-foreground' : 'border-border/50 bg-background text-muted-foreground hover:text-foreground'}`}
                       >
                         <ThumbsUp className="h-3.5 w-3.5" />
-                        {language === 'ar' ? 'مفيد' : 'Helpful'}
+                        {language === 'ar' ? 'ظ…ظپظٹط¯' : 'Helpful'}
                       </button>
                       <button
                         onClick={() => submitFeedback(m.id, 'down')}
                         className={`inline-flex items-center gap-1 rounded-full border px-2.5 py-1 text-[11px] transition-colors ${m.feedback === 'down' ? 'border-secondary/60 bg-secondary/15 text-foreground' : 'border-border/50 bg-background text-muted-foreground hover:text-foreground'}`}
                       >
                         <ThumbsDown className="h-3.5 w-3.5" />
-                        {language === 'ar' ? 'غير مفيد' : 'Not helpful'}
+                        {language === 'ar' ? 'ط؛ظٹط± ظ…ظپظٹط¯' : 'Not helpful'}
                       </button>
                     </div>
                   )}
@@ -409,7 +409,7 @@ export const SmartChat = () => {
                         : 'border border-border/40 bg-background text-muted-foreground'
                         }`}
                     >
-                      {m.role === 'user' ? (language === 'ar' ? 'أنت' : 'You') : language === 'ar' ? 'المساعد' : 'Assistant'}
+                      {m.role === 'user' ? (language === 'ar' ? 'ط£ظ†طھ' : 'You') : language === 'ar' ? 'ط§ظ„ظ…ط³ط§ط¹ط¯' : 'Assistant'}
                     </span>
                   </div>
                 </motion.div>
@@ -419,7 +419,7 @@ export const SmartChat = () => {
             {loading && (
               <div className="mr-auto flex max-w-[85%] items-center gap-2 rounded-2xl border border-border/35 bg-card/95 p-3 text-sm text-muted-foreground">
                 <span className="inline-block w-2 h-2 rounded-full bg-muted-foreground animate-pulse" />
-                {t('جاري تجهيز الرد...', 'Preparing response...')}
+                {t('ط¬ط§ط±ظٹ طھط¬ظ‡ظٹط² ط§ظ„ط±ط¯...', 'Preparing response...')}
               </div>
             )}
           </div>
@@ -436,12 +436,12 @@ export const SmartChat = () => {
                     sendMessage();
                   }
                 }}
-                placeholder={t('اكتب سؤالك هنا واضغط Enter...', 'Type your question and press Enter...')}
+                placeholder={t('ط§ظƒطھط¨ ط³ط¤ط§ظ„ظƒ ظ‡ظ†ط§ ظˆط§ط¶ط؛ط· Enter...', 'Type your question and press Enter...')}
                 className="max-h-24 flex-1 resize-none overflow-y-auto rounded-xl border border-border/40 bg-card px-3.5 py-2.5 text-[15px] leading-7 text-foreground outline-none transition-colors placeholder:text-muted-foreground/80 focus:border-secondary/45 focus:bg-background"
               />
               <Button size="sm" onClick={sendMessage} disabled={loading || !input.trim()} className="flex items-center gap-2 rounded-xl bg-secondary px-3.5 text-secondary-foreground hover:bg-secondary/90 shadow-[0_12px_20px_-16px_hsl(var(--secondary)/0.95)] disabled:opacity-60">
                 <Send className="w-4 h-4" />
-                {t('إرسال', 'Send')}
+                {t('ط¥ط±ط³ط§ظ„', 'Send')}
               </Button>
             </div>
           </div>

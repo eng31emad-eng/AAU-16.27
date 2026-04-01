@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
 
@@ -103,7 +103,7 @@ for (let i = 1; i < rows.length; i += 1) {
       sourceType: 'faq',
       sourceName: 'FAQ CSV',
       sourceUrl: sourceUrl || undefined,
-      excerpt: `س: ${question}\nج: ${answer}`,
+      excerpt: answer.length > 180 ? `${answer.slice(0, 180)}...` : answer,
       importedAt: new Date().toISOString(),
     },
   });

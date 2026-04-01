@@ -1,4 +1,4 @@
-import fs from 'fs'
+﻿import fs from 'fs'
 import path from 'path'
 import crypto from 'crypto'
 import { saveKbIndex } from '@/lib/kb-store'
@@ -167,7 +167,7 @@ async function writeFaqIndex(rows: SourceFaq[], sourceUrl: string, sourceHash: s
       sourceUrl,
       category: row.category,
       tags: row.category ? [row.category] : [],
-      excerpt: `س: ${row.question}\nج: ${row.answer}`,
+      excerpt: row.answer.length > 180 ? `${row.answer.slice(0, 180)}...` : row.answer,
       importedAt: now,
       updatedAt: row.updatedAt || now,
     },

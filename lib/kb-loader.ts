@@ -1,4 +1,4 @@
-import type { KbSourceRef } from '@/types/kb';
+﻿import type { KbSourceRef } from '@/types/kb';
 export { loadKbIndex } from '@/lib/kb-store'
 
 export function toSourceRef(
@@ -12,6 +12,6 @@ export function toSourceRef(
     sourceName: `FAQ #${index + 1}`,
     sourceType: 'faq',
     chunkId: `faq-${itemId}`,
-    excerpt: `س: ${question}\nج: ${answer}`,
+    excerpt: answer.length > 180 ? `${answer.slice(0, 180)}...` : answer,
   };
 }

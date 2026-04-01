@@ -1,4 +1,4 @@
-import { randomUUID } from 'crypto';
+﻿import { randomUUID } from 'crypto';
 import { NextResponse } from 'next/server';
 import { loadKbIndex, toSourceRef } from '@/lib/kb-loader';
 import type { KbChunk, KbSourceRef, SmartChatStructuredResponse } from '@/types/kb';
@@ -26,11 +26,11 @@ const GENERATION_MODELS = (
   .filter(Boolean);
 const MAX_RETRIES = 2;
 
-const EMPTY_QUESTION_MESSAGE = 'اكتب سؤالك من فضلك.';
-const NO_INFO_MESSAGE = 'حاليًا لا أجد إجابة مباشرة لهذا السؤال ضمن بيانات الجامعة المتاحة لدي.';
-const OUTSIDE_MESSAGE = 'أعتذر، أنا مساعد مخصص لأسئلة جامعة الجيل الجديد فقط.';
-const GENERIC_ERROR_MESSAGE = 'حدث خلل مؤقت. حاول مرة أخرى بعد قليل.';
-const RATE_LIMIT_MESSAGE = 'الرجاء الانتظار قليلًا قبل إرسال سؤال جديد.';
+const EMPTY_QUESTION_MESSAGE = 'ط§ظƒطھط¨ ط³ط¤ط§ظ„ظƒ ظ…ظ† ظپط¶ظ„ظƒ.';
+const NO_INFO_MESSAGE = 'ط­ط§ظ„ظٹظ‹ط§ ظ„ط§ ط£ط¬ط¯ ط¥ط¬ط§ط¨ط© ظ…ط¨ط§ط´ط±ط© ظ„ظ‡ط°ط§ ط§ظ„ط³ط¤ط§ظ„ ط¶ظ…ظ† ط¨ظٹط§ظ†ط§طھ ط§ظ„ط¬ط§ظ…ط¹ط© ط§ظ„ظ…طھط§ط­ط© ظ„ط¯ظٹ.';
+const OUTSIDE_MESSAGE = 'ط£ط¹طھط°ط±طŒ ط£ظ†ط§ ظ…ط³ط§ط¹ط¯ ظ…ط®طµطµ ظ„ط£ط³ط¦ظ„ط© ط¬ط§ظ…ط¹ط© ط§ظ„ط¬ظٹظ„ ط§ظ„ط¬ط¯ظٹط¯ ظپظ‚ط·.';
+const GENERIC_ERROR_MESSAGE = 'ط­ط¯ط« ط®ظ„ظ„ ظ…ط¤ظ‚طھ. ط­ط§ظˆظ„ ظ…ط±ط© ط£ط®ط±ظ‰ ط¨ط¹ط¯ ظ‚ظ„ظٹظ„.';
+const RATE_LIMIT_MESSAGE = 'ط§ظ„ط±ط¬ط§ط، ط§ظ„ط§ظ†طھط¸ط§ط± ظ‚ظ„ظٹظ„ظ‹ط§ ظ‚ط¨ظ„ ط¥ط±ط³ط§ظ„ ط³ط¤ط§ظ„ ط¬ط¯ظٹط¯.';
 
 type QuestionType = 'small_talk' | 'university' | 'outside';
 type IntentType =
@@ -145,10 +145,10 @@ function normalizeArabic(text: string) {
   return text
     .normalize('NFKC')
     .replace(/[\u064B-\u0652\u0670]/g, '')
-    .replace(/[أإآ]/g, 'ا')
-    .replace(/ة/g, 'ه')
-    .replace(/ى/g, 'ي')
-    .replace(/ـ+/g, '')
+    .replace(/[ط£ط¥ط¢]/g, 'ط§')
+    .replace(/ط©/g, 'ظ‡')
+    .replace(/ظ‰/g, 'ظٹ')
+    .replace(/ظ€+/g, '')
     .replace(/[^\p{L}\p{N}\s]/gu, ' ')
     .toLowerCase()
     .replace(/\s+/g, ' ')
@@ -158,12 +158,12 @@ function normalizeArabic(text: string) {
 function normalizeQuestion(question: string) {
   let q = question;
   const slangMap: Array<[RegExp, string]> = [
-    [/\bفين\b/gi, 'اين'],
-    [/\bوين\b/gi, 'اين'],
-    [/\bايش\b/gi, 'ما'],
-    [/\bاش\b/gi, 'ما'],
-    [/\bشلون\b/gi, 'كيف'],
-    [/\bقديش\b/gi, 'كم'],
+    [/\bظپظٹظ†\b/gi, 'ط§ظٹظ†'],
+    [/\bظˆظٹظ†\b/gi, 'ط§ظٹظ†'],
+    [/\bط§ظٹط´\b/gi, 'ظ…ط§'],
+    [/\bط§ط´\b/gi, 'ظ…ط§'],
+    [/\bط´ظ„ظˆظ†\b/gi, 'ظƒظٹظپ'],
+    [/\bظ‚ط¯ظٹط´\b/gi, 'ظƒظ…'],
   ];
   for (const [pattern, replacement] of slangMap) {
     q = q.replace(pattern, replacement);
@@ -208,34 +208,34 @@ function includesAny(text: string, terms: string[]) {
 }
 
 const INTENT_TERMS: Array<{ intent: IntentType; terms: string[] }> = [
-  { intent: 'admission_requirements', terms: ['قبول', 'تسجيل', 'التسجيل', 'شروط', 'وثائق', 'معدل', 'admission', 'register'] },
-  { intent: 'tuition_fees', terms: ['رسوم', 'اقساط', 'قسط', 'تكلفه', 'سعر', 'fees', 'tuition'] },
-  { intent: 'scholarships', terms: ['منحه', 'منح', 'خصم', 'اعفاء', 'scholarship'] },
-  { intent: 'program_info', terms: ['تخصص', 'برنامج', 'برامج', 'كليه', 'الكليات', 'major', 'program', 'college'] },
-  { intent: 'schedule_calendar', terms: ['دوام', 'جدول', 'تقويم', 'اختبار', 'بدايه', 'نهايه', 'calendar', 'schedule', 'exam'] },
-  { intent: 'policies_regulations', terms: ['لائحه', 'قانون', 'سياسه', 'انذار', 'غياب', 'حضور', 'policy', 'regulation'] },
-  { intent: 'campus_services', terms: ['مكتبه', 'سكن', 'مختبر', 'نقل', 'انترنت', 'خدمات', 'library', 'lab', 'service'] },
-  { intent: 'contact_location', terms: ['اين', 'عنوان', 'موقع', 'تواصل', 'هاتف', 'ايميل', 'location', 'address', 'contact'] },
+  { intent: 'admission_requirements', terms: ['ظ‚ط¨ظˆظ„', 'طھط³ط¬ظٹظ„', 'ط§ظ„طھط³ط¬ظٹظ„', 'ط´ط±ظˆط·', 'ظˆط«ط§ط¦ظ‚', 'ظ…ط¹ط¯ظ„', 'admission', 'register'] },
+  { intent: 'tuition_fees', terms: ['ط±ط³ظˆظ…', 'ط§ظ‚ط³ط§ط·', 'ظ‚ط³ط·', 'طھظƒظ„ظپظ‡', 'ط³ط¹ط±', 'fees', 'tuition'] },
+  { intent: 'scholarships', terms: ['ظ…ظ†ط­ظ‡', 'ظ…ظ†ط­', 'ط®طµظ…', 'ط§ط¹ظپط§ط،', 'scholarship'] },
+  { intent: 'program_info', terms: ['طھط®طµطµ', 'ط¨ط±ظ†ط§ظ…ط¬', 'ط¨ط±ط§ظ…ط¬', 'ظƒظ„ظٹظ‡', 'ط§ظ„ظƒظ„ظٹط§طھ', 'major', 'program', 'college'] },
+  { intent: 'schedule_calendar', terms: ['ط¯ظˆط§ظ…', 'ط¬ط¯ظˆظ„', 'طھظ‚ظˆظٹظ…', 'ط§ط®طھط¨ط§ط±', 'ط¨ط¯ط§ظٹظ‡', 'ظ†ظ‡ط§ظٹظ‡', 'calendar', 'schedule', 'exam'] },
+  { intent: 'policies_regulations', terms: ['ظ„ط§ط¦ط­ظ‡', 'ظ‚ط§ظ†ظˆظ†', 'ط³ظٹط§ط³ظ‡', 'ط§ظ†ط°ط§ط±', 'ط؛ظٹط§ط¨', 'ط­ط¶ظˆط±', 'policy', 'regulation'] },
+  { intent: 'campus_services', terms: ['ظ…ظƒطھط¨ظ‡', 'ط³ظƒظ†', 'ظ…ط®طھط¨ط±', 'ظ†ظ‚ظ„', 'ط§ظ†طھط±ظ†طھ', 'ط®ط¯ظ…ط§طھ', 'library', 'lab', 'service'] },
+  { intent: 'contact_location', terms: ['ط§ظٹظ†', 'ط¹ظ†ظˆط§ظ†', 'ظ…ظˆظ‚ط¹', 'طھظˆط§طµظ„', 'ظ‡ط§طھظپ', 'ط§ظٹظ…ظٹظ„', 'location', 'address', 'contact'] },
 ];
 
 function classifyIntent(question: string): IntentProfile {
   const q = normalizeQuestion(question);
-  const smallTalkTerms = ['السلام عليكم', 'السلام', 'مرحبا', 'اهلا', 'من انت', 'ما اسمك', 'ساعدني', 'help', 'hello'];
+  const smallTalkTerms = ['ط§ظ„ط³ظ„ط§ظ… ط¹ظ„ظٹظƒظ…', 'ط§ظ„ط³ظ„ط§ظ…', 'ظ…ط±ط­ط¨ط§', 'ط§ظ‡ظ„ط§', 'ظ…ظ† ط§ظ†طھ', 'ظ…ط§ ط§ط³ظ…ظƒ', 'ط³ط§ط¹ط¯ظ†ظٹ', 'help', 'hello'];
   if (includesAny(q, smallTalkTerms) || /(hi|hello|who are you|help)/i.test(q)) {
     return { intent: 'small_talk', type: 'small_talk', intentTerms: [], outside: false, smallTalk: true };
   }
 
   const universityAnchorTerms = [
-    'جامعه',
-    'الجامعه',
-    'الجيل الجديد',
-    'قبول',
-    'تسجيل',
-    'كليه',
-    'برنامج',
-    'رسوم',
-    'عنوان',
-    'تواصل',
+    'ط¬ط§ظ…ط¹ظ‡',
+    'ط§ظ„ط¬ط§ظ…ط¹ظ‡',
+    'ط§ظ„ط¬ظٹظ„ ط§ظ„ط¬ط¯ظٹط¯',
+    'ظ‚ط¨ظˆظ„',
+    'طھط³ط¬ظٹظ„',
+    'ظƒظ„ظٹظ‡',
+    'ط¨ط±ظ†ط§ظ…ط¬',
+    'ط±ط³ظˆظ…',
+    'ط¹ظ†ظˆط§ظ†',
+    'طھظˆط§طµظ„',
     'university',
     'aau',
   ];
@@ -268,8 +268,8 @@ function rewriteQuestionFromHistory(question: string, history: ChatHistoryItem[]
   const previousAssistant = [...cleanedHistory].reverse().find((h) => h.role === 'assistant')?.text || '';
   const normalized = normalizeQuestion(cleanedQuestion);
   const words = normalized.split(' ').filter(Boolean);
-  const followUp = /^(و|طيب|طب|اذن|اذا|وماذا|وهل|وكيف|ومتى|كم|what about|and )/i.test(cleanedQuestion.trim());
-  const pronounLike = includesAny(normalized, ['هذا', 'هذه', 'ذلك', 'الذي', 'التي', 'هذي', 'ذا']);
+  const followUp = /^(ظˆ|ط·ظٹط¨|ط·ط¨|ط§ط°ظ†|ط§ط°ط§|ظˆظ…ط§ط°ط§|ظˆظ‡ظ„|ظˆظƒظٹظپ|ظˆظ…طھظ‰|ظƒظ…|what about|and )/i.test(cleanedQuestion.trim());
+  const pronounLike = includesAny(normalized, ['ظ‡ط°ط§', 'ظ‡ط°ظ‡', 'ط°ظ„ظƒ', 'ط§ظ„ط°ظٹ', 'ط§ظ„طھظٹ', 'ظ‡ط°ظٹ', 'ط°ط§']);
   const tooShort = words.length <= 4;
 
   if ((followUp || pronounLike || tooShort) && previousUser) {
@@ -412,7 +412,7 @@ function buildSourceRef(match: SearchMatch, rank: number): KbSourceRef {
     : undefined;
   const excerpt = typeof metadata.excerpt === 'string' && metadata.excerpt.trim()
     ? metadata.excerpt
-    : `س: ${match.question}\nج: ${match.answer}`;
+    : match.answer.length > 180 ? `${match.answer.slice(0, 180)}...` : match.answer;
 
   return {
     ...toSourceRef(match.question, match.answer, match.id, rank),
@@ -424,25 +424,25 @@ function buildSourceRef(match: SearchMatch, rank: number): KbSourceRef {
 
 function getSmallTalkReply(question: string) {
   const q = normalizeQuestion(question);
-  if (includesAny(q, ['السلام عليكم', 'السلام', 'مرحبا', 'اهلا']) || /(hi|hello)/i.test(q)) {
-    return 'وعليكم السلام، أهلًا بك. أنا مساعد الجامعة.';
+  if (includesAny(q, ['ط§ظ„ط³ظ„ط§ظ… ط¹ظ„ظٹظƒظ…', 'ط§ظ„ط³ظ„ط§ظ…', 'ظ…ط±ط­ط¨ط§', 'ط§ظ‡ظ„ط§']) || /(hi|hello)/i.test(q)) {
+    return 'ظˆط¹ظ„ظٹظƒظ… ط§ظ„ط³ظ„ط§ظ…طŒ ط£ظ‡ظ„ظ‹ط§ ط¨ظƒ. ط£ظ†ط§ ظ…ط³ط§ط¹ط¯ ط§ظ„ط¬ط§ظ…ط¹ط©.';
   }
-  if (includesAny(q, ['ما اسمك', 'من انت']) || /(who are you|your name)/i.test(q)) {
-    return 'أنا المساعد الذكي لجامعة الجيل الجديد.';
+  if (includesAny(q, ['ظ…ط§ ط§ط³ظ…ظƒ', 'ظ…ظ† ط§ظ†طھ']) || /(who are you|your name)/i.test(q)) {
+    return 'ط£ظ†ط§ ط§ظ„ظ…ط³ط§ط¹ط¯ ط§ظ„ط°ظƒظٹ ظ„ط¬ط§ظ…ط¹ط© ط§ظ„ط¬ظٹظ„ ط§ظ„ط¬ط¯ظٹط¯.';
   }
-  return 'مرحبًا بك، اسألني عن القبول، الرسوم، البرامج، والخدمات الجامعية.';
+  return 'ظ…ط±ط­ط¨ظ‹ط§ ط¨ظƒطŒ ط§ط³ط£ظ„ظ†ظٹ ط¹ظ† ط§ظ„ظ‚ط¨ظˆظ„طŒ ط§ظ„ط±ط³ظˆظ…طŒ ط§ظ„ط¨ط±ط§ظ…ط¬طŒ ظˆط§ظ„ط®ط¯ظ…ط§طھ ط§ظ„ط¬ط§ظ…ط¹ظٹط©.';
 }
 
 function getLowSimilarityReply(suggestions: string[]) {
   const lines = [
-    `${NO_INFO_MESSAGE} هل تقصد:`,
-    '- القبول والتسجيل؟',
-    '- الرسوم والمنح؟',
-    '- البرامج والتخصصات؟',
-    '- العنوان وطرق التواصل؟',
+    `${NO_INFO_MESSAGE} ظ‡ظ„ طھظ‚طµط¯:`,
+    '- ط§ظ„ظ‚ط¨ظˆظ„ ظˆط§ظ„طھط³ط¬ظٹظ„طں',
+    '- ط§ظ„ط±ط³ظˆظ… ظˆط§ظ„ظ…ظ†ط­طں',
+    '- ط§ظ„ط¨ط±ط§ظ…ط¬ ظˆط§ظ„طھط®طµطµط§طھطں',
+    '- ط§ظ„ط¹ظ†ظˆط§ظ† ظˆط·ط±ظ‚ ط§ظ„طھظˆط§طµظ„طں',
   ];
   if (suggestions.length > 0) {
-    lines.push('أسئلة قريبة قد تفيدك:');
+    lines.push('ط£ط³ط¦ظ„ط© ظ‚ط±ظٹط¨ط© ظ‚ط¯ طھظپظٹط¯ظƒ:');
     for (const s of suggestions) lines.push(`- ${s}`);
   }
   return lines.join('\n');
@@ -526,16 +526,16 @@ async function generateAnswerGemini(apiKey: string, question: string, topMatches
 
   const context = topMatches.map((item, i) => `Q${i + 1}: ${item.question}\nA${i + 1}: ${item.answer}`).join('\n\n');
   const prompt = [
-    'أنت مساعد رسمي لجامعة الجيل الجديد.',
-    'التعليمات:',
-    '- أجب باللغة العربية.',
-    '- استخدم فقط المعلومات الموجودة في "المصدر".',
-    '- ممنوع اختراع معلومات غير موجودة.',
-    `- إذا لم تتوفر إجابة واضحة، أعد هذه الجملة فقط: ${NO_INFO_MESSAGE}`,
+    'ط£ظ†طھ ظ…ط³ط§ط¹ط¯ ط±ط³ظ…ظٹ ظ„ط¬ط§ظ…ط¹ط© ط§ظ„ط¬ظٹظ„ ط§ظ„ط¬ط¯ظٹط¯.',
+    'ط§ظ„طھط¹ظ„ظٹظ…ط§طھ:',
+    '- ط£ط¬ط¨ ط¨ط§ظ„ظ„ط؛ط© ط§ظ„ط¹ط±ط¨ظٹط©.',
+    '- ط§ط³طھط®ط¯ظ… ظپظ‚ط· ط§ظ„ظ…ط¹ظ„ظˆظ…ط§طھ ط§ظ„ظ…ظˆط¬ظˆط¯ط© ظپظٹ "ط§ظ„ظ…طµط¯ط±".',
+    '- ظ…ظ…ظ†ظˆط¹ ط§ط®طھط±ط§ط¹ ظ…ط¹ظ„ظˆظ…ط§طھ ط؛ظٹط± ظ…ظˆط¬ظˆط¯ط©.',
+    `- ط¥ط°ط§ ظ„ظ… طھطھظˆظپط± ط¥ط¬ط§ط¨ط© ظˆط§ط¶ط­ط©طŒ ط£ط¹ط¯ ظ‡ط°ظ‡ ط§ظ„ط¬ظ…ظ„ط© ظپظ‚ط·: ${NO_INFO_MESSAGE}`,
     '',
-    `السؤال:\n${question}`,
+    `ط§ظ„ط³ط¤ط§ظ„:\n${question}`,
     '',
-    `المصدر:\n${context}`,
+    `ط§ظ„ظ…طµط¯ط±:\n${context}`,
   ].join('\n');
 
   let lastError = '';
