@@ -29,11 +29,14 @@ const ENABLE_LLM_INTENT_REWRITE = (process.env.SMARTCHAT_ENABLE_LLM_INTENT_REWRI
 const STRICT_FAQ_MATCH_MODE = (process.env.SMARTCHAT_STRICT_FAQ_MATCH_MODE || '0') !== '0';
 const MIN_EXACT_QUESTION_SCORE = Number(process.env.SMARTCHAT_MIN_EXACT_QUESTION_SCORE || 0.65);
 const EARLY_TURN_MAX_USER_MESSAGES = Number(process.env.SMARTCHAT_EARLY_TURN_MAX_USER_MESSAGES || 1);
-const EARLY_TURN_MIN_TOP_SCORE = Number(process.env.SMARTCHAT_EARLY_TURN_MIN_TOP_SCORE || 0.36);
-const EARLY_TURN_MIN_SEMANTIC_SCORE = Number(process.env.SMARTCHAT_EARLY_TURN_MIN_SEMANTIC_SCORE || 0.42);
-const EARLY_TURN_MIN_KEYWORD_SCORE = Number(process.env.SMARTCHAT_EARLY_TURN_MIN_KEYWORD_SCORE || 0.34);
-const EARLY_TURN_MIN_GAP = Number(process.env.SMARTCHAT_EARLY_TURN_MIN_GAP || 0.03);
+const EARLY_TURN_MIN_TOP_SCORE = Number(process.env.SMARTCHAT_EARLY_TURN_MIN_TOP_SCORE || 0.30);
+const EARLY_TURN_MIN_SEMANTIC_SCORE = Number(process.env.SMARTCHAT_EARLY_TURN_MIN_SEMANTIC_SCORE || 0.34);
+const EARLY_TURN_MIN_KEYWORD_SCORE = Number(process.env.SMARTCHAT_EARLY_TURN_MIN_KEYWORD_SCORE || 0.24);
+const EARLY_TURN_MIN_GAP = Number(process.env.SMARTCHAT_EARLY_TURN_MIN_GAP || 0.015);
 const MIN_TOP_GAP = Number(process.env.SMARTCHAT_MIN_TOP_GAP || 0.015);
+const CONTACT_LOCATION_MIN_TOP_SCORE = Number(process.env.SMARTCHAT_CONTACT_LOCATION_MIN_TOP_SCORE || 0.26);
+const CONTACT_LOCATION_MIN_SEMANTIC_SCORE = Number(process.env.SMARTCHAT_CONTACT_LOCATION_MIN_SEMANTIC_SCORE || 0.24);
+const CONTACT_LOCATION_MIN_KEYWORD_SCORE = Number(process.env.SMARTCHAT_CONTACT_LOCATION_MIN_KEYWORD_SCORE || 0.20);
 
 const EMPTY_QUESTION_MESSAGE = 'اكتب سؤالك من فضلك.';
 const NO_INFO_MESSAGE = 'حاليًا لا أجد إجابة مباشرة لهذا السؤال ضمن بيانات الجامعة المتاحة لدي.';
@@ -641,18 +644,9 @@ function getSmallTalkReply(question: string) {
 }
 
 function getLowSimilarityReply(suggestions: string[]) {
-  const lines = [
-    `${NO_INFO_MESSAGE} هل تقصد:`,
-    '- القبول والتسجيل؟',
-    '- الرسوم والمنح؟',
-    '- البرامج والتخصصات؟',
-    '- العنوان وطرق التواصل؟',
-  ];
-  if (suggestions.length > 0) {
-    lines.push('أسئلة قريبة قد تفيدك:');
-    for (const s of suggestions) lines.push(`- ${s}`);
-  }
-  return lines.join('\n');
+  const top2 = suggestions.filter(Boolean).slice(0, 2);
+  if (top2.length === 0) return NO_INFO_MESSAGE;
+  return `${NO_INFO_MESSAGE} ربما تقصد: ${top2.join('، ')}`;
 }
 
 async function postJsonWithRetry(url: string, body: unknown, retries = MAX_RETRIES): Promise<UpstreamResult> {
@@ -1039,6 +1033,7 @@ export async function POST(req: Request) {
       const rawConfidence = deriveConfidence(topScore, useSemanticSearch);
       let confidence = calibrateConfidence(rawConfidence, topMatches, intentProfile.intent);
       const suggestions = topMatches.slice(0, 3).map((m) => m.question);
+      const fallbackSuggestions = suggestions.slice(0, 2);
       const sources = topMatches.slice(0, 3).map((m, i) => buildSourceRef(m, i));
 
       const threshold = useSemanticSearch ? MIN_SIMILARITY : KEYWORD_ONLY_MIN_SCORE;
@@ -1052,14 +1047,24 @@ export async function POST(req: Request) {
       const weakByTopScore = topScore < (isEarlyTurn ? Math.max(threshold, EARLY_TURN_MIN_TOP_SCORE) : threshold);
       const weakBySemantic = useSemanticSearch && topSemanticScore < (isEarlyTurn ? EARLY_TURN_MIN_SEMANTIC_SCORE : MIN_SIMILARITY);
       const weakByKeyword = !useSemanticSearch && topKeywordScore < (isEarlyTurn ? EARLY_TURN_MIN_KEYWORD_SCORE : KEYWORD_ONLY_MIN_SCORE);
-      const ambiguousTop = topGap < (isEarlyTurn ? EARLY_TURN_MIN_GAP : MIN_TOP_GAP) && topScore < threshold + 0.08;
+      const ambiguousTop =
+        topGap < (isEarlyTurn ? EARLY_TURN_MIN_GAP : MIN_TOP_GAP) &&
+        topScore < threshold + 0.06 &&
+        topQuestionMatchScore < 0.55;
 
-      if (weakByTopScore || weakBySemantic || weakByKeyword || ambiguousTop) {
+      const isContactLocationIntent = intentProfile.intent === 'contact_location';
+      const hasReasonableContactSignal =
+        topKeywordScore >= CONTACT_LOCATION_MIN_KEYWORD_SCORE ||
+        topSemanticScore >= CONTACT_LOCATION_MIN_SEMANTIC_SCORE ||
+        topScore >= CONTACT_LOCATION_MIN_TOP_SCORE;
+      const bypassEarlyGuardForContact = isContactLocationIntent && hasReasonableContactSignal;
+
+      if (!bypassEarlyGuardForContact && (weakByTopScore || weakBySemantic || weakByKeyword || ambiguousTop)) {
         return {
-          answer: getLowSimilarityReply(suggestions),
+          answer: getLowSimilarityReply(fallbackSuggestions),
           confidence,
           sources,
-          suggestions,
+          suggestions: fallbackSuggestions,
           type: 'university',
           intent: intentProfile.intent,
           rewrittenQuestion: wasRewritten ? effectiveQuestion : undefined,
