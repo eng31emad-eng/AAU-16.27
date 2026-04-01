@@ -25,12 +25,14 @@ const GENERATION_MODELS = (
   .map((s) => s.trim())
   .filter(Boolean);
 const MAX_RETRIES = 2;
+const ENABLE_LLM_INTENT_REWRITE = (process.env.SMARTCHAT_ENABLE_LLM_INTENT_REWRITE || '1') !== '0';
 
 const EMPTY_QUESTION_MESSAGE = 'اكتب سؤالك من فضلك.';
 const NO_INFO_MESSAGE = 'حاليًا لا أجد إجابة مباشرة لهذا السؤال ضمن بيانات الجامعة المتاحة لدي.';
 const OUTSIDE_MESSAGE = 'أعتذر، أنا مساعد مخصص لأسئلة جامعة الجيل الجديد فقط.';
 const GENERIC_ERROR_MESSAGE = 'حدث خلل مؤقت. حاول مرة أخرى بعد قليل.';
 const RATE_LIMIT_MESSAGE = 'الرجاء الانتظار قليلًا قبل إرسال سؤال جديد.';
+const UNIVERSITY_NAME = 'جامعة الجيل الجديد';
 
 type QuestionType = 'small_talk' | 'university' | 'outside';
 type IntentType =
@@ -90,6 +92,7 @@ type CachedAnswer = {
 };
 
 type UpstreamErrorType = 'timeout' | 'http' | 'network';
+type LlmIntentLabel = 'small_talk' | 'university_domain' | 'clearly_outside';
 type UpstreamResult = {
   status: number;
   data: any | null;
@@ -207,6 +210,109 @@ function includesAny(text: string, terms: string[]) {
   return terms.some((t) => text.includes(t));
 }
 
+function hasAnyPattern(text: string, patterns: RegExp[]) {
+  return patterns.some((pattern) => pattern.test(text));
+}
+
+const SMALL_TALK_TERMS = [
+  'السلام عليكم',
+  'السلام',
+  'مرحبا',
+  'اهلا',
+  'اهلين',
+  'صباح الخير',
+  'مساء الخير',
+  'من انت',
+  'ما اسمك',
+  'ساعدني',
+  'hello',
+  'hi',
+  'help',
+].map((term) => normalizeQuestion(term));
+
+const OUTSIDE_STRONG_TERMS = [
+  'الطقس',
+  'درجه الحراره',
+  'مباراه',
+  'كره القدم',
+  'الدوري',
+  'اسهم',
+  'بيتكوين',
+  'عمله رقميه',
+  'سياره',
+  'طبخ',
+  'وصفه',
+  'فيلم',
+  'مسلسل',
+  'اغنيه',
+  'الهاتف',
+  'جوال',
+  'برمجه',
+  'ذكاء اصطناعي',
+  'الساعه',
+  'وقت',
+  'رحله',
+  'حجز طيران',
+].map((term) => normalizeQuestion(term));
+
+const UNIVERSITY_ANCHOR_TERMS = [
+  'جامعه',
+  'الجامعه',
+  'الجيل الجديد',
+  'قبول',
+  'تسجيل',
+  'تخصص',
+  'برامج',
+  'كليه',
+  'رسوم',
+  'اقساط',
+  'منح',
+  'سكن',
+  'دوام',
+  'تقويم',
+  'اختبار',
+  'عنوان',
+  'موقع',
+  'تواصل',
+  'هاتف',
+  'ايميل',
+  'university',
+  'campus',
+  'aau',
+].map((term) => normalizeQuestion(term));
+
+const GENERAL_UNIVERSITY_SHORT_TERMS = [
+  'اين',
+  'وين',
+  'موقع',
+  'عنوان',
+  'كم',
+  'رسوم',
+  'اقساط',
+  'ما',
+  'ايش',
+  'تخصصات',
+  'برامج',
+  'كليات',
+  'كيف',
+  'اسجل',
+  'تسجيل',
+  'قبول',
+  'شروط',
+  'دوام',
+  'منح',
+  'منحه',
+  'تواصل',
+].map((term) => normalizeQuestion(term));
+
+const UNIVERSITY_SYNONYM_MAP: Array<[RegExp, string]> = [
+  [/\bموقعكم\b/giu, 'موقع الجامعة'],
+  [/\bرسومكم\b/giu, 'رسوم الجامعة'],
+  [/\bتخصصاتكم\b/giu, 'تخصصات الجامعة'],
+  [/\bعندكم\b/giu, 'لدى الجامعة'],
+  [/\bجامعتكم\b/giu, 'جامعة الجيل الجديد'],
+];
+
 const INTENT_TERMS: Array<{ intent: IntentType; terms: string[] }> = [
   { intent: 'admission_requirements', terms: ['قبول', 'تسجيل', 'التسجيل', 'شروط', 'وثائق', 'معدل', 'admission', 'register'] },
   { intent: 'tuition_fees', terms: ['رسوم', 'اقساط', 'قسط', 'تكلفه', 'سعر', 'fees', 'tuition'] },
@@ -218,36 +324,103 @@ const INTENT_TERMS: Array<{ intent: IntentType; terms: string[] }> = [
   { intent: 'contact_location', terms: ['اين', 'عنوان', 'موقع', 'تواصل', 'هاتف', 'ايميل', 'location', 'address', 'contact'] },
 ];
 
+function applySynonymExpansion(question: string) {
+  const raw = String(question || '').trim();
+  if (!raw) return raw;
+
+  const rawNormalized = normalizeQuestion(raw);
+  let expanded = raw;
+
+  for (const [pattern, replacement] of UNIVERSITY_SYNONYM_MAP) {
+    expanded = expanded.replace(pattern, replacement);
+  }
+
+  const expansions: string[] = [];
+  if (rawNormalized.includes(normalizeQuestion('موقعكم'))) expansions.push('موقع الجامعة');
+  if (rawNormalized.includes(normalizeQuestion('رسومكم'))) expansions.push('رسوم الجامعة');
+  if (rawNormalized.includes(normalizeQuestion('تخصصاتكم'))) expansions.push('تخصصات الجامعة');
+  if (rawNormalized.includes(normalizeQuestion('عندكم'))) expansions.push('لدى الجامعة');
+
+  if (expansions.length > 0) {
+    expanded = `${expanded} ${expansions.join(' ')}`.trim();
+  }
+
+  return expanded;
+}
+
+function rewriteUniversityScopedQuestion(question: string) {
+  const raw = String(question || '').trim();
+  if (!raw) return raw;
+
+  const normalized = normalizeQuestion(raw);
+
+  const rewriteRules: Array<{ patterns: RegExp[]; target: string }> = [
+    {
+      patterns: [/^(اين|وين)\s+(موقع|عنوان)/i, /^(اين|وين)\s+موقعكم/i, /^(what|where).*(location|address)/i],
+      target: `اين موقع ${UNIVERSITY_NAME}؟`,
+    },
+    {
+      patterns: [/^(كم|ما)\s+(ال)?(رسوم|الاقساط|القسط)/i, /^(كم|ما)\s+رسومكم/i, /^(how much).*(fees|tuition)/i],
+      target: `ما رسوم الدراسة في ${UNIVERSITY_NAME}؟`,
+    },
+    {
+      patterns: [/^(ما|ايش|ما هي)\s+(ال)?(تخصصات|البرامج|الكليات)/i, /^(ما|ايش)\s+تخصصاتكم/i, /^(what).*(majors|programs|specializations)/i],
+      target: `ما التخصصات المتاحة في ${UNIVERSITY_NAME}؟`,
+    },
+    {
+      patterns: [/^(كيف|شلون|ايش)\s+(اسجل|التسجيل|انضم|اقدم)/i, /^(how).*(register|apply|admission)/i],
+      target: `كيف أسجل في ${UNIVERSITY_NAME}؟`,
+    },
+  ];
+
+  for (const rule of rewriteRules) {
+    if (hasAnyPattern(raw, rule.patterns) || hasAnyPattern(normalized, rule.patterns)) {
+      return rule.target;
+    }
+  }
+
+  const hasUniversityReference = includesAny(normalized, UNIVERSITY_ANCHOR_TERMS);
+  const words = normalized.split(' ').filter(Boolean);
+  const isShortQuestion = words.length <= 5;
+  const looksQuestion = includesAny(normalized, GENERAL_UNIVERSITY_SHORT_TERMS);
+
+  if (!hasUniversityReference && isShortQuestion && looksQuestion) {
+    return `${raw} في ${UNIVERSITY_NAME}`;
+  }
+
+  return raw;
+}
+
 function classifyIntent(question: string): IntentProfile {
   const q = normalizeQuestion(question);
-  const smallTalkTerms = ['السلام عليكم', 'السلام', 'مرحبا', 'اهلا', 'من انت', 'ما اسمك', 'ساعدني', 'help', 'hello'];
-  if (includesAny(q, smallTalkTerms) || /(hi|hello|who are you|help)/i.test(q)) {
+  const words = q.split(' ').filter(Boolean);
+
+  if (includesAny(q, SMALL_TALK_TERMS) || /(hi|hello|who are you|help)/i.test(question)) {
     return { intent: 'small_talk', type: 'small_talk', intentTerms: [], outside: false, smallTalk: true };
   }
 
-  const universityAnchorTerms = [
-    'جامعه',
-    'الجامعه',
-    'الجيل الجديد',
-    'قبول',
-    'تسجيل',
-    'كليه',
-    'برنامج',
-    'رسوم',
-    'عنوان',
-    'تواصل',
-    'university',
-    'aau',
-  ];
+  const hasUniversityAnchor = includesAny(q, UNIVERSITY_ANCHOR_TERMS) || /(admission|tuition|college|program|university|campus|fees)/i.test(question);
+  const isGeneralShortUniversityQuestion = words.length <= 5 && includesAny(q, GENERAL_UNIVERSITY_SHORT_TERMS);
+  const clearlyOutside = includesAny(q, OUTSIDE_STRONG_TERMS) || /(weather|temperature|football|soccer|stock|bitcoin|recipe|movie|song|car|phone|travel)/i.test(question);
 
-  const looksUniversity = includesAny(q, universityAnchorTerms) || /(admission|tuition|college|program|university|campus)/i.test(q);
-  if (!looksUniversity) {
+  if (clearlyOutside && !hasUniversityAnchor && !isGeneralShortUniversityQuestion) {
     return { intent: 'outside_scope', type: 'outside', intentTerms: [], outside: true, smallTalk: false };
   }
 
+  if (hasUniversityAnchor || isGeneralShortUniversityQuestion || words.length <= 3) {
+    for (const rule of INTENT_TERMS) {
+      const normalizedTerms = rule.terms.map((term) => normalizeQuestion(term));
+      if (includesAny(q, normalizedTerms)) {
+        return { intent: rule.intent, type: 'university', intentTerms: normalizedTerms, outside: false, smallTalk: false };
+      }
+    }
+    return { intent: 'general_university', type: 'university', intentTerms: [], outside: false, smallTalk: false };
+  }
+
   for (const rule of INTENT_TERMS) {
-    if (includesAny(q, rule.terms)) {
-      return { intent: rule.intent, type: 'university', intentTerms: rule.terms, outside: false, smallTalk: false };
+    const normalizedTerms = rule.terms.map((term) => normalizeQuestion(term));
+    if (includesAny(q, normalizedTerms)) {
+      return { intent: rule.intent, type: 'university', intentTerms: normalizedTerms, outside: false, smallTalk: false };
     }
   }
 
@@ -514,6 +687,75 @@ async function tryGenerateWithModel(apiKey: string, model: string, prompt: strin
   return { ok: true, text: text || '' };
 }
 
+function buildIntentRewritePrompt(question: string, history: ChatHistoryItem[]) {
+  const safeHistory = Array.isArray(history)
+    ? history
+      .slice(-6)
+      .map((item) => `${item.role || 'user'}: ${String(item.text || '').trim()}`)
+      .filter(Boolean)
+      .join('\n')
+    : '';
+
+  return [
+    'أنت مصنف نوايا ومُعيد صياغة لاستعلامات شات جامعة.',
+    `اسم الجامعة الرسمي: ${UNIVERSITY_NAME}.`,
+    'قاعدة أساسية: الشات داخل موقع الجامعة، لذلك أي سؤال عام قصير يُفترض أنه عن الجامعة ما لم يكن خارج الموضوع بوضوح.',
+    'صنف السؤال إلى قيمة واحدة فقط:',
+    '- small_talk',
+    '- university_domain',
+    '- clearly_outside',
+    'ثم أعد كتابة السؤال بشكل واضح ومباشر عن الجامعة.',
+    'ممنوع اختراع معلومات. المطلوب فقط تصنيف + إعادة صياغة.',
+    'أعد JSON فقط بدون أي نص إضافي بهذا الشكل:',
+    '{"intent":"university_domain","rewrittenQuestion":"..."}',
+    '',
+    `السؤال الحالي: ${question}`,
+    safeHistory ? `السياق السابق:\n${safeHistory}` : 'السياق السابق: لا يوجد',
+  ].join('\n');
+}
+
+function parseJsonObject(raw: string) {
+  const text = String(raw || '').trim();
+  if (!text) return null;
+
+  try {
+    return JSON.parse(text);
+  } catch {
+    const match = text.match(/\{[\s\S]*\}/);
+    if (!match) return null;
+    try {
+      return JSON.parse(match[0]);
+    } catch {
+      return null;
+    }
+  }
+}
+
+async function classifyAndRewriteWithGemini(apiKey: string, question: string, history: ChatHistoryItem[]) {
+  if (!apiKey || !ENABLE_LLM_INTENT_REWRITE || GENERATION_MODELS.length === 0) return null;
+
+  const model = GENERATION_MODELS[0];
+  const prompt = buildIntentRewritePrompt(question, history);
+  const result = await tryGenerateWithModel(apiKey, model, prompt);
+  if (!result.ok || !result.text) return null;
+
+  const parsed = parseJsonObject(result.text) as { intent?: string; rewrittenQuestion?: string } | null;
+  if (!parsed) return null;
+
+  const intent = parsed.intent;
+  const rewrittenQuestion = typeof parsed.rewrittenQuestion === 'string' ? parsed.rewrittenQuestion.trim() : '';
+
+  if (intent !== 'small_talk' && intent !== 'university_domain' && intent !== 'clearly_outside') {
+    return null;
+  }
+
+  return {
+    intent: intent as LlmIntentLabel,
+    rewrittenQuestion: rewrittenQuestion || question,
+    usedModel: model,
+  };
+}
+
 async function generateAnswerGemini(apiKey: string, question: string, topMatches: SearchMatch[]) {
   if (isGeminiCircuitOpen()) {
     return {
@@ -644,10 +886,39 @@ export async function POST(req: Request) {
       });
     }
 
-    const rewrite = rewriteQuestionFromHistory(question, history);
-    const effectiveQuestion = rewrite.rewrittenQuestion || question;
+    const apiKey = process.env.GEMINI_API_KEY || '';
+    const historyRewrite = rewriteQuestionFromHistory(question, history);
+    const expandedQuestion = applySynonymExpansion(historyRewrite.rewrittenQuestion || question);
+    let effectiveQuestion = rewriteUniversityScopedQuestion(expandedQuestion);
+    let intentProfile = classifyIntent(effectiveQuestion);
+
+    const isAmbiguousIntent = intentProfile.outside || intentProfile.intent === 'general_university';
+    if (isAmbiguousIntent && apiKey && ENABLE_LLM_INTENT_REWRITE) {
+      try {
+        const llmIntentRewrite = await classifyAndRewriteWithGemini(apiKey, effectiveQuestion, history);
+        if (llmIntentRewrite) {
+          usedLLM = `intent-rewrite:${llmIntentRewrite.usedModel}`;
+          effectiveQuestion = rewriteUniversityScopedQuestion(applySynonymExpansion(llmIntentRewrite.rewrittenQuestion));
+
+          if (llmIntentRewrite.intent === 'small_talk') {
+            intentProfile = { intent: 'small_talk', type: 'small_talk', intentTerms: [], outside: false, smallTalk: true };
+          } else if (llmIntentRewrite.intent === 'clearly_outside') {
+            intentProfile = { intent: 'outside_scope', type: 'outside', intentTerms: [], outside: true, smallTalk: false };
+          } else {
+            const refinedIntent = classifyIntent(effectiveQuestion);
+            intentProfile = refinedIntent.outside
+              ? { intent: 'general_university', type: 'university', intentTerms: [], outside: false, smallTalk: false }
+              : refinedIntent;
+          }
+        }
+      } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : 'Intent rewrite failed';
+        console.warn('[smartchat] intent rewrite fallback:', message);
+      }
+    }
+
     const normalizedQuestion = normalizeQuestion(effectiveQuestion);
-    const intentProfile = classifyIntent(effectiveQuestion);
+    const wasRewritten = normalizeQuestion(question) !== normalizedQuestion;
     const cacheKey = `${intentProfile.intent}::${normalizedQuestion}`;
 
     const cached = answerCache.get(cacheKey);
@@ -696,7 +967,6 @@ export async function POST(req: Request) {
     }
 
     const processingPromise = (async (): Promise<Omit<SmartChatStructuredResponse, 'traceId'>> => {
-      const apiKey = process.env.GEMINI_API_KEY;
       const index = (await loadKbIndex()) as IndexFile;
       let useSemanticSearch = Boolean(apiKey) && index.model !== 'keyword-only';
       let degraded = false;
@@ -742,7 +1012,7 @@ export async function POST(req: Request) {
           suggestions,
           type: 'university',
           intent: intentProfile.intent,
-          rewrittenQuestion: rewrite.rewritten ? effectiveQuestion : undefined,
+          rewrittenQuestion: wasRewritten ? effectiveQuestion : undefined,
           degraded,
           errorCode: degraded && upstreamErrorType === 'timeout' ? 'UPSTREAM_TIMEOUT' : undefined,
         };
@@ -771,7 +1041,7 @@ export async function POST(req: Request) {
         suggestions,
         type: 'university',
         intent: intentProfile.intent,
-        rewrittenQuestion: rewrite.rewritten ? effectiveQuestion : undefined,
+        rewrittenQuestion: wasRewritten ? effectiveQuestion : undefined,
         degraded,
         errorCode,
       };
@@ -818,3 +1088,8 @@ export async function POST(req: Request) {
     console.log('[smartchat] responseTime:', `${Date.now() - startedAt}ms`);
   }
 }
+
+
+
+
+
