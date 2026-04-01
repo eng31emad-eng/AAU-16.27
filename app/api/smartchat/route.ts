@@ -26,6 +26,8 @@ const GENERATION_MODELS = (
   .filter(Boolean);
 const MAX_RETRIES = 2;
 const ENABLE_LLM_INTENT_REWRITE = (process.env.SMARTCHAT_ENABLE_LLM_INTENT_REWRITE || '1') !== '0';
+const STRICT_FAQ_MATCH_MODE = (process.env.SMARTCHAT_STRICT_FAQ_MATCH_MODE || '1') !== '0';
+const MIN_EXACT_QUESTION_SCORE = Number(process.env.SMARTCHAT_MIN_EXACT_QUESTION_SCORE || 0.78);
 
 const EMPTY_QUESTION_MESSAGE = 'اكتب سؤالك من فضلك.';
 const NO_INFO_MESSAGE = 'حاليًا لا أجد إجابة مباشرة لهذا السؤال ضمن بيانات الجامعة المتاحة لدي.';
@@ -77,6 +79,7 @@ type SearchMatch = IndexItem & {
   finalScore: number;
   rrfScore: number;
   rerankScore: number;
+  questionMatchScore: number;
 };
 
 type CachedAnswer = {
@@ -204,6 +207,22 @@ function getPhraseScore(normalizedQuery: string, normalizedQuestionText: string,
   if (normalizedQuestionText.includes(normalizedQuery)) return 1;
   if (normalizedAnswerText.includes(normalizedQuery)) return 0.8;
   return 0;
+}
+
+function getQuestionMatchScore(normalizedQuery: string, normalizedQuestionText: string) {
+  if (!normalizedQuery || !normalizedQuestionText) return 0;
+
+  if (normalizedQuery === normalizedQuestionText) return 1;
+  const keyword = getKeywordScore(normalizedQuery, normalizedQuestionText);
+  const startsOrContains =
+    normalizedQuestionText.startsWith(normalizedQuery) ||
+    normalizedQuery.startsWith(normalizedQuestionText) ||
+    normalizedQuestionText.includes(normalizedQuery) ||
+    normalizedQuery.includes(normalizedQuestionText)
+      ? 1
+      : 0;
+
+  return Number((keyword * 0.7 + startsOrContains * 0.3).toFixed(3));
 }
 
 function includesAny(text: string, terms: string[]) {
@@ -495,13 +514,14 @@ function hybridRetrieve(
     const keywordAnswer = getKeywordScore(normalizedQuestion, normalizedItemA);
     const keywordScore = keywordQuestion * 0.7 + keywordAnswer * 0.3;
     const phraseScore = getPhraseScore(normalizedQuestion, normalizedItemQ, normalizedItemA);
+    const questionMatchScore = getQuestionMatchScore(normalizedQuestion, normalizedItemQ);
     const intentScore = intentProfile.intentTerms.length
       ? (includesAny(`${normalizedItemQ} ${normalizedItemA}`, intentProfile.intentTerms.map((x) => normalizeQuestion(x))) ? 0.1 : 0)
       : 0;
 
     const finalScore = useSemanticSearch
-      ? semanticScore * 0.65 + keywordScore * 0.25 + phraseScore * 0.05 + intentScore * 0.05
-      : keywordScore * 0.75 + phraseScore * 0.2 + intentScore * 0.05;
+      ? semanticScore * 0.5 + keywordScore * 0.2 + phraseScore * 0.05 + questionMatchScore * 0.2 + intentScore * 0.05
+      : keywordScore * 0.55 + phraseScore * 0.15 + questionMatchScore * 0.25 + intentScore * 0.05;
 
     return {
       ...item,
@@ -512,6 +532,7 @@ function hybridRetrieve(
       finalScore,
       rrfScore: 0,
       rerankScore: 0,
+      questionMatchScore,
     };
   });
 
@@ -539,7 +560,7 @@ function hybridRetrieve(
   const reranked = [...union.values()]
     .map((item) => ({
       ...item,
-      rerankScore: item.finalScore * 0.7 + item.rrfScore * 0.3,
+      rerankScore: item.finalScore * 0.55 + item.rrfScore * 0.25 + item.questionMatchScore * 0.2,
     }))
     .sort((a, b) => b.rerankScore - a.rerankScore)
     .slice(0, TOP_K);
@@ -831,6 +852,7 @@ export async function POST(req: Request) {
   let usedLLM = 'none';
   let finalScoreLog = 0;
   let semanticScoreLog = 0;
+  let questionMatchScoreLog = 0;
 
   const respond = (
     payload: Omit<SmartChatStructuredResponse, 'traceId'>,
@@ -996,15 +1018,18 @@ export async function POST(req: Request) {
       );
 
       const topScore = topMatches[0]?.rerankScore ?? 0;
+      const topQuestionMatchScore = topMatches[0]?.questionMatchScore ?? 0;
       finalScoreLog = topScore;
       semanticScoreLog = topMatches[0]?.semanticScore ?? 0;
+      questionMatchScoreLog = topQuestionMatchScore;
       const rawConfidence = deriveConfidence(topScore, useSemanticSearch);
       const confidence = calibrateConfidence(rawConfidence, topMatches, intentProfile.intent);
       const suggestions = topMatches.slice(0, 3).map((m) => m.question);
       const sources = topMatches.slice(0, 3).map((m, i) => buildSourceRef(m, i));
 
       const threshold = useSemanticSearch ? MIN_SIMILARITY : KEYWORD_ONLY_MIN_SCORE;
-      if (topScore < threshold) {
+      const strictQuestionMismatch = STRICT_FAQ_MATCH_MODE && topQuestionMatchScore < MIN_EXACT_QUESTION_SCORE;
+      if (topScore < threshold || strictQuestionMismatch) {
         return {
           answer: getLowSimilarityReply(suggestions),
           confidence,
@@ -1020,7 +1045,9 @@ export async function POST(req: Request) {
 
       let answer = topMatches[0]?.answer || NO_INFO_MESSAGE;
       let errorCode: SmartChatStructuredResponse['errorCode'];
-      if (apiKey) {
+      if (STRICT_FAQ_MATCH_MODE) {
+        usedLLM = 'faq-direct';
+      } else if (apiKey) {
         const generated = await generateAnswerGemini(apiKey, effectiveQuestion, topMatches);
         usedLLM = generated.usedModel;
         answer = generated.answer || NO_INFO_MESSAGE;
@@ -1085,10 +1112,10 @@ export async function POST(req: Request) {
     console.log('[smartchat] usedLLM:', usedLLM);
     console.log('[smartchat] semanticScore:', semanticScoreLog);
     console.log('[smartchat] finalScore:', finalScoreLog);
+    console.log('[smartchat] questionMatchScore:', questionMatchScoreLog);
     console.log('[smartchat] responseTime:', `${Date.now() - startedAt}ms`);
   }
 }
-
 
 
 
