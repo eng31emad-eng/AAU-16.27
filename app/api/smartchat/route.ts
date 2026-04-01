@@ -177,6 +177,8 @@ function normalizeQuestion(question: string) {
     [/\bوين\b/gi, 'اين'],
     [/\bايش\b/gi, 'ما'],
     [/\bاش\b/gi, 'ما'],
+    [/\bماهي\b/gi, 'ما هي'],
+    [/\bايشهي\b/gi, 'ايش هي'],
     [/\bشلون\b/gi, 'كيف'],
     [/\bقديش\b/gi, 'كم'],
   ];
@@ -380,15 +382,35 @@ const UNIVERSITY_SYNONYM_MAP: Array<[RegExp, string]> = [
   [/\bموقعكم\b/giu, 'موقع الجامعة'],
   [/\bرسومكم\b/giu, 'رسوم الجامعة'],
   [/\bتخصصاتكم\b/giu, 'تخصصات الجامعة'],
+  [/\bتخخصاتكم\b/giu, 'تخصصات الجامعة'],
+  [/\bكلياتكم\b/giu, 'كليات الجامعة'],
   [/\bعندكم\b/giu, 'لدى الجامعة'],
   [/\bجامعتكم\b/giu, 'جامعة الجيل الجديد'],
 ];
 
 const INTENT_TERMS: Array<{ intent: IntentType; terms: string[] }> = [
   { intent: 'admission_requirements', terms: ['قبول', 'تسجيل', 'التسجيل', 'شروط', 'وثائق', 'معدل', 'admission', 'register'] },
-  { intent: 'tuition_fees', terms: ['رسوم', 'اقساط', 'قسط', 'تكلفه', 'سعر', 'fees', 'tuition'] },
+  { intent: 'tuition_fees', terms: ['رسوم', 'رسومكم', 'اقساط', 'قسط', 'تكلفه', 'سعر', 'fees', 'tuition'] },
   { intent: 'scholarships', terms: ['منحه', 'منح', 'خصم', 'اعفاء', 'scholarship'] },
-  { intent: 'program_info', terms: ['تخصص', 'برنامج', 'برامج', 'كليه', 'الكليات', 'major', 'program', 'college'] },
+  {
+    intent: 'program_info',
+    terms: [
+      'تخصص',
+      'تخصصات',
+      'تخصصاتكم',
+      'تخخصات',
+      'تخخصاتكم',
+      'برنامج',
+      'برامج',
+      'كليه',
+      'كليات',
+      'كلياتكم',
+      'الكليات',
+      'major',
+      'program',
+      'college',
+    ],
+  },
   { intent: 'schedule_calendar', terms: ['دوام', 'جدول', 'تقويم', 'اختبار', 'بدايه', 'نهايه', 'calendar', 'schedule', 'exam'] },
   { intent: 'policies_regulations', terms: ['لائحه', 'قانون', 'سياسه', 'انذار', 'غياب', 'حضور', 'policy', 'regulation'] },
   { intent: 'campus_services', terms: ['مكتبه', 'سكن', 'مختبر', 'نقل', 'انترنت', 'خدمات', 'library', 'lab', 'service'] },
@@ -1107,8 +1129,19 @@ export async function POST(req: Request) {
         topSemanticScore >= CONTACT_LOCATION_MIN_SEMANTIC_SCORE ||
         topScore >= CONTACT_LOCATION_MIN_TOP_SCORE;
       const bypassEarlyGuardForContact = isContactLocationIntent && hasReasonableContactSignal;
+      const isCoreFaqIntent =
+        intentProfile.intent === 'program_info' ||
+        intentProfile.intent === 'tuition_fees' ||
+        intentProfile.intent === 'admission_requirements' ||
+        intentProfile.intent === 'contact_location';
+      const hasReasonableFaqSignal =
+        topQuestionMatchScore >= 0.45 ||
+        topKeywordScore >= 0.17 ||
+        topSemanticScore >= 0.22 ||
+        topScore >= 0.24;
+      const bypassEarlyGuardForFaq = isCoreFaqIntent && hasReasonableFaqSignal;
 
-      if (!bypassEarlyGuardForContact && (weakByTopScore || weakBySemantic || weakByKeyword || ambiguousTop || weakOverallSignal)) {
+      if (!bypassEarlyGuardForContact && !bypassEarlyGuardForFaq && (weakByTopScore || weakBySemantic || weakByKeyword || ambiguousTop || weakOverallSignal)) {
         return {
           answer: getLowSimilarityReply(fallbackSuggestions),
           confidence,
