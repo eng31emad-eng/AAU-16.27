@@ -365,25 +365,6 @@ export const SmartChat = () => {
                       {language === 'ar' ? 'ط§ظ„ط«ظ‚ط©:' : 'Confidence:'} {(m.confidence * 100).toFixed(0)}%
                     </div>
                   )}
-                  {m.role === 'assistant' && Array.isArray(m.sources) && m.sources.length > 0 && (
-                    <div className="mt-2.5 space-y-2">
-                      {m.sources.map((src, idx) => (
-                        <div key={`${m.id}-src-${src.chunkId}-${idx}`} className="rounded-lg border border-border/40 bg-background/80 p-2 text-xs leading-5">
-                          <div className="font-semibold text-foreground">{src.sourceName}</div>
-                          {src.sourceUrl && (
-                            <a
-                              href={src.sourceUrl}
-                              target="_blank"
-                              rel="noreferrer"
-                              className="mt-1 inline-block text-secondary hover:underline"
-                            >
-                              {language === 'ar' ? 'ظپطھط­ ط§ظ„ظ…طµط¯ط±' : 'Open source'}
-                            </a>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  )}
                   {m.role === 'assistant' && (
                     <div className={`mt-2.5 flex items-center gap-2 ${isRtl ? 'justify-end' : 'justify-start'}`}>
                       <button
