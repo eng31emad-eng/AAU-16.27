@@ -26,6 +26,7 @@ const GENERATION_MODELS = (
   .filter(Boolean);
 const MAX_RETRIES = 2;
 const ENABLE_LLM_INTENT_REWRITE = (process.env.SMARTCHAT_ENABLE_LLM_INTENT_REWRITE || '1') !== '0';
+const ENABLE_EMOJI_REPLIES = (process.env.SMARTCHAT_ENABLE_EMOJI_REPLIES || '1') !== '0';
 const STRICT_FAQ_MATCH_MODE = (process.env.SMARTCHAT_STRICT_FAQ_MATCH_MODE || '0') !== '0';
 const MIN_EXACT_QUESTION_SCORE = Number(process.env.SMARTCHAT_MIN_EXACT_QUESTION_SCORE || 0.65);
 const EARLY_TURN_MAX_USER_MESSAGES = Number(process.env.SMARTCHAT_EARLY_TURN_MAX_USER_MESSAGES || 1);
@@ -175,10 +176,13 @@ function normalizeQuestion(question: string) {
   const slangMap: Array<[RegExp, string]> = [
     [/\bفين\b/gi, 'اين'],
     [/\bوين\b/gi, 'اين'],
+    [/\bاثن\b/gi, 'اين'],
     [/\bايش\b/gi, 'ما'],
     [/\bاش\b/gi, 'ما'],
     [/\bماهي\b/gi, 'ما هي'],
+    [/\bاهي\b/gi, 'ما هي'],
     [/\bايشهي\b/gi, 'ايش هي'],
+    [/\bموقى\b/gi, 'موقع'],
     [/\bشلون\b/gi, 'كيف'],
     [/\bقديش\b/gi, 'كم'],
   ];
@@ -287,6 +291,10 @@ function hasAnyPattern(text: string, patterns: RegExp[]) {
   return patterns.some((pattern) => pattern.test(text));
 }
 
+function withOptionalEmoji(text: string, emoji: string) {
+  return ENABLE_EMOJI_REPLIES ? `${text} ${emoji}` : text;
+}
+
 const SMALL_TALK_TERMS = [
   'السلام عليكم',
   'السلام',
@@ -347,6 +355,10 @@ const OUTSIDE_STRONG_TERMS = [
   'وقت',
   'رحله',
   'حجز طيران',
+  'دجاج',
+  'لحم',
+  'خضار',
+  'سعر الدجاج',
 ].map((term) => normalizeQuestion(term));
 
 const UNIVERSITY_ANCHOR_TERMS = [
@@ -370,6 +382,12 @@ const UNIVERSITY_ANCHOR_TERMS = [
   'تواصل',
   'هاتف',
   'ايميل',
+  'رؤيه',
+  'رؤية',
+  'رساله',
+  'رسالة',
+  'رئيس',
+  'مدير',
   'university',
   'campus',
   'aau',
@@ -380,15 +398,11 @@ const GENERAL_UNIVERSITY_SHORT_TERMS = [
   'وين',
   'موقع',
   'عنوان',
-  'كم',
   'رسوم',
   'اقساط',
-  'ما',
-  'ايش',
   'تخصصات',
   'برامج',
   'كليات',
-  'كيف',
   'اسجل',
   'تسجيل',
   'قبول',
@@ -397,6 +411,11 @@ const GENERAL_UNIVERSITY_SHORT_TERMS = [
   'منح',
   'منحه',
   'تواصل',
+  'رؤيه',
+  'رؤية',
+  'رساله',
+  'رسالة',
+  'رئيس',
 ].map((term) => normalizeQuestion(term));
 
 const UNIVERSITY_SYNONYM_MAP: Array<[RegExp, string]> = [
@@ -405,6 +424,10 @@ const UNIVERSITY_SYNONYM_MAP: Array<[RegExp, string]> = [
   [/\bتخصصاتكم\b/giu, 'تخصصات الجامعة'],
   [/\bتخخصاتكم\b/giu, 'تخصصات الجامعة'],
   [/\bكلياتكم\b/giu, 'كليات الجامعة'],
+  [/\bرؤيتكم\b/giu, 'رؤية الجامعة'],
+  [/\bرسالتكم\b/giu, 'رسالة الجامعة'],
+  [/\bمدير الجامعه\b/giu, 'رئيس الجامعة'],
+  [/\bمدير الجامعة\b/giu, 'رئيس الجامعة'],
   [/\bعندكم\b/giu, 'لدى الجامعة'],
   [/\bجامعتكم\b/giu, 'جامعة الجيل الجديد'],
 ];
@@ -453,6 +476,13 @@ function applySynonymExpansion(question: string) {
   if (rawNormalized.includes(normalizeQuestion('موقعكم'))) expansions.push('موقع الجامعة');
   if (rawNormalized.includes(normalizeQuestion('رسومكم'))) expansions.push('رسوم الجامعة');
   if (rawNormalized.includes(normalizeQuestion('تخصصاتكم'))) expansions.push('تخصصات الجامعة');
+  if (rawNormalized.includes(normalizeQuestion('تخخصاتكم'))) expansions.push('تخصصات الجامعة');
+  if (rawNormalized.includes(normalizeQuestion('كلياتكم'))) expansions.push('كليات الجامعة');
+  if (rawNormalized.includes(normalizeQuestion('رؤيتكم'))) expansions.push('رؤية الجامعة');
+  if (rawNormalized.includes(normalizeQuestion('رسالتكم'))) expansions.push('رسالة الجامعة');
+  if (rawNormalized.includes(normalizeQuestion('مدير الجامعة')) || rawNormalized.includes(normalizeQuestion('مدير الجامعه'))) {
+    expansions.push('رئيس الجامعة');
+  }
   if (rawNormalized.includes(normalizeQuestion('عندكم'))) expansions.push('لدى الجامعة');
 
   if (expansions.length > 0) {
@@ -482,6 +512,18 @@ function rewriteUniversityScopedQuestion(question: string) {
       target: `ما التخصصات المتاحة في ${UNIVERSITY_NAME}؟`,
     },
     {
+      patterns: [/^(ما ?هي|ماهي|ايش|اهي)\s+(تخصصاتكم|تخصصات|كلياتكم|كليات)/i],
+      target: `ما التخصصات والكليات المتاحة في ${UNIVERSITY_NAME}؟`,
+    },
+    {
+      patterns: [/^(ما ?هي|ماهي|ايش)\s+(رؤيه|رؤية|رساله|رسالة)/i, /(vision|mission)/i],
+      target: `ما رؤية ورسالة ${UNIVERSITY_NAME}؟`,
+    },
+    {
+      patterns: [/^(من|مين)\s+(هو\s+)?مدير\s+(ال)?(جامعه|جامعة)/i],
+      target: `من هو رئيس ${UNIVERSITY_NAME}؟`,
+    },
+    {
       patterns: [/^(كيف|شلون|ايش)\s+(اسجل|التسجيل|انضم|اقدم)/i, /^(how).*(register|apply|admission)/i],
       target: `كيف أسجل في ${UNIVERSITY_NAME}؟`,
     },
@@ -506,6 +548,13 @@ function rewriteUniversityScopedQuestion(question: string) {
 }
 
 function classifyIntent(question: string): IntentProfile {
+  const raw = String(question || '').trim();
+  const hasEmoji = /\p{Extended_Pictographic}/u.test(raw);
+  const hasLettersOrDigits = /[\p{L}\p{N}]/u.test(raw);
+  if (hasEmoji && !hasLettersOrDigits) {
+    return { intent: 'small_talk', type: 'small_talk', intentTerms: [], outside: false, smallTalk: true };
+  }
+
   const q = normalizeQuestion(question);
   const words = q.split(' ').filter(Boolean);
 
@@ -517,7 +566,7 @@ function classifyIntent(question: string): IntentProfile {
   const isGeneralShortUniversityQuestion = words.length <= 5 && includesAny(q, GENERAL_UNIVERSITY_SHORT_TERMS);
   const clearlyOutside = includesAny(q, OUTSIDE_STRONG_TERMS) || /(weather|temperature|football|soccer|stock|bitcoin|recipe|movie|song|car|phone|travel)/i.test(question);
 
-  if (clearlyOutside && !hasUniversityAnchor && !isGeneralShortUniversityQuestion) {
+  if (clearlyOutside && !hasUniversityAnchor) {
     return { intent: 'outside_scope', type: 'outside', intentTerms: [], outside: true, smallTalk: false };
   }
 
@@ -721,21 +770,23 @@ function buildSourceRef(match: SearchMatch, rank: number): KbSourceRef {
 function getSmallTalkReply(question: string) {
   const q = normalizeQuestion(question);
   if (includesAny(q, PRAISE_TERMS) || /(thanks?|great|awesome|best chatbot)/i.test(q)) {
-    return 'شكرًا لك. سعيد أن الخدمة أعجبتك، وأنا جاهز لأي سؤال عن الجامعة.';
+    return withOptionalEmoji('شكرًا لك. سعيد أن الخدمة أعجبتك، وأنا جاهز لأي سؤال عن الجامعة.', '🙏');
   }
   if (includesAny(q, ['السلام عليكم', 'السلام', 'مرحبا', 'اهلا']) || /(hi|hello)/i.test(q)) {
-    return 'وعليكم السلام، أهلًا بك. أنا مساعد الجامعة.';
+    return withOptionalEmoji('وعليكم السلام، أهلًا بك. أنا مساعد الجامعة.', '😊');
   }
-  if (includesAny(q, ['ما اسمك', 'من انت']) || /(who are you|your name)/i.test(q)) {
-    return 'أنا المساعد الذكي لجامعة الجيل الجديد.';
+  if (includesAny(q, ['ما اسمك', 'من انت']) || /(who are you|your name)/i.test(q) || /\p{Extended_Pictographic}/u.test(question)) {
+    return withOptionalEmoji('أنا المساعد الذكي لجامعة الجيل الجديد.', '🤖');
   }
-  return 'مرحبًا بك، اسألني عن القبول، الرسوم، البرامج، والخدمات الجامعية.';
+  return withOptionalEmoji('مرحبًا بك، اسألني عن القبول، الرسوم، البرامج، والخدمات الجامعية.', '✨');
 }
 
 function getLowSimilarityReply(suggestions: string[]) {
   const top2 = suggestions.filter(Boolean).slice(0, 2);
-  if (top2.length === 0) return `${NO_INFO_MESSAGE} يمكنك سؤالي عن التخصصات، الكليات، الرسوم، القبول، أو التواصل.`;
-  return `${NO_INFO_MESSAGE} يمكنك سؤالي مثل: ${top2.join('، ')}`;
+  if (top2.length === 0) {
+    return withOptionalEmoji(`${NO_INFO_MESSAGE} يمكنك سؤالي عن التخصصات، الكليات، الرسوم، القبول، أو التواصل.`, '🙂');
+  }
+  return withOptionalEmoji(`${NO_INFO_MESSAGE} يمكنك سؤالي مثل: ${top2.join('، ')}`, '🙂');
 }
 
 async function postJsonWithRetry(url: string, body: unknown, retries = MAX_RETRIES): Promise<UpstreamResult> {
@@ -889,6 +940,7 @@ async function generateAnswerGemini(apiKey: string, question: string, topMatches
     'التعليمات:',
     '- أجب باللغة العربية.',
     '- اجعل الإجابة قصيرة جدًا (سطر إلى سطرين فقط).',
+    '- يمكنك استخدام إيموجي واحد مناسب فقط إذا كان طبيعيًا في السياق.',
     '- استخدم فقط المعلومات الموجودة في "المصدر".',
     '- ممنوع اختراع معلومات غير موجودة.',
     '- إذا كانت النتائج غير كافية أو متضاربة، أعد جملة عدم توفر المعلومات فقط.',
@@ -1193,6 +1245,15 @@ export async function POST(req: Request) {
         }
       } else {
         usedLLM = 'keyword-only';
+      }
+
+      const normalizedOriginalQuestion = normalizeQuestion(question);
+      const askedForManager =
+        normalizedOriginalQuestion.includes(normalizeQuestion('مدير الجامعة')) ||
+        normalizedOriginalQuestion.includes(normalizeQuestion('مدير الجامعه'));
+      const answerLooksLikePresident = /رئيس|الدكتور|الاستاذ|الأستاذ/i.test(answer);
+      if (askedForManager && answer !== NO_INFO_MESSAGE && answerLooksLikePresident && !answer.includes('هل تقصد رئيس الجامعة')) {
+        answer = `هل تقصد رئيس الجامعة؟ ${answer}`;
       }
 
       return {
