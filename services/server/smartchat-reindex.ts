@@ -68,6 +68,12 @@ function unwrapPayload(payload: any): any[] | null {
     return payload
   }
 
+  // { headers:{}, data: { ok:true, data:[...] } }  ← الشكل الفعلي للـ API
+  if (Array.isArray(payload?.data?.data)) {
+    console.log('[reindex] payload.data.data is array, length:', payload.data.data.length)
+    return payload.data.data
+  }
+
   // { ok: true, data: [...] }  أو  { data: [...] }
   if (Array.isArray(payload?.data)) {
     console.log('[reindex] payload.data is array, length:', payload.data.length)
