@@ -474,7 +474,7 @@ const UNIVERSITY_SYNONYM_MAP: Array<[RegExp, string]> = [
 
 const INTENT_TERMS: Array<{ intent: IntentType; terms: string[] }> = [
   { intent: 'admission_requirements', terms: ['قبول', 'تسجيل', 'التسجيل', 'شروط', 'وثائق', 'معدل', 'admission', 'register'] },
-  { intent: 'tuition_fees', terms: ['رسوم', 'رسومكم', 'اقساط', 'قسط', 'تكلفه', 'سعر', 'fees', 'tuition'] },
+  { intent: 'tuition_fees', terms: ['اسعار', 'مصاريف', 'تكاليف', 'تكلفه', 'سعر', 'رسوم', 'رسومكم', 'اقساط', 'قسط', 'fees', 'tuition'] },
   { intent: 'scholarships', terms: ['منحه', 'منح', 'خصم', 'اعفاء', 'scholarship'] },
   {
     intent: 'program_info',
@@ -537,6 +537,16 @@ function rewriteUniversityScopedQuestion(question: string) {
   if (!raw) return raw;
 
   const normalized = normalizeQuestion(raw);
+  const hasUniversityName = normalized.includes(normalizeQuestion(UNIVERSITY_NAME));
+  const feeTerms = ['اسعار', 'مصاريف', 'تكاليف', 'تكلفه', 'سعر', 'رسوم', 'اقساط'].map((term) => normalizeQuestion(term));
+  const scopedFeeDetailTerms = ['كلية', 'كليه', 'تخصص', 'قسم', 'برنامج'].map((term) => normalizeQuestion(term));
+  const hasFeeIntent = includesAny(normalized, feeTerms);
+  const hasScopedFeeDetail = includesAny(normalized, scopedFeeDetailTerms);
+
+  if (hasFeeIntent && hasScopedFeeDetail && !hasUniversityName) {
+    const trimmedRaw = raw.replace(/[؟?]+\s*$/u, '').trim();
+    return `${trimmedRaw} في ${UNIVERSITY_NAME}؟`;
+  }
 
   const rewriteRules: Array<{ patterns: RegExp[]; target: string }> = [
     {
@@ -544,7 +554,7 @@ function rewriteUniversityScopedQuestion(question: string) {
       target: `اين موقع ${UNIVERSITY_NAME}؟`,
     },
     {
-      patterns: [/^(كم|ما)\s+(ال)?(رسوم|الاقساط|القسط)/i, /^(كم|ما)\s+رسومكم/i, /^(how much).*(fees|tuition)/i],
+      patterns: [/^(كم|ما|ايش|ما هي)\s+(ال)?(رسوم|الاقساط|الأقساط|الاقساط|القسط|اسعار|أسعار|مصاريف|تكاليف|تكلفه|تكلفة|سعر)/i, /^(كم|ما)\s+رسومكم/i, /^(how much).*(fees|tuition)/i],
       target: `ما رسوم الدراسة في ${UNIVERSITY_NAME}؟`,
     },
     {
@@ -997,7 +1007,7 @@ async function generateAnswerGemini(apiKey: string, question: string, topMatches
     'أنت مساعد رسمي لجامعة الجيل الجديد.',
     'التعليمات:',
     '- أجب باللغة العربية.',
-    '- اجعل الإجابة قصيرة جدًا (سطر إلى سطرين فقط).',
+    '- اجعل الإجابة قصيرة جدًا (سطر إلى سطرين الى ثلاثة سطور).',
     '- يمكنك استخدام إيموجي واحد مناسب فقط إذا كان طبيعيًا في السياق.',
     '- استخدم فقط المعلومات الموجودة في "المصدر".',
     '- ممنوع اختراع معلومات غير موجودة.',

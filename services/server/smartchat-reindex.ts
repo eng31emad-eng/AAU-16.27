@@ -47,6 +47,9 @@ const DEFAULT_BASE_URL = (
 const FAQ_SOURCE_PATH = process.env.SMARTCHAT_FAQ_SOURCE_PATH || '/api/faqs'
 const INCLUDE_UNPUBLISHED = String(process.env.SMARTCHAT_REINDEX_INCLUDE_UNPUBLISHED || '').trim() === '1'
 const SOURCE_TIMEOUT_MS = Math.max(Number(process.env.SMARTCHAT_REINDEX_TIMEOUT_MS || 25000), 5000)
+const EMBEDDING_MODEL = 'gemini-embedding-001'
+const EMBEDDING_BATCH_SIZE = Math.max(Number(process.env.SMARTCHAT_REINDEX_EMBEDDING_BATCH_SIZE || 4), 1)
+const EMBEDDING_BATCH_DELAY_MS = Math.max(Number(process.env.SMARTCHAT_REINDEX_EMBEDDING_BATCH_DELAY_MS || 180), 0)
 
 let runningPromise: Promise<SmartchatReindexResult> | null = null
 
@@ -154,7 +157,54 @@ async function fetchFaqRows(sourceUrl: string): Promise<SourceFaq[]> {
   }
 }
 
+function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
+function buildEmbeddingText(row: { question: string; answer: string }) {
+  return `${row.question}\n\n${row.answer}`.trim()
+}
+
+async function embedTextGemini(apiKey: string, text: string) {
+  const controller = new AbortController()
+  const timeout = setTimeout(() => controller.abort(), SOURCE_TIMEOUT_MS)
+  try {
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/${EMBEDDING_MODEL}:embedContent?key=${encodeURIComponent(apiKey)}`
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      cache: 'no-store',
+      signal: controller.signal,
+      body: JSON.stringify({
+        content: {
+          parts: [{ text }],
+        },
+      }),
+    })
+    if (!response.ok) {
+      const errorText = await response.text().catch(() => '')
+      throw new Error(`HTTP ${response.status}${errorText ? ` ${errorText}` : ''}`)
+    }
+
+    const payload = await response.json()
+    const values = payload?.embedding?.values
+    if (!Array.isArray(values) || values.length === 0) {
+      throw new Error('Invalid embedding response')
+    }
+    return values as number[]
+  } finally {
+    clearTimeout(timeout)
+  }
+}
+
 async function writeFaqIndex(rows: SourceFaq[], sourceUrl: string, sourceHash: string) {
+  const apiKey = String(process.env.GEMINI_API_KEY || '').trim()
+  if (!apiKey) {
+    throw new Error('GEMINI_API_KEY is required for smartchat reindex embeddings')
+  }
+
   const now = new Date().toISOString()
   const items = rows.map((row, index) => ({
     id: row.id || String(index + 1),
@@ -173,10 +223,31 @@ async function writeFaqIndex(rows: SourceFaq[], sourceUrl: string, sourceHash: s
     },
   }))
 
+  console.log(`[reindex] generating embeddings for ${items.length} items...`)
+  let successCount = 0
+  for (let offset = 0; offset < items.length; offset += EMBEDDING_BATCH_SIZE) {
+    const batchEnd = Math.min(offset + EMBEDDING_BATCH_SIZE, items.length)
+    const batchTasks = items.slice(offset, batchEnd).map(async (item) => {
+      try {
+        const embedding = await embedTextGemini(apiKey, buildEmbeddingText(item))
+        item.embedding = embedding
+        successCount += 1
+      } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : 'unknown embedding error'
+        console.warn(`[reindex] embedding failed for item ${item.id}: ${message}`)
+      }
+    })
+    await Promise.all(batchTasks)
+    if (batchEnd < items.length && EMBEDDING_BATCH_DELAY_MS > 0) {
+      await sleep(EMBEDDING_BATCH_DELAY_MS)
+    }
+  }
+  console.log(`[reindex] embeddings generated: ${successCount}/${items.length} succeeded`)
+
   const payload = {
     createdAt: now,
     count: items.length,
-    model: 'keyword-only',
+    model: EMBEDDING_MODEL,
     items,
   }
 
