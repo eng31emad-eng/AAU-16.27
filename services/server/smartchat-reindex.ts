@@ -134,6 +134,7 @@ function buildHash(rows: SourceFaq[]) {
 }
 
 async function fetchFaqRows(sourceUrl: string): Promise<SourceFaq[]> {
+  console.log('[reindex] fetching FAQ source:', sourceUrl)
   const controller = new AbortController()
   const timeout = setTimeout(() => controller.abort(), SOURCE_TIMEOUT_MS)
   try {
@@ -146,11 +147,14 @@ async function fetchFaqRows(sourceUrl: string): Promise<SourceFaq[]> {
     if (!response.ok) {
       throw new Error(`FAQ source request failed: HTTP ${response.status}`)
     }
+    console.log('[reindex] FAQ source status:', response.status)
     const payload = await response.json()
     const unwrapped = unwrapPayload(payload)
     if (!Array.isArray(unwrapped)) {
+      console.error('[reindex] FAQ payload is not an array', unwrapped)
       throw new Error('FAQ source payload is not an array')
     }
+    console.log('[reindex] FAQ payload array length:', unwrapped.length)
     return normalizeFaqRows(unwrapped)
   } finally {
     clearTimeout(timeout)
@@ -200,6 +204,7 @@ async function embedTextGemini(apiKey: string, text: string) {
 }
 
 async function writeFaqIndex(rows: SourceFaq[], sourceUrl: string, sourceHash: string) {
+  console.log('[reindex] GEMINI_API_KEY present:', Boolean(String(process.env.GEMINI_API_KEY || '').trim()))
   const apiKey = String(process.env.GEMINI_API_KEY || '').trim()
   if (!apiKey) {
     throw new Error('GEMINI_API_KEY is required for smartchat reindex embeddings')
@@ -222,6 +227,7 @@ async function writeFaqIndex(rows: SourceFaq[], sourceUrl: string, sourceHash: s
       updatedAt: row.updatedAt || now,
     },
   }))
+  console.log('[reindex] items prepared:', items.length)
 
   console.log(`[reindex] generating embeddings for ${items.length} items...`)
   let successCount = 0
@@ -251,12 +257,14 @@ async function writeFaqIndex(rows: SourceFaq[], sourceUrl: string, sourceHash: s
     items,
   }
 
+  console.log('[reindex] saving KB payload...', { model: EMBEDDING_MODEL, count: items.length })
   return saveKbIndex(payload, { sourceHash, sourceUrl })
 }
 
 async function executeReindex(force = false, reason = 'manual'): Promise<SmartchatReindexResult> {
   const startedAt = Date.now()
   const sourceUrl = buildSourceUrl(DEFAULT_BASE_URL)
+  console.log('[reindex] started', { force, reason, sourceUrl })
   const previousState = readState()
   const nextState: SmartchatReindexState = {
     ...previousState,
@@ -267,10 +275,13 @@ async function executeReindex(force = false, reason = 'manual'): Promise<Smartch
 
   try {
     const rows = await fetchFaqRows(sourceUrl)
+    console.log('[reindex] faq rows loaded:', rows.length)
     const hash = buildHash(rows)
+    console.log('[reindex] source hash:', hash)
     const durationMs = Date.now() - startedAt
 
     if (!force && previousState.lastHash && previousState.lastHash === hash) {
+      console.log('[reindex] skipped: no changes detected')
       nextState.lastDurationMs = durationMs
       nextState.lastCount = rows.length
       nextState.lastError = undefined
@@ -287,7 +298,9 @@ async function executeReindex(force = false, reason = 'manual'): Promise<Smartch
       }
     }
 
+    console.log('[reindex] writing faq index...')
     const persisted = await writeFaqIndex(rows, sourceUrl, hash)
+    console.log('[reindex] save complete:', persisted)
     nextState.lastSuccessAt = new Date().toISOString()
     nextState.lastDurationMs = durationMs
     nextState.lastCount = rows.length
@@ -309,6 +322,7 @@ async function executeReindex(force = false, reason = 'manual'): Promise<Smartch
   } catch (error: unknown) {
     const durationMs = Date.now() - startedAt
     const errorMessage = error instanceof Error ? error.message : 'Unknown reindex error'
+    console.error('[reindex] failed:', errorMessage)
     nextState.lastDurationMs = durationMs
     nextState.lastError = errorMessage
     writeState(nextState)

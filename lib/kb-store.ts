@@ -68,10 +68,14 @@ async function readKbIndexFromSupabase(): Promise<KbIndex | null> {
     const errorText = await response.text().catch(() => '')
     throw new Error(`Supabase KB read failed: ${response.status} ${errorText}`)
   }
+  console.log('[kb-store] Supabase read status:', response.status)
 
   const rows = (await response.json().catch(() => [])) as Array<{ index_payload?: KbIndex }>
   const payload = rows?.[0]?.index_payload
-  if (!payload || !isValidKbIndex(payload)) return null
+  if (!payload || !isValidKbIndex(payload)) {
+    console.warn('[kb-store] Supabase payload missing or invalid')
+    return null
+  }
 
   if (hasIndexMojibake(payload)) {
     console.error('[kb-store] Supabase KB appears corrupted (mojibake). Ignoring Supabase payload.')
@@ -82,10 +86,18 @@ async function readKbIndexFromSupabase(): Promise<KbIndex | null> {
 }
 
 export async function loadKbIndex(): Promise<KbIndex> {
+  console.log('[kb-store] hasSupabaseConfig:', hasSupabaseConfig())
+  console.log('[kb-store] trying load from supabase first')
   if (hasSupabaseConfig()) {
     try {
       const supabaseIndex = await readKbIndexFromSupabase()
-      if (supabaseIndex) return supabaseIndex
+      if (supabaseIndex) {
+        console.log('[kb-store] loaded from supabase', {
+          model: supabaseIndex.model,
+          count: supabaseIndex.count,
+        })
+        return supabaseIndex
+      }
     } catch (error: unknown) {
       const message = error instanceof Error ? error.message : 'Unknown error'
       console.error('[kb-store] Supabase read failed, fallback to file:', message)
@@ -96,6 +108,10 @@ export async function loadKbIndex(): Promise<KbIndex> {
   if (hasIndexMojibake(fileIndex)) {
     console.error('[kb-store] Local KB file appears corrupted (mojibake).')
   }
+  console.log('[kb-store] loaded from file', {
+    model: fileIndex.model,
+    count: fileIndex.count,
+  })
   return fileIndex
 }
 
@@ -103,6 +119,11 @@ export async function saveKbIndex(
   index: KbIndex,
   options?: { sourceHash?: string; sourceUrl?: string }
 ): Promise<{ storage: 'supabase' | 'file' }> {
+  console.log('[kb-store] saving KB index', {
+    hasSupabaseConfig: hasSupabaseConfig(),
+    model: index.model,
+    count: index.count,
+  })
   if (hasSupabaseConfig()) {
     try {
       const url = `${SUPABASE_URL}/rest/v1/${encodeURIComponent(SUPABASE_KB_TABLE)}`
@@ -133,6 +154,7 @@ export async function saveKbIndex(
         throw new Error(`Supabase KB write failed: ${response.status} ${errorText}`)
       }
 
+      console.log('[kb-store] saved to supabase')
       return { storage: 'supabase' }
     } catch (error: unknown) {
       const message = error instanceof Error ? error.message : 'Unknown error'
@@ -142,5 +164,6 @@ export async function saveKbIndex(
 
   fs.mkdirSync(path.dirname(FILE_INDEX_PATH), { recursive: true })
   fs.writeFileSync(FILE_INDEX_PATH, `${JSON.stringify(index, null, 2)}\n`, 'utf8')
+  console.log('[kb-store] saved to file')
   return { storage: 'file' }
 }

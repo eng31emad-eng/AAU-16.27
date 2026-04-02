@@ -29,14 +29,23 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: false, error: 'Unauthorized' }, { status: 401 })
   }
 
-  const body = await req.json().catch(() => ({} as any))
-  const force = Boolean(body?.force)
-  const reason = typeof body?.reason === 'string' && body.reason.trim() ? body.reason.trim() : 'manual_api'
-  const result = await runSmartchatReindex({ force, reason })
+  try {
+    const body = await req.json().catch(() => ({} as any))
+    const force = Boolean(body?.force)
+    const reason = typeof body?.reason === 'string' && body.reason.trim() ? body.reason.trim() : 'manual_api'
+    console.log('[reindex-route] POST called', { force, reason })
+    const result = await runSmartchatReindex({ force, reason })
+    console.log('[reindex-route] result', result)
 
-  if (!result.ok) {
-    return NextResponse.json(result, { status: 500 })
+    if (!result.ok) {
+      return NextResponse.json(result, { status: 500 })
+    }
+    return NextResponse.json(result)
+  } catch (error: unknown) {
+    console.error('[reindex-route] unexpected error', error)
+    return NextResponse.json(
+      { ok: false, error: 'Unexpected reindex route error' },
+      { status: 500 }
+    )
   }
-  return NextResponse.json(result)
 }
-
